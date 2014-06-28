@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		995D0A2A19290EEF0082D500 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D0A2919290EEF0082D500 /* Foundation.framework */; };
+		995D0A2C19290EEF0082D500 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D0A2B19290EEF0082D500 /* CoreGraphics.framework */; };
+		995D0A2E19290EEF0082D500 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D0A2D19290EEF0082D500 /* UIKit.framework */; };
+		995D0A3419290EEF0082D500 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 995D0A3219290EEF0082D500 /* InfoPlist.strings */; };
+		995D0A3619290EEF0082D500 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A3519290EEF0082D500 /* main.m */; };
+		995D0A3A19290EEF0082D500 /* DZNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A3919290EEF0082D500 /* DZNAppDelegate.m */; };
+		995D0A4319290EEF0082D500 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D0A4219290EEF0082D500 /* XCTest.framework */; };
+		995D0A4419290EEF0082D500 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D0A2919290EEF0082D500 /* Foundation.framework */; };
+		995D0A4519290EEF0082D500 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D0A2D19290EEF0082D500 /* UIKit.framework */; };
+		995D0A4D19290EEF0082D500 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 995D0A4B19290EEF0082D500 /* InfoPlist.strings */; };
+		995D0A4F19290EEF0082D500 /* GimVicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A4E19290EEF0082D500 /* GimVicTests.m */; };
+		995D0A5D19290FCC0082D500 /* DZNPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A5C19290FCC0082D500 /* DZNPageViewController.m */; };
+		995D0A5F192911750082D500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995D0A5E192911750082D500 /* Main.storyboard */; };
+		995D0A65192913D90082D500 /* DZNPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A64192913D90082D500 /* DZNPageContentViewController.m */; };
+		995D0A681929184E0082D500 /* DZNDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A671929184E0082D500 /* DZNDaysViewController.m */; };
+		995D0A6C1929215F0082D500 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A6A1929215F0082D500 /* Reachability.m */; };
+		995D0A6F192921690082D500 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A6D192921690082D500 /* XMLReader.m */; };
+		995D0A721929219C0082D500 /* DZNRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 995D0A711929219C0082D500 /* DZNRefresh.m */; };
+		99C0643919292D0100784EEB /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C0643819292D0100784EEB /* smile.png */; };
+		99C0643B1929305100784EEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C0643A1929305100784EEB /* Images.xcassets */; };
+		99C0643F192BCD1500784EEB /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C0643E192BCD1500784EEB /* more.png */; };
+		99C06442192BCDDA00784EEB /* DZNSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C06441192BCDDA00784EEB /* DZNSettingsViewController.m */; };
+		99C06448192D071700784EEB /* DZNDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C06447192D071700784EEB /* DZNDetailViewController.m */; };
+		99C0644A192D0CBC00784EEB /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C06449192D0CBC00784EEB /* checkmark.png */; };
+		99C0644D192D0F4900784EEB /* DZNImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C0644C192D0F4900784EEB /* DZNImageViewController.m */; };
+		99F081041942483E00918B98 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DBD96319423D72007C090B /* NotificationCenter.framework */; };
+		99F0810F1942483E00918B98 /* com.DzinVision.GimVic.QuickVic.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 99F081031942483D00918B98 /* com.DzinVision.GimVic.QuickVic.appex */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		995D0A4619290EEF0082D500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995D0A1E19290EEF0082D500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 995D0A2519290EEF0082D500;
+			remoteInfo = GimVic;
+		};
+		99E66138194250BF00BDD086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995D0A1E19290EEF0082D500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 995D0A2519290EEF0082D500;
+			remoteInfo = GimVic;
+		};
+		99E6613A194250BF00BDD086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995D0A1E19290EEF0082D500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 995D0A2519290EEF0082D500;
+			remoteInfo = GimVic;
+		};
+		99F0810D1942483E00918B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995D0A1E19290EEF0082D500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99F081021942483D00918B98;
+			remoteInfo = QuickVic;
+		};
+		99F081101942483E00918B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995D0A1E19290EEF0082D500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99F081021942483D00918B98;
+			remoteInfo = QuickVic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99DBD97619423D72007C090B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				99F0810F1942483E00918B98 /* com.DzinVision.GimVic.QuickVic.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		995D0A2619290EEF0082D500 /* GimVic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GimVic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		995D0A2919290EEF0082D500 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		995D0A2B19290EEF0082D500 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		995D0A2D19290EEF0082D500 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		995D0A3119290EEF0082D500 /* GimVic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GimVic-Info.plist"; sourceTree = "<group>"; };
+		995D0A3319290EEF0082D500 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		995D0A3519290EEF0082D500 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		995D0A3719290EEF0082D500 /* GimVic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GimVic-Prefix.pch"; sourceTree = "<group>"; };
+		995D0A3819290EEF0082D500 /* DZNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZNAppDelegate.h; sourceTree = "<group>"; };
+		995D0A3919290EEF0082D500 /* DZNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZNAppDelegate.m; sourceTree = "<group>"; };
+		995D0A4119290EEF0082D500 /* GimVicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GimVicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		995D0A4219290EEF0082D500 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		995D0A4A19290EEF0082D500 /* GimVicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GimVicTests-Info.plist"; sourceTree = "<group>"; };
+		995D0A4C19290EEF0082D500 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		995D0A4E19290EEF0082D500 /* GimVicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GimVicTests.m; sourceTree = "<group>"; };
+		995D0A5B19290FCC0082D500 /* DZNPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DZNPageViewController.h; path = ../DZNPageViewController.h; sourceTree = "<group>"; };
+		995D0A5C19290FCC0082D500 /* DZNPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DZNPageViewController.m; path = ../DZNPageViewController.m; sourceTree = "<group>"; };
+		995D0A5E192911750082D500 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		995D0A63192913D90082D500 /* DZNPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNPageContentViewController.h; sourceTree = "<group>"; };
+		995D0A64192913D90082D500 /* DZNPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNPageContentViewController.m; sourceTree = "<group>"; };
+		995D0A661929184E0082D500 /* DZNDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNDaysViewController.h; sourceTree = "<group>"; };
+		995D0A671929184E0082D500 /* DZNDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNDaysViewController.m; sourceTree = "<group>"; };
+		995D0A6A1929215F0082D500 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		995D0A6B1929215F0082D500 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		995D0A6D192921690082D500 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		995D0A6E192921690082D500 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		995D0A701929219C0082D500 /* DZNRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNRefresh.h; sourceTree = "<group>"; };
+		995D0A711929219C0082D500 /* DZNRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNRefresh.m; sourceTree = "<group>"; };
+		99C0643819292D0100784EEB /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
+		99C0643A1929305100784EEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		99C0643E192BCD1500784EEB /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		99C06440192BCDDA00784EEB /* DZNSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNSettingsViewController.h; sourceTree = "<group>"; };
+		99C06441192BCDDA00784EEB /* DZNSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNSettingsViewController.m; sourceTree = "<group>"; };
+		99C06446192D071700784EEB /* DZNDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNDetailViewController.h; sourceTree = "<group>"; };
+		99C06447192D071700784EEB /* DZNDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNDetailViewController.m; sourceTree = "<group>"; };
+		99C06449192D0CBC00784EEB /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		99C0644B192D0F4900784EEB /* DZNImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNImageViewController.h; sourceTree = "<group>"; };
+		99C0644C192D0F4900784EEB /* DZNImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNImageViewController.m; sourceTree = "<group>"; };
+		99DBD96319423D72007C090B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		99F080E419423F8100918B98 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TodayViewController.h; path = ../Extension/TodayViewController.h; sourceTree = "<group>"; };
+		99F080E519423F8100918B98 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TodayViewController.m; path = ../Extension/TodayViewController.m; sourceTree = "<group>"; };
+		99F080E719423F8100918B98 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainInterface.storyboard; path = ../Extension/MainInterface.storyboard; sourceTree = "<group>"; };
+		99F081031942483D00918B98 /* com.DzinVision.GimVic.QuickVic.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = com.DzinVision.GimVic.QuickVic.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F081071942483E00918B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		995D0A2319290EEF0082D500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995D0A2C19290EEF0082D500 /* CoreGraphics.framework in Frameworks */,
+				995D0A2E19290EEF0082D500 /* UIKit.framework in Frameworks */,
+				995D0A2A19290EEF0082D500 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		995D0A3E19290EEF0082D500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995D0A4319290EEF0082D500 /* XCTest.framework in Frameworks */,
+				995D0A4519290EEF0082D500 /* UIKit.framework in Frameworks */,
+				995D0A4419290EEF0082D500 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F081001942483D00918B98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F081041942483E00918B98 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		995D0A1D19290EEF0082D500 = {
+			isa = PBXGroup;
+			children = (
+				995D0A2F19290EEF0082D500 /* GimVic */,
+				995D0A4819290EEF0082D500 /* GimVicTests */,
+				99F081051942483E00918B98 /* QuickVic */,
+				995D0A2819290EEF0082D500 /* Frameworks */,
+				995D0A2719290EEF0082D500 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		995D0A2719290EEF0082D500 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A2619290EEF0082D500 /* GimVic.app */,
+				995D0A4119290EEF0082D500 /* GimVicTests.xctest */,
+				99F081031942483D00918B98 /* com.DzinVision.GimVic.QuickVic.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		995D0A2819290EEF0082D500 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A2919290EEF0082D500 /* Foundation.framework */,
+				995D0A2B19290EEF0082D500 /* CoreGraphics.framework */,
+				995D0A2D19290EEF0082D500 /* UIKit.framework */,
+				995D0A4219290EEF0082D500 /* XCTest.framework */,
+				99DBD96319423D72007C090B /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		995D0A2F19290EEF0082D500 /* GimVic */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A5B19290FCC0082D500 /* DZNPageViewController.h */,
+				995D0A5C19290FCC0082D500 /* DZNPageViewController.m */,
+				995D0A63192913D90082D500 /* DZNPageContentViewController.h */,
+				995D0A64192913D90082D500 /* DZNPageContentViewController.m */,
+				995D0A661929184E0082D500 /* DZNDaysViewController.h */,
+				995D0A671929184E0082D500 /* DZNDaysViewController.m */,
+				99C06440192BCDDA00784EEB /* DZNSettingsViewController.h */,
+				99C06441192BCDDA00784EEB /* DZNSettingsViewController.m */,
+				99C06446192D071700784EEB /* DZNDetailViewController.h */,
+				99C06447192D071700784EEB /* DZNDetailViewController.m */,
+				99C0644B192D0F4900784EEB /* DZNImageViewController.h */,
+				99C0644C192D0F4900784EEB /* DZNImageViewController.m */,
+				995D0A3819290EEF0082D500 /* DZNAppDelegate.h */,
+				995D0A3919290EEF0082D500 /* DZNAppDelegate.m */,
+				995D0A701929219C0082D500 /* DZNRefresh.h */,
+				995D0A711929219C0082D500 /* DZNRefresh.m */,
+				995D0A5E192911750082D500 /* Main.storyboard */,
+				99C0643A1929305100784EEB /* Images.xcassets */,
+				99C0643719292CE200784EEB /* Images */,
+				995D0A691929213E0082D500 /* Libaryes */,
+				995D0A3019290EEF0082D500 /* Supporting Files */,
+			);
+			path = GimVic;
+			sourceTree = "<group>";
+		};
+		995D0A3019290EEF0082D500 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A3119290EEF0082D500 /* GimVic-Info.plist */,
+				995D0A3219290EEF0082D500 /* InfoPlist.strings */,
+				995D0A3519290EEF0082D500 /* main.m */,
+				995D0A3719290EEF0082D500 /* GimVic-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		995D0A4819290EEF0082D500 /* GimVicTests */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A4E19290EEF0082D500 /* GimVicTests.m */,
+				995D0A4919290EEF0082D500 /* Supporting Files */,
+			);
+			path = GimVicTests;
+			sourceTree = "<group>";
+		};
+		995D0A4919290EEF0082D500 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A4A19290EEF0082D500 /* GimVicTests-Info.plist */,
+				995D0A4B19290EEF0082D500 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		995D0A691929213E0082D500 /* Libaryes */ = {
+			isa = PBXGroup;
+			children = (
+				995D0A6D192921690082D500 /* XMLReader.m */,
+				995D0A6E192921690082D500 /* XMLReader.h */,
+				995D0A6A1929215F0082D500 /* Reachability.m */,
+				995D0A6B1929215F0082D500 /* Reachability.h */,
+			);
+			name = Libaryes;
+			sourceTree = "<group>";
+		};
+		99C0643719292CE200784EEB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				99C06449192D0CBC00784EEB /* checkmark.png */,
+				99C0643E192BCD1500784EEB /* more.png */,
+				99C0643819292D0100784EEB /* smile.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		99F081051942483E00918B98 /* QuickVic */ = {
+			isa = PBXGroup;
+			children = (
+				99F080E719423F8100918B98 /* MainInterface.storyboard */,
+				99F080E419423F8100918B98 /* TodayViewController.h */,
+				99F080E519423F8100918B98 /* TodayViewController.m */,
+				99F081061942483E00918B98 /* Supporting Files */,
+			);
+			path = QuickVic;
+			sourceTree = "<group>";
+		};
+		99F081061942483E00918B98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99F081071942483E00918B98 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		995D0A2519290EEF0082D500 /* GimVic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 995D0A5219290EEF0082D500 /* Build configuration list for PBXNativeTarget "GimVic" */;
+			buildPhases = (
+				995D0A2219290EEF0082D500 /* Sources */,
+				995D0A2319290EEF0082D500 /* Frameworks */,
+				995D0A2419290EEF0082D500 /* Resources */,
+				99DBD97619423D72007C090B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99F0810E1942483E00918B98 /* PBXTargetDependency */,
+				99F081111942483E00918B98 /* PBXTargetDependency */,
+			);
+			name = GimVic;
+			productName = GimVic;
+			productReference = 995D0A2619290EEF0082D500 /* GimVic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		995D0A4019290EEF0082D500 /* GimVicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 995D0A5519290EEF0082D500 /* Build configuration list for PBXNativeTarget "GimVicTests" */;
+			buildPhases = (
+				995D0A3D19290EEF0082D500 /* Sources */,
+				995D0A3E19290EEF0082D500 /* Frameworks */,
+				995D0A3F19290EEF0082D500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				995D0A4719290EEF0082D500 /* PBXTargetDependency */,
+				99E66139194250BF00BDD086 /* PBXTargetDependency */,
+				99E6613B194250BF00BDD086 /* PBXTargetDependency */,
+			);
+			name = GimVicTests;
+			productName = GimVicTests;
+			productReference = 995D0A4119290EEF0082D500 /* GimVicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99F081021942483D00918B98 /* QuickVic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F081121942483E00918B98 /* Build configuration list for PBXNativeTarget "QuickVic" */;
+			buildPhases = (
+				99F080FF1942483D00918B98 /* Sources */,
+				99F081001942483D00918B98 /* Frameworks */,
+				99F081011942483D00918B98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickVic;
+			productName = QuickVic;
+			productReference = 99F081031942483D00918B98 /* com.DzinVision.GimVic.QuickVic.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		995D0A1E19290EEF0082D500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DZN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Vid Drobnic";
+				TargetAttributes = {
+					995D0A2519290EEF0082D500 = {
+						DevelopmentTeam = 8S5A9B58D2;
+					};
+					995D0A4019290EEF0082D500 = {
+						TestTargetID = 995D0A2519290EEF0082D500;
+					};
+					99F081021942483D00918B98 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 8S5A9B58D2;
+					};
+				};
+			};
+			buildConfigurationList = 995D0A2119290EEF0082D500 /* Build configuration list for PBXProject "GimVic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 995D0A1D19290EEF0082D500;
+			productRefGroup = 995D0A2719290EEF0082D500 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				995D0A2519290EEF0082D500 /* GimVic */,
+				995D0A4019290EEF0082D500 /* GimVicTests */,
+				99F081021942483D00918B98 /* QuickVic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		995D0A2419290EEF0082D500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C0643F192BCD1500784EEB /* more.png in Resources */,
+				995D0A5F192911750082D500 /* Main.storyboard in Resources */,
+				99C0643B1929305100784EEB /* Images.xcassets in Resources */,
+				995D0A3419290EEF0082D500 /* InfoPlist.strings in Resources */,
+				99C0643919292D0100784EEB /* smile.png in Resources */,
+				99C0644A192D0CBC00784EEB /* checkmark.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		995D0A3F19290EEF0082D500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995D0A4D19290EEF0082D500 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F081011942483D00918B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		995D0A2219290EEF0082D500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C06448192D071700784EEB /* DZNDetailViewController.m in Sources */,
+				99C06442192BCDDA00784EEB /* DZNSettingsViewController.m in Sources */,
+				995D0A65192913D90082D500 /* DZNPageContentViewController.m in Sources */,
+				995D0A3619290EEF0082D500 /* main.m in Sources */,
+				99C0644D192D0F4900784EEB /* DZNImageViewController.m in Sources */,
+				995D0A721929219C0082D500 /* DZNRefresh.m in Sources */,
+				995D0A5D19290FCC0082D500 /* DZNPageViewController.m in Sources */,
+				995D0A681929184E0082D500 /* DZNDaysViewController.m in Sources */,
+				995D0A6C1929215F0082D500 /* Reachability.m in Sources */,
+				995D0A3A19290EEF0082D500 /* DZNAppDelegate.m in Sources */,
+				995D0A6F192921690082D500 /* XMLReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		995D0A3D19290EEF0082D500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995D0A4F19290EEF0082D500 /* GimVicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F080FF1942483D00918B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		995D0A4719290EEF0082D500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 995D0A2519290EEF0082D500 /* GimVic */;
+			targetProxy = 995D0A4619290EEF0082D500 /* PBXContainerItemProxy */;
+		};
+		99E66139194250BF00BDD086 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 995D0A2519290EEF0082D500 /* GimVic */;
+			targetProxy = 99E66138194250BF00BDD086 /* PBXContainerItemProxy */;
+		};
+		99E6613B194250BF00BDD086 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 995D0A2519290EEF0082D500 /* GimVic */;
+			targetProxy = 99E6613A194250BF00BDD086 /* PBXContainerItemProxy */;
+		};
+		99F0810E1942483E00918B98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99F081021942483D00918B98 /* QuickVic */;
+			targetProxy = 99F0810D1942483E00918B98 /* PBXContainerItemProxy */;
+		};
+		99F081111942483E00918B98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99F081021942483D00918B98 /* QuickVic */;
+			targetProxy = 99F081101942483E00918B98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		995D0A3219290EEF0082D500 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				995D0A3319290EEF0082D500 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		995D0A4B19290EEF0082D500 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				995D0A4C19290EEF0082D500 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		995D0A5019290EEF0082D500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		995D0A5119290EEF0082D500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE = "8F71C1F0-B09E-4903-96A0-D88C68278C99";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		995D0A5319290EEF0082D500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimVic/GimVic-Prefix.pch";
+				INFOPLIST_FILE = "GimVic/GimVic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		995D0A5419290EEF0082D500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimVic/GimVic-Prefix.pch";
+				INFOPLIST_FILE = "GimVic/GimVic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8F71C1F0-B09E-4903-96A0-D88C68278C99";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		995D0A5619290EEF0082D500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GimVic.app/GimVic";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimVic/GimVic-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GimVicTests/GimVicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		995D0A5719290EEF0082D500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GimVic.app/GimVic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimVic/GimVic-Prefix.pch";
+				INFOPLIST_FILE = "GimVicTests/GimVicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		99AC3487192FCE23001B5706 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE = "8F71C1F0-B09E-4903-96A0-D88C68278C99";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		99AC3488192FCE23001B5706 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimVic/GimVic-Prefix.pch";
+				INFOPLIST_FILE = "GimVic/GimVic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8F71C1F0-B09E-4903-96A0-D88C68278C99";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		99AC3489192FCE23001B5706 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GimVic.app/GimVic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimVic/GimVic-Prefix.pch";
+				INFOPLIST_FILE = "GimVicTests/GimVicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Distribution;
+		};
+		99F081131942483E00918B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QuickVic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "com.DzinVision.GimVic.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		99F081141942483E00918B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = QuickVic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "com.DzinVision.GimVic.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+		99F081151942483E00918B98 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gimnazija Vic (8S5A9B58D2)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = QuickVic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "com.DzinVision.GimVic.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = NO;
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		995D0A2119290EEF0082D500 /* Build configuration list for PBXProject "GimVic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995D0A5019290EEF0082D500 /* Debug */,
+				995D0A5119290EEF0082D500 /* Release */,
+				99AC3487192FCE23001B5706 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		995D0A5219290EEF0082D500 /* Build configuration list for PBXNativeTarget "GimVic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995D0A5319290EEF0082D500 /* Debug */,
+				995D0A5419290EEF0082D500 /* Release */,
+				99AC3488192FCE23001B5706 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		995D0A5519290EEF0082D500 /* Build configuration list for PBXNativeTarget "GimVicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995D0A5619290EEF0082D500 /* Debug */,
+				995D0A5719290EEF0082D500 /* Release */,
+				99AC3489192FCE23001B5706 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F081121942483E00918B98 /* Build configuration list for PBXNativeTarget "QuickVic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F081131942483E00918B98 /* Debug */,
+				99F081141942483E00918B98 /* Release */,
+				99F081151942483E00918B98 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 995D0A1E19290EEF0082D500 /* Project object */;
+}
