@@ -1,7 +1,7 @@
 GimVic-iOS
 ==========
 
-GimVic application for iOS 7 or higher. The app is now outdated. Newer app can be found on the app store, however it's closed sourced because of privacy issues.
+GimVic application for iOS 8 or higher. Applicaiton provides timetable, substitutes and canteen menu for Gimnazija Vič.
 
 Copyright and licence
 =====================
