@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="733-ft-QCB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hybrid.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zlh-JL-BT4">
+                    <rect key="frame" x="0.0" y="20" width="600" height="469"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8k-Z7-KfI">
+                    <rect key="frame" x="153" y="499" width="294" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="u4v-bz-Wud"/>
+                    </constraints>
+                    <string key="text">V pogledu "hibrid" ti aplikacija prikaže urnik
+s spremembami iz nadomeščanj. Spremembe
+ so označene z zeleno barvo celice.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.78431372549019607" green="0.90196078431372551" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zlh-JL-BT4" firstAttribute="leading" secondItem="733-ft-QCB" secondAttribute="leading" id="EFf-sf-Bj8"/>
+                <constraint firstAttribute="centerX" secondItem="O8k-Z7-KfI" secondAttribute="centerX" id="FIR-tH-Scq"/>
+                <constraint firstItem="O8k-Z7-KfI" firstAttribute="top" secondItem="Zlh-JL-BT4" secondAttribute="bottom" constant="10" id="NkV-uX-Uon"/>
+                <constraint firstAttribute="bottom" secondItem="O8k-Z7-KfI" secondAttribute="bottom" constant="50" id="ZdT-Xk-Eq9"/>
+                <constraint firstItem="Zlh-JL-BT4" firstAttribute="top" secondItem="733-ft-QCB" secondAttribute="top" constant="20" id="rUh-7z-xqZ"/>
+                <constraint firstAttribute="trailing" secondItem="Zlh-JL-BT4" secondAttribute="trailing" id="yjL-wy-1PF"/>
+            </constraints>
+            <point key="canvasLocation" x="296" y="388"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hybrid.png" width="781" height="1500"/>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "995D0A2519290EEF0082D500"
+               BlueprintIdentifier = "9922F62119C4741A000E71E6"
                BuildableName = "GimVic.app"
                BlueprintName = "GimVic"
                ReferencedContainer = "container:GimVic.xcodeproj">
@@ -23,12 +23,12 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "995D0A4019290EEF0082D500"
+               BlueprintIdentifier = "9922F63A19C4741A000E71E6"
                BuildableName = "GimVicTests.xctest"
                BlueprintName = "GimVicTests"
                ReferencedContainer = "container:GimVic.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "995D0A4019290EEF0082D500"
+               BlueprintIdentifier = "9922F63A19C4741A000E71E6"
                BuildableName = "GimVicTests.xctest"
                BlueprintName = "GimVicTests"
                ReferencedContainer = "container:GimVic.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "995D0A2519290EEF0082D500"
+            BlueprintIdentifier = "9922F62119C4741A000E71E6"
             BuildableName = "GimVic.app"
             BlueprintName = "GimVic"
             ReferencedContainer = "container:GimVic.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "995D0A2519290EEF0082D500"
+            BlueprintIdentifier = "9922F62119C4741A000E71E6"
             BuildableName = "GimVic.app"
             BlueprintName = "GimVic"
             ReferencedContainer = "container:GimVic.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "995D0A2519290EEF0082D500"
+            BlueprintIdentifier = "9922F62119C4741A000E71E6"
             BuildableName = "GimVic.app"
             BlueprintName = "GimVic"
             ReferencedContainer = "container:GimVic.xcodeproj">

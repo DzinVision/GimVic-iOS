@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weekend.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Va-Z1-Uqp">
+                    <rect key="frame" x="160" y="160" width="280" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="8fa-uX-OZF"/>
+                        <constraint firstAttribute="height" constant="280" id="TeM-yV-tri"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="7Va-Z1-Uqp" secondAttribute="centerY" id="afl-IU-pl5"/>
+                <constraint firstAttribute="centerX" secondItem="7Va-Z1-Uqp" secondAttribute="centerX" id="cze-fn-Pqr"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Weekend.png" width="718" height="718"/>
+    </resources>
+</document>
