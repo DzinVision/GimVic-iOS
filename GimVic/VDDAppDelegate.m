@@ -155,7 +155,7 @@
     
     long numberOfDays = endDay - startDay;
     
-    if (numberOfDays == 0)
+    if (numberOfDays <= 0)
         return;
     
     if ([VDDUrnikDataFetch sharedUrnikDataFetch].isRefreshing == NO)
@@ -180,7 +180,7 @@
                                                          forDate:[NSDate date]];
     long numberOfDays = endDay - startDay;
     
-    if (numberOfDays == 0)
+    if (numberOfDays <= 0)
         return;
     
     if ([VDDJedilnikDataFetch sharedJedilnikDataFetch].isRefreshing == NO)

@@ -6,31 +6,35 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DA4412C7-2E92-4C7A-B92E-4EEAB0C8D03B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GimVic</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C639EFDC44A67C633BAB2025A60FA5BE84AF1661</key>
-		<string>https://github.com/DzinVision/VDDHorizontalPicker.git</string>
+		<key>C89205E9E3763B849CEA9D2C2971909C555F869B</key>
+		<string>https://github.com/DzinVision/GimVic-iOS.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GimVic.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C639EFDC44A67C633BAB2025A60FA5BE84AF1661</key>
-		<string>VDDHorizontalPicker/</string>
+		<key>C89205E9E3763B849CEA9D2C2971909C555F869B</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/DzinVision/VDDHorizontalPicker.git</string>
+	<string>https://github.com/DzinVision/GimVic-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C639EFDC44A67C633BAB2025A60FA5BE84AF1661</string>
+	<string>C89205E9E3763B849CEA9D2C2971909C555F869B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C639EFDC44A67C633BAB2025A60FA5BE84AF1661</string>
+			<string>C89205E9E3763B849CEA9D2C2971909C555F869B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>VDDHorizontalPicker</string>
+			<string>GimVic%20iOS</string>
 		</dict>
 	</array>
 </dict>
