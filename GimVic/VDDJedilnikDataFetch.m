@@ -129,10 +129,10 @@
                                                                error:nil];
     
     
-    NSDictionary *kosiloInfoData = [infoData objectForKey:@"kosilo"];
-    NSDictionary *malicaInfoData = [infoData objectForKey:@"malica"];
+    NSDictionary *kosiloInfoData = infoData[@"kosilo"];
+    NSDictionary *malicaInfoData = infoData[@"malica"];
     
-    if ((![[infoData objectForKey:@"kosilo"] isKindOfClass:[NSDictionary class]]) || (![[infoData objectForKey:@"malica"] isKindOfClass:[NSDictionary class]])) {
+    if ((![infoData[@"kosilo"] isKindOfClass:[NSDictionary class]]) || (![infoData[@"malica"] isKindOfClass:[NSDictionary class]])) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsPath = (paths.count > 0) ? paths[0] : nil;
         
@@ -150,19 +150,19 @@
     }
     
     
-    NSString *kosiloFileName = [kosiloInfoData objectForKey:@"filename"];
-    NSString *malicaFileName = [malicaInfoData objectForKey:@"filename"];
+    NSString *kosiloFileName = kosiloInfoData[@"filename"];
+    NSString *malicaFileName = malicaInfoData[@"filename"];
     
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd";
     dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
     
-    NSDate *malicaFromDate = [dateFormatter dateFromString:[malicaInfoData objectForKey:@"fromdate"]];
-    NSDate *malicaToDate = [dateFormatter dateFromString:[malicaInfoData objectForKey:@"todate"]];
+    NSDate *malicaFromDate = [dateFormatter dateFromString:malicaInfoData[@"fromdate"]];
+    NSDate *malicaToDate = [dateFormatter dateFromString:malicaInfoData[@"todate"]];
     
-    NSDate *kosiloFromDate = [dateFormatter dateFromString:[kosiloInfoData objectForKey:@"fromdate"]];
-    NSDate *kosiloToDate = [dateFormatter dateFromString:[kosiloInfoData objectForKey:@"todate"]];
+    NSDate *kosiloFromDate = [dateFormatter dateFromString:kosiloInfoData[@"fromdate"]];
+    NSDate *kosiloToDate = [dateFormatter dateFromString:kosiloInfoData[@"todate"]];
     
     
     [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"malicaFromDate" toObject:malicaFromDate];

@@ -37,22 +37,19 @@
 
 - (void)setData {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
     
     
     if (currentRubric == 0) {
-        NSMutableArray *profesorji = [[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]]
-                                      objectForKey:@"ucitelji"];
+        NSMutableArray *profesorji = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]][@"ucitelji"];
         data = [[profesorji sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] mutableCopy];
         return;
     }
     
     if (currentRubric == 1) {
-        NSMutableArray *razredi = [[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]]
-                                   objectForKey:@"razredi"];
+        NSMutableArray *razredi = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]][@"razredi"];
 
-        NSDictionary *podRazredi = [[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]]
-                                      objectForKey:@"podRazredi"];
+        NSDictionary *podRazredi = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]][@"podRazredi"];
         
         NSArray *podRazredi3 = [podRazredi valueForKey:@"3"];
         NSArray *podRazredi4 = [podRazredi valueForKey:@"4"];
@@ -68,8 +65,7 @@
     }
     
     if (currentRubric == 2) {
-        NSMutableArray *ucilnice = [[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]]
-                                    objectForKey:@"ucilnice"];
+        NSMutableArray *ucilnice = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]][@"ucilnice"];
         data = [[ucilnice sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] mutableCopy];
     }
 }

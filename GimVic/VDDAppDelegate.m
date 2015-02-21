@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
     
     NSString *metaDataPath = [NSString stringWithFormat:@"%@/metaData", documentsPath];
     NSData *metaDataData = [NSData dataWithContentsOfFile:metaDataPath];
@@ -41,11 +41,11 @@
         
         NSDictionary *data = @{@"filter": @"",
                                @"podFilter": @[],
-                               @"numberOfChangesLeft": [NSNumber numberWithInt:3],
-                               @"uciteljskiNacin": [NSNumber numberWithBool:NO],
+                               @"numberOfChangesLeft": @3,
+                               @"uciteljskiNacin": @NO,
                                @"lastUpdatedSuplence": [NSNull null],
                                @"lastUpdatedUrnik": [NSNull null],
-                               @"showedView": [NSNumber numberWithInt:VDDSetupView],
+                               @"showedView": @(VDDSetupView),
                                @"lastUpdatedJedilnik": [NSNull null],
                                @"malicaFromDate": [NSNull null],
                                @"malicaToDate": [NSNull null],
@@ -240,13 +240,13 @@
         
         if ([today timeIntervalSinceDate:firstSeptember] >= 0) {
             [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"lastAddedChanges" toObject:[NSDate date]];
-            [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"numberOfChangesLeft" toObject:[NSNumber numberWithInt:3]];
+            [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"numberOfChangesLeft" toObject:@3];
             return;
         }
     } else {
         if ([today timeIntervalSinceDate:firstSeptember] >= 0) {
             [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"lastAddedChanges" toObject:[NSDate date]];
-            [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"numberOfChangesLeft" toObject:[NSNumber numberWithInt:3]];
+            [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"numberOfChangesLeft" toObject:@3];
             return;
         }
     }

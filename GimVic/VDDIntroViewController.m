@@ -58,7 +58,7 @@
     
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
     NSMutableDictionary *urnikData = [[NSMutableDictionary alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]];
     
     if (![VDDReachability checkInternetConnection]) {

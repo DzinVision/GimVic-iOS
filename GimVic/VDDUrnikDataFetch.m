@@ -125,9 +125,9 @@
                     if (![localUcilnice containsObject:localUcilnica])
                         [localUcilnice addObject:localUcilnica];
                     
-                    [podatki[j] setObject:localProfesorji forKey:@"profesorji"];
-                    [podatki[j] setObject:localPredmeti forKey:@"predmeti"];
-                    [podatki[j] setObject:localUcilnice forKey:@"ucilnice"];
+                    (podatki[j])[@"profesorji"] = localProfesorji;
+                    (podatki[j])[@"predmeti"] = localPredmeti;
+                    (podatki[j])[@"ucilnice"] = localUcilnice;
                 }
             }
             
@@ -175,7 +175,7 @@
                                      @"ucilnice": ucilnice};
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
     
     [rootDictionary writeToFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath] atomically:YES];
 }
@@ -221,7 +221,7 @@
 - (void)filter {
     _isRefreshing = YES;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
     
     NSString *filter = (NSString *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"filter"];
     if (filter == nil || [filter isEqualToString:@""]) {
@@ -246,7 +246,7 @@
     
     NSMutableArray *filteredPodatki = [[NSMutableArray alloc] init];
 
-    NSArray *podatki = [data objectForKey:@"podatki"];
+    NSArray *podatki = data[@"podatki"];
     for (int i = 0; i < podatki.count; i++) {
         NSDictionary *element = podatki[i];
         
@@ -340,7 +340,7 @@
     }
     
     
-    [data setObject:filteredPodatki forKey:@"podatki"];
+    data[@"podatki"] = filteredPodatki;
     [data writeToFile:[NSString stringWithFormat:@"%@/filteredPodatki", documentsPath] atomically:YES];
     
     NSMutableArray *filteredUrnik1 = [[NSMutableArray alloc] init];
@@ -349,8 +349,8 @@
     NSMutableArray *filteredUrnik4 = [[NSMutableArray alloc] init];
     NSMutableArray *filteredUrnik5 = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *element in [data objectForKey:@"podatki"]) {
-        int dan = [[element objectForKey:@"dan"] intValue];
+    for (NSDictionary *element in data[@"podatki"]) {
+        int dan = [element[@"dan"] intValue];
         if (dan == 1)
             [filteredUrnik1 addObject:element];
         

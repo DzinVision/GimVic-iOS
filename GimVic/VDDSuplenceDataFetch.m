@@ -93,7 +93,7 @@
                                                   error:nil];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
 
     
     NSDictionary *json0 = [NSJSONSerialization JSONObjectWithData:[data0 dataUsingEncoding:NSUTF8StringEncoding]
@@ -140,7 +140,7 @@
     _isRefreshing = YES;
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
   
     NSString *filter = (NSString *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"filter"];
     if (filter == nil)
@@ -234,7 +234,7 @@
     for (NSString *key in rootDictionaryKeys) {
         NSArray *item = [dict valueForKey:key];
         if (item.count == 0) {
-            [resultDictionary setObject:item forKey:key];
+            resultDictionary[key] = item;
             continue;
         }
         NSMutableArray *resultArray = [[NSMutableArray alloc] init];
@@ -286,7 +286,7 @@
                 }
             }
             
-            [resultDictionary setObject:resultArray forKey:key];
+            resultDictionary[key] = resultArray;
         }
     }
     

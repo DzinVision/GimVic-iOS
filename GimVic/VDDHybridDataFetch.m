@@ -58,35 +58,35 @@
             }
             
             
-            NSArray *menjavaPredmeta = [suplenceData objectForKey:@"menjavaPredmeta"];
+            NSArray *menjavaPredmeta = suplenceData[@"menjavaPredmeta"];
             if (menjavaPredmeta.count > 0) {
                 for (int i = 0; i < menjavaPredmeta.count; i++) {
                     NSDictionary *suplenceElement = menjavaPredmeta[i];
                     for (int j = 0; j < urnikData.count; j++) {
                         NSMutableDictionary *urnikElement = urnikData[j];
-                        if ([[urnikElement objectForKey:@"ura"] isEqualToString:[suplenceElement objectForKey:@"ura"]]) {
-                            NSMutableArray *predmeti = [urnikElement objectForKey:@"predmeti"];
-                            int index = (int)[predmeti indexOfObject:[suplenceElement objectForKey:@"originalPredmet"]];
-                            predmeti[index] = [suplenceElement objectForKey:@"newPredmet"];
-                            [urnikElement setObject:predmeti forKey:@"predmeti"];
+                        if ([urnikElement[@"ura"] isEqualToString:suplenceElement[@"ura"]]) {
+                            NSMutableArray *predmeti = urnikElement[@"predmeti"];
+                            int index = (int)[predmeti indexOfObject:suplenceElement[@"originalPredmet"]];
+                            predmeti[index] = suplenceElement[@"newPredmet"];
+                            urnikElement[@"predmeti"] = predmeti;
                             urnikData[j] = urnikElement;
-                            [urnikData[j] setObject:[NSNumber numberWithBool:YES] forKey:@"spremenjeno"];
-                            [urnikData[j] setObject:[suplenceElement objectForKey:@"opomba"] forKey:@"opomba"];
+                            (urnikData[j])[@"spremenjeno"] = @YES;
+                            (urnikData[j])[@"opomba"] = suplenceElement[@"opomba"];
                         }
                     }
                 }
             }
             
             
-            NSArray *menjavaUcilnic = [suplenceData objectForKey:@"menjavaUcilnic"];
+            NSArray *menjavaUcilnic = suplenceData[@"menjavaUcilnic"];
             if (menjavaUcilnic.count > 0) {
                 for (int i = 0; i < menjavaUcilnic.count; i++) {
                     NSDictionary *suplenceElement = menjavaUcilnic[i];
                     for (int j = 0; j < urnikData.count; j++) {
                         NSMutableDictionary *urnikElement = urnikData[j];
-                        if ([[urnikElement objectForKey:@"ura"] isEqualToString:[suplenceElement objectForKey:@"ura"]]) {
-                            NSMutableArray *ucilnice = [urnikElement objectForKey:@"ucilnice"];
-                            NSString *suplenceUcilniceString = [suplenceElement objectForKey:@"ucilnicaFrom"];
+                        if ([urnikElement[@"ura"] isEqualToString:suplenceElement[@"ura"]]) {
+                            NSMutableArray *ucilnice = urnikElement[@"ucilnice"];
+                            NSString *suplenceUcilniceString = suplenceElement[@"ucilnicaFrom"];
                             NSArray *suplenceUcilnice = [[NSArray alloc] init];
                             if ([suplenceUcilniceString containsString:@","]) {
                                 suplenceUcilnice = [[suplenceUcilniceString stringByReplacingOccurrencesOfString:@" " withString:@""] componentsSeparatedByString:@","];
@@ -101,112 +101,112 @@
                             if (contains) {
                                 for (int a = 0 ; a < suplenceUcilnice.count; a++) {
                                     int index = (int)[ucilnice indexOfObject:suplenceUcilnice[a]];
-                                    ucilnice[index] = [suplenceElement objectForKey:@"ucilnicaTo"];
+                                    ucilnice[index] = suplenceElement[@"ucilnicaTo"];
                                 }
                             } else ucilnice = [suplenceUcilnice mutableCopy];
-                            [urnikElement setObject:ucilnice forKey:@"ucilnice"];
+                            urnikElement[@"ucilnice"] = ucilnice;
                             urnikData[j] = urnikElement;
-                            [urnikData[j] setObject:[NSNumber numberWithBool:YES] forKey:@"spremenjeno"];
-                            [urnikData[j] setObject:[suplenceElement objectForKey:@"opomba"] forKey:@"opomba"];
+                            (urnikData[j])[@"spremenjeno"] = @YES;
+                            (urnikData[j])[@"opomba"] = suplenceElement[@"opomba"];
                         }
                     }
                 }
             }
             
-            NSArray *menjavaUr = [suplenceData objectForKey:@"menjavaUr"];
+            NSArray *menjavaUr = suplenceData[@"menjavaUr"];
             if (menjavaUr.count > 0) {
                 for (int i = 0; i < menjavaUr.count; i++) {
                     NSDictionary *suplenceElement = menjavaUr[i];
                     for (int j = 0; j < urnikData.count; j++) {
                         NSMutableDictionary *urnikElement = urnikData[j];
-                        if ([[urnikElement objectForKey:@"ura"] isEqualToString:[suplenceElement objectForKey:@"ura"]]) {
-                            NSMutableArray *predmeti = [urnikElement objectForKey:@"predmeti"];
-                            int index = (int)[predmeti indexOfObject:[suplenceElement objectForKey:@"predmetFrom"]];
+                        if ([urnikElement[@"ura"] isEqualToString:suplenceElement[@"ura"]]) {
+                            NSMutableArray *predmeti = urnikElement[@"predmeti"];
+                            int index = (int)[predmeti indexOfObject:suplenceElement[@"predmetFrom"]];
                             NSLog(@"%@", predmeti);
                             NSLog(@"%@", suplenceElement);
-                            predmeti[index] = [suplenceElement objectForKey:@"predmetTo"];
-                            [urnikElement setObject:predmeti forKey:@"predmeti"];
+                            predmeti[index] = suplenceElement[@"predmetTo"];
+                            urnikElement[@"predmeti"] = predmeti;
                             
-                            NSMutableArray *profesorji = [urnikElement objectForKey:@"profesorji"];
-                            index = [self indexOfProfesorNameFromSuplence:[suplenceElement objectForKey:@"uciteljFrom"] inUrnik:profesorji];
+                            NSMutableArray *profesorji = urnikElement[@"profesorji"];
+                            index = [self indexOfProfesorNameFromSuplence:suplenceElement[@"uciteljFrom"] inUrnik:profesorji];
                             if (index > -1)
-                                profesorji[index] = [suplenceElement objectForKey:@"uciteljTo"];
+                                profesorji[index] = suplenceElement[@"uciteljTo"];
                             else
-                                [profesorji addObject:[suplenceElement objectForKey:@"uciteljTo"]];
-                            [urnikElement setObject:profesorji forKey:@"profesorji"];
+                                [profesorji addObject:suplenceElement[@"uciteljTo"]];
+                            urnikElement[@"profesorji"] = profesorji;
                             urnikData[j] = urnikElement;
-                            [urnikData[j] setObject:[NSNumber numberWithBool:YES] forKey:@"spremenjeno"];
-                            [urnikData[j] setObject:[suplenceElement objectForKey:@"opomba"] forKey:@"opomba"];
+                            (urnikData[j])[@"spremenjeno"] = @YES;
+                            (urnikData[j])[@"opomba"] = suplenceElement[@"opomba"];
                         }
                     }
                 }
             }
             
-            NSArray *nadomescanja = [suplenceData objectForKey:@"nadomescanja"];
+            NSArray *nadomescanja = suplenceData[@"nadomescanja"];
             if (nadomescanja.count > 0) {
                 for (int i = 0; i < nadomescanja.count; i++) {
                     NSDictionary *suplenceElement = nadomescanja[i];
                     for (int j = 0; j < urnikData.count; j++) {
                         NSMutableDictionary *urnikElement = urnikData[j];
-                        if ([[urnikElement objectForKey:@"ura"] isEqualToString:[suplenceElement objectForKey:@"ura"]]) {
-                            NSMutableArray *profesorji = [urnikElement objectForKey:@"profesorji"];
-                            NSMutableArray *predmeti = [urnikElement objectForKey:@"predmeti"];
-                            NSMutableArray *ucilnice = [urnikElement objectForKey:@"ucilnice"];
-                            int index = [self indexOfProfesorNameFromSuplence:[suplenceElement objectForKey:@"odsoten"] inUrnik:profesorji];
+                        if ([urnikElement[@"ura"] isEqualToString:suplenceElement[@"ura"]]) {
+                            NSMutableArray *profesorji = urnikElement[@"profesorji"];
+                            NSMutableArray *predmeti = urnikElement[@"predmeti"];
+                            NSMutableArray *ucilnice = urnikElement[@"ucilnice"];
+                            int index = [self indexOfProfesorNameFromSuplence:suplenceElement[@"odsoten"] inUrnik:profesorji];
                             if (index > -1) {
                                 if (profesorji.count > index)
-                                    profesorji[index] = [suplenceElement objectForKey:@"nadomesca"];
+                                    profesorji[index] = suplenceElement[@"nadomesca"];
                                 else
-                                    [profesorji addObject:[suplenceElement objectForKey:@"nadomesca"]];
+                                    [profesorji addObject:suplenceElement[@"nadomesca"]];
                                 
                                 if (predmeti.count > index)
-                                    predmeti[index] = [suplenceElement objectForKey:@"predmet"];
+                                    predmeti[index] = suplenceElement[@"predmet"];
                                 else
-                                    [predmeti addObject:[suplenceElement objectForKey:@"predmet"]];
+                                    [predmeti addObject:suplenceElement[@"predmet"]];
                                 
                                 if (ucilnice.count > index)
-                                    ucilnice[index] = [suplenceElement objectForKey:@"ucilnica"];
+                                    ucilnice[index] = suplenceElement[@"ucilnica"];
                                 else
-                                    [ucilnice addObject:[suplenceElement objectForKey:@"ucilnica"]];
+                                    [ucilnice addObject:suplenceElement[@"ucilnica"]];
                             } else {
-                                [profesorji addObject:[suplenceElement objectForKey:@"nadomesca"]];
-                                [predmeti addObject:[suplenceElement objectForKey:@"predmet"]];
-                                [ucilnice addObject:[suplenceElement objectForKey:@"ucilnica"]];
+                                [profesorji addObject:suplenceElement[@"nadomesca"]];
+                                [predmeti addObject:suplenceElement[@"predmet"]];
+                                [ucilnice addObject:suplenceElement[@"ucilnica"]];
                             }
-                            [urnikElement setObject:profesorji forKey:@"profesorji"];
-                            [urnikElement setObject:predmeti forKey:@"predmeti"];
-                            [urnikElement setObject:ucilnice forKey:@"ucilnice"];
+                            urnikElement[@"profesorji"] = profesorji;
+                            urnikElement[@"predmeti"] = predmeti;
+                            urnikElement[@"ucilnice"] = ucilnice;
                             urnikData[j] = urnikElement;
-                            [urnikData[j] setObject:[NSNumber numberWithBool:YES] forKey:@"spremenjeno"];
-                            [urnikData[j] setObject:[suplenceElement objectForKey:@"opomba"] forKey:@"opomba"];
+                            (urnikData[j])[@"spremenjeno"] = @YES;
+                            (urnikData[j])[@"opomba"] = suplenceElement[@"opomba"];
                         }
                     }
                 }
             }
             
-            NSArray *vecUciteljevVRazredu = [suplenceData objectForKey:@"vecUciteljevVRazredu"];
+            NSArray *vecUciteljevVRazredu = suplenceData[@"vecUciteljevVRazredu"];
             if (vecUciteljevVRazredu.count > 0) {
                 for (int i = 0; i < vecUciteljevVRazredu.count; i++) {
                     NSDictionary *suplenceElement = vecUciteljevVRazredu[i];
                     for (int j = 0; j < urnikData.count; j++) {
                         NSMutableDictionary *urnikElement = urnikData[j];
-                        if ([[urnikElement objectForKey:@"ura"] isEqualToString:[suplenceElement objectForKey:@"ura"]]) {
-                            NSMutableArray *profesorji = [urnikElement objectForKey:@"profesorji"];
-                            [profesorji addObject:[suplenceElement objectForKey:@"ucitelj"]];
-                            [urnikElement setObject:profesorji forKey:@"profesorji"];
+                        if ([urnikElement[@"ura"] isEqualToString:suplenceElement[@"ura"]]) {
+                            NSMutableArray *profesorji = urnikElement[@"profesorji"];
+                            [profesorji addObject:suplenceElement[@"ucitelj"]];
+                            urnikElement[@"profesorji"] = profesorji;
                             urnikData[j] = urnikElement;
-                            [urnikData[j] setObject:[NSNumber numberWithBool:YES] forKey:@"spremenjeno"];
-                            [urnikData[j] setObject:[suplenceElement objectForKey:@"opomba"] forKey:@"opomba"];
+                            (urnikData[j])[@"spremenjeno"] = @YES;
+                            (urnikData[j])[@"opomba"] = suplenceElement[@"opomba"];
                         }
                     }
                 }
             }
             
             for (int i = 0; i < urnikData.count; i++) {
-                NSNumber *boolean = [urnikData[i] objectForKey:@"spremenjeno"];
+                NSNumber *boolean = (urnikData[i])[@"spremenjeno"];
                 if (!boolean) {
-                    [urnikData[i] setObject:[NSNumber numberWithBool:NO] forKey:@"spremenjeno"];
-                    [urnikData[i] setObject:@"" forKey:@"opomba"];
+                    (urnikData[i])[@"spremenjeno"] = @NO;
+                    (urnikData[i])[@"opomba"] = @"";
                 }
             }
             

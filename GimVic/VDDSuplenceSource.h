@@ -10,7 +10,7 @@
 
 @interface VDDSuplenceSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-- (instancetype)initWithIndex:(int)index data:(NSDictionary *)data numberOfSections:(int)numberOfSections;
+- (instancetype)initWithIndex:(int)index data:(NSDictionary *)data numberOfSections:(int)numberOfSections NS_DESIGNATED_INITIALIZER;
 - (void)reloadData:(NSDictionary *)newData;
 
 @end

@@ -62,7 +62,7 @@
 - (IBAction)uciteljModeChanged:(id)sender {
     if (isUcitelj) {
         isUcitelj = NO;
-        [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin" toObject:[NSNumber numberWithBool:NO]];
+        [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin" toObject:@NO];
         [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"filter" toObject:@""];
         return;
     }
@@ -83,7 +83,7 @@
                                                 if ([password isEqualToString:[VDDRootViewController sharedRootViewController].profPassword]) {
                                                     isUcitelj = YES;
                                                     [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin"
-                                                                                                       toObject:[NSNumber numberWithBool:YES]];
+                                                                                                       toObject:@YES];
                                                 } else {
                                                     UIAlertController *incorrectPasswordAlert =
                                                     [UIAlertController alertControllerWithTitle:@"Napačno Geslo!"

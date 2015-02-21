@@ -31,7 +31,7 @@
 }
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:@"Wrong initializer" reason:@"VDDSideMenuViewController needs additional parameter to be successfully initialized. Use initWithSelectedView:" userInfo:nil];
+    return [self initWithSelectedView:VDDHybridView];
 }
 
 - (void)viewDidLoad {
