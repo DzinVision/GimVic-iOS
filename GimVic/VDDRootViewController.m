@@ -112,7 +112,7 @@
     [self addChildViewController:hybridVC];
     [self.view addSubview:hybridVC.view];
     
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:[NSNumber numberWithInt:VDDHybridView]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:@(VDDHybridView)];
 }
 
 - (void)changeToHybridWithTutorial {
@@ -129,7 +129,7 @@
     [self addChildViewController:suplenceVC];
     [self.view addSubview:suplenceVC.view];
     
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:[NSNumber numberWithInt:VDDSuplenceView]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:@(VDDSuplenceView)];
 }
 
 - (void)changeToJedilnik {
@@ -139,7 +139,7 @@
     [self addChildViewController:jedilnikVC];
     [self.view addSubview:jedilnikVC.view];
     
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:[NSNumber numberWithInt:VDDJedilnikView]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:@(VDDJedilnikView)];
 }
 
 - (void)changeToSettings {
@@ -151,7 +151,7 @@
     [self addChildViewController:settingsVC];
     [self.view addSubview:settingsVC.view];
     
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:[NSNumber numberWithInt:VDDSettingsView]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:@(VDDSettingsView)];
 }
 
 - (void)changeToUrnik {
@@ -161,7 +161,7 @@
     [self addChildViewController: urnikVC];
     [self.view addSubview:urnikVC.view];
     
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:[NSNumber numberWithInt:VDDUrnikView]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"showedView" toObject:@(VDDUrnikView)];
 }
 
 - (void)changeToSetup {

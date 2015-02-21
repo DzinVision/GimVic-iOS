@@ -11,6 +11,6 @@
 
 @interface VDDSideMenuViewController : UIViewController
 
-- (instancetype)initWithSelectedView:(VDDViewIndex)viewIndex;
+- (instancetype)initWithSelectedView:(VDDViewIndex)viewIndex NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -24,7 +24,7 @@
 - (void)changeToJedilnik;
 - (void)changeToSetup;
 
-typedef enum {
+typedef NS_ENUM(NSInteger, VDDViewIndex) {
     VDDSuplenceView,
     VDDSettingsView,
     VDDUrnikView,
@@ -33,7 +33,7 @@ typedef enum {
     VDDJedilnikView,
     VDDHybridView,
     VDDSetupView
-} VDDViewIndex;
+} ;
 
 #pragma mark - Static Variables
 

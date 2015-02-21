@@ -71,7 +71,7 @@
     
     for (int i = 0; i < 5; i++) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
 
         int count = 0;
         
@@ -224,7 +224,7 @@
     
     for (int i = 0; i < 5; i++) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
         
         int count = 0;
         

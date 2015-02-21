@@ -22,7 +22,7 @@
 
 @interface VDDSubPredmetiViewController : UIViewController
 
-- (instancetype)initWithSelectedRazreds:(NSMutableArray *)selectedRazreds class:(NSString *)razred;
+- (instancetype)initWithSelectedRazreds:(NSMutableArray *)selectedRazreds class:(NSString *)razred NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, weak) id<VDDSubPredmetiDelegate> delegate;
 

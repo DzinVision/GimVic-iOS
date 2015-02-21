@@ -35,7 +35,7 @@
             for (int i = 0; i < privateData.count - 1; i++) {
                 NSDictionary *element1 = privateData[i];
                 NSDictionary *element2 = privateData[i + 1];
-                if ([[element1 objectForKey:@"ura"] intValue] > [[element2 objectForKey:@"ura"] intValue]) {
+                if ([element1[@"ura"] intValue] > [element2[@"ura"] intValue]) {
                     privateData[i] = element2;
                     privateData[i + 1] = element1;
                     sorted = NO;
@@ -45,13 +45,13 @@
         }
         data = privateData;
         
-        startIndex = [[data[0] objectForKey:@"ura"] intValue];
+        startIndex = [(data[0])[@"ura"] intValue];
     }
     return self;
 }
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:@"Wrong initializer" reason:@"You should use initWithIndex:data initializer on VDDHybridSource" userInfo:nil];
+    return [self initWithIndex:0 data:nil];
 }
 
 #pragma mark - Reloading
@@ -64,7 +64,7 @@
         for (int i = 0; i < privateData.count - 1; i++) {
             NSDictionary *element1 = privateData[i];
             NSDictionary *element2 = privateData[i + 1];
-            if ([[element1 objectForKey:@"ura"] intValue] > [[element2 objectForKey:@"ura"] intValue]) {
+            if ([element1[@"ura"] intValue] > [element2[@"ura"] intValue]) {
                 privateData[i] = element2;
                 privateData[i + 1] = element1;
                 sorted = NO;
@@ -75,7 +75,7 @@
     data = privateData;
     
     
-    startIndex = [[data[0] objectForKey:@"ura"] intValue];
+    startIndex = [(data[0])[@"ura"] intValue];
 }
 
 #pragma mark - TableView Delegate
@@ -89,13 +89,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[data[indexPath.row] objectForKey:@"opomba"] isEqualToString:@""])
+    if ([(data[indexPath.row])[@"opomba"] isEqualToString:@""])
         return 85.0;
     return 110.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[data[indexPath.row] objectForKey:@"opomba"] isEqualToString:@""])
+    if ([(data[indexPath.row])[@"opomba"] isEqualToString:@""])
         return [self normalCellWithCellData:data[indexPath.row] inTableView:tableView];
     else
         return [self opombaCellWithCellData:data[indexPath.row] inTableView:tableView];
@@ -110,14 +110,14 @@
         cell = nib[0];
     }
     
-    if ([[cellData objectForKey:@"spremenjeno"] boolValue])
+    if ([cellData[@"spremenjeno"] boolValue])
         cell.backgroundColor = [UIColor colorWithRed:200/255.0 green:230/255.0 blue:201/255.0 alpha:1.0];
     else
         cell.backgroundColor = [UIColor whiteColor];
     
-    NSArray *profesorji = [cellData objectForKey:@"profesorji"];
-    NSArray *predmeti = [cellData objectForKey:@"predmeti"];
-    NSArray *ucilnice = [cellData objectForKey:@"ucilnice"];
+    NSArray *profesorji = cellData[@"profesorji"];
+    NSArray *predmeti = cellData[@"predmeti"];
+    NSArray *ucilnice = cellData[@"ucilnice"];
     
     NSString *predmet = predmeti[0];
     NSString *profesor = profesorji[0];
@@ -160,9 +160,9 @@
     
     cell.backgroundColor = [UIColor colorWithRed:200/255.0 green:230/255.0 blue:201/255.0 alpha:1.0];
     
-    NSArray *profesorji = [cellData objectForKey:@"profesorji"];
-    NSArray *predmeti = [cellData objectForKey:@"predmeti"];
-    NSArray *ucilnice = [cellData objectForKey:@"ucilnice"];
+    NSArray *profesorji = cellData[@"profesorji"];
+    NSArray *predmeti = cellData[@"predmeti"];
+    NSArray *ucilnice = cellData[@"ucilnice"];
     
     NSString *predmet = predmeti[0];
     NSString *profesor = profesorji[0];

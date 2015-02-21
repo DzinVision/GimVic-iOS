@@ -81,9 +81,9 @@
     
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
     
-    razredi = [[[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]] objectForKey:@"podRazredi"] objectForKey:class];
+    razredi = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]][@"podRazredi"][class];
     
     if (selected == nil)
         selected = [[NSMutableArray alloc] init];

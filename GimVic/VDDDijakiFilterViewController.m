@@ -42,9 +42,8 @@
     
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    razredi = [[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]]
-               objectForKey:@"razredi"];
+    NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
+    razredi = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/unfilteredPodatki", documentsPath]][@"razredi"];
     razredi = [[razredi sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] mutableCopy];
     
     
@@ -158,7 +157,7 @@
         return;
     }
     
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"numberOfChangesLeft" toObject:[NSNumber numberWithInt:changesLeft]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"numberOfChangesLeft" toObject:@(changesLeft)];
     
     NSString *filter = razredi[[_changeFilter selectedRowInComponent:0]];
     filter = filter.lowercaseString;

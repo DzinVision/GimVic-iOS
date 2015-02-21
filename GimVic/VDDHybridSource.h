@@ -10,7 +10,7 @@
 
 @interface VDDHybridSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-- (instancetype)initWithIndex:(int)index data:(NSArray *)urnikData;
+- (instancetype)initWithIndex:(int)index data:(NSArray *)urnikData NS_DESIGNATED_INITIALIZER;
 - (void)reloadData:(NSArray *)newData;
 
 @end

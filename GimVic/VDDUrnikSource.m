@@ -35,7 +35,7 @@
             for (int i = 0; i < privateData.count - 1; i++) {
                 NSDictionary *element1 = privateData[i];
                 NSDictionary *element2 = privateData[i + 1];
-                if ([[element1 objectForKey:@"ura"] intValue] > [[element2 objectForKey:@"ura"] intValue]) {
+                if ([element1[@"ura"] intValue] > [element2[@"ura"] intValue]) {
                     privateData[i] = element2;
                     privateData[i + 1] = element1;
                     sorted = NO;
@@ -46,13 +46,13 @@
         data = privateData;
         
         
-        startIndex = [[data[0] objectForKey:@"ura"] intValue];
+        startIndex = [(data[0])[@"ura"] intValue];
     }
     return self;
 }
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:@"Wrong initializer" reason:@"You should use initWithIndex:data initializer on VDDUrnikSource" userInfo:nil];
+    return [self initWithIndex:0 data:nil];
 }
 
 #pragma mark - Reloading
@@ -65,7 +65,7 @@
         for (int i = 0; i < privateData.count - 1; i++) {
             NSDictionary *element1 = privateData[i];
             NSDictionary *element2 = privateData[i + 1];
-            if ([[element1 objectForKey:@"ura"] intValue] > [[element2 objectForKey:@"ura"] intValue]) {
+            if ([element1[@"ura"] intValue] > [element2[@"ura"] intValue]) {
                 privateData[i] = element2;
                 privateData[i + 1] = element1;
                 sorted = NO;
@@ -76,7 +76,7 @@
     data = privateData;
     
     
-    startIndex = [[data[0] objectForKey:@"ura"] intValue];
+    startIndex = [(data[0])[@"ura"] intValue];
 }
 
 #pragma mark - TableView Delegate
@@ -100,13 +100,13 @@
     NSDictionary *dataDictionary;
     for (int i = 0; i < data.count; i++) {
         NSDictionary *element = data[i];
-        if ([[element objectForKey:@"ura"] intValue] == (indexPath.row + startIndex))
+        if ([element[@"ura"] intValue] == (indexPath.row + startIndex))
             dataDictionary = element;
     }
     
-    NSArray *profesorji = [dataDictionary objectForKey:@"profesorji"];
-    NSArray *predmeti = [dataDictionary objectForKey:@"predmeti"];
-    NSArray *ucilnice = [dataDictionary objectForKey:@"ucilnice"];
+    NSArray *profesorji = dataDictionary[@"profesorji"];
+    NSArray *predmeti = dataDictionary[@"predmeti"];
+    NSArray *ucilnice = dataDictionary[@"ucilnice"];
     
     NSString *predmet = predmeti[0];
     NSString *profesor = profesorji[0];
@@ -133,7 +133,7 @@
     if ([ucilnica isEqualToString:@""])
         ucilnica = [@"-" mutableCopy];
     
-    cell.ura.text = [dataDictionary objectForKey:@"ura"];
+    cell.ura.text = dataDictionary[@"ura"];
     cell.predmet.text = predmet;
     cell.ucilnica.text = ucilnica;
     cell.ucitelj.text = profesor;

@@ -48,7 +48,7 @@
 #pragma mark - Data Manipulation
 
 - (void)changeMetaDataAtributeWithKey:(NSString *)key toObject:(NSObject *)object {
-    [metaData setObject:object forKey:key];
+    metaData[key] = object;
     [[NSKeyedArchiver archivedDataWithRootObject:metaData] writeToFile:metaDataPath atomically:YES];
 }
 

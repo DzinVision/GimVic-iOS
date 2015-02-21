@@ -35,7 +35,7 @@
 - (IBAction)okButtonPressed:(id)sender {
     password = [VDDCrypto sha256hashFor:_passwordField.text];
     if ([password isEqualToString:[VDDRootViewController sharedRootViewController].profPassword]) {
-        [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin" toObject:[NSNumber numberWithBool:YES]];
+        [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin" toObject:@YES];
         [self performSegueWithIdentifier:@"pushToSettingsSeque" sender:self];
         return;
     }
@@ -52,7 +52,7 @@
 
 - (IBAction)cancelButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin" toObject:[NSNumber numberWithBool:NO]];
+    [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"uciteljskiNacin" toObject:@NO];
 }
 
 - (IBAction)editingDidEnd:(id)sender {

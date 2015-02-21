@@ -41,7 +41,7 @@
         for (NSString *key in keys) {
             NSArray *array = [data valueForKey:key];
             if (array.count > 0) {
-                [cleanDictionary setObject:array forKey:key];
+                cleanDictionary[key] = array;
             }
         }
         
@@ -51,7 +51,7 @@
 }
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:@"Wrong initializer" reason:@"On VDDSuplenceSource permited initializer is initWithIndex:index!" userInfo:nil];
+    return [self initWithIndex:0 data:nil numberOfSections:0];
 }
 
 #pragma mark - Reloading
@@ -76,7 +76,7 @@
     for (NSString *key in keys) {
         NSArray *array = [newData valueForKey:key];
         if (array.count > 0) {
-            [cleanDictionary setObject:array forKey:key];
+            cleanDictionary[key] = array;
         }
     }
     
@@ -165,7 +165,7 @@
     VDDNadomescanjaCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VDDNadomescanjaCell"];
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VDDNadomescanjaCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = nib[0];
     }
     
     NSArray *nadomescanja = [data valueForKey:@"nadomescanja"];
@@ -185,7 +185,7 @@
     VDDMenjavaPredmetaCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VDDMenjavaPredmetaCell"];
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VDDMenjavaPredmetaCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = nib[0];
     }
     
     NSArray *menjavaPredmeta = [data valueForKey:@"menjavaPredmeta"];
@@ -205,7 +205,7 @@
     VDDMenjavaUrCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VDDMenjavaUrCell"];
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VDDMenjavaUrCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = nib[0];
     }
     
     NSArray *menjavaUr = [data valueForKey:@"menjavaUr"];
@@ -226,7 +226,7 @@
     VDDMenjavaUcilnicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VDDMenjavaUcilnicCell"];
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VDDMenjavaUcilnicCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = nib[0];
     }
     
     NSArray *menjavaUcilnic = [data valueForKey:@"menjavaUcilnic"];
@@ -246,7 +246,7 @@
     VDDRezervacijaUcilnicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VDDRezervacijaUcilnicCell"];
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VDDRezervacijaUcilnicCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = nib[0];
     }
     
     NSArray *rezervacijaUcilnic = [data valueForKey:@"rezervacijaUcilnic"];
@@ -263,7 +263,7 @@
     VDDVecUciteljevCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VDDVecUciteljevCell"];
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VDDVecUciteljevCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = nib[0];
     }
     
     NSArray *vecUciteljev = [data valueForKey:@"vecUciteljevVRazredu"];
