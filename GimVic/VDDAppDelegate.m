@@ -32,7 +32,7 @@
     NSString *metaDataPath = [NSString stringWithFormat:@"%@/metaData", documentsPath];
     NSData *metaDataData = [NSData dataWithContentsOfFile:metaDataPath];
     
-    if (!metaDataData) {
+    if (metaDataData == nil) {
         NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsPath error:nil];
         if (directoryContent.count > 0) {
             for (int i = 0; i < directoryContent.count; i++)
@@ -107,12 +107,12 @@
     
     NSDate *lastOpened = (NSDate *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"lastOpened"];
     long startDay = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] ordinalityOfUnit:NSCalendarUnitDay
-                                                            inUnit:NSCalendarUnitEra
-                                                           forDate:lastOpened];
+                                                                                                 inUnit:NSCalendarUnitEra
+                                                                                                forDate:lastOpened];
     
     long endDay = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] ordinalityOfUnit:NSCalendarUnitDay
-                                                          inUnit:NSCalendarUnitEra
-                                                         forDate:[NSDate date]];
+                                                                                               inUnit:NSCalendarUnitEra
+                                                                                              forDate:[NSDate date]];
     long numberOfDays = endDay - startDay;
     if (numberOfDays > 0) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDatesChanged" object:nil];
@@ -146,12 +146,12 @@
     
     NSDate *urnikUpdate = (NSDate *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"lastUpdatedUrnik"];
     long startDay = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] ordinalityOfUnit:NSCalendarUnitDay
-                                                            inUnit:NSCalendarUnitEra
-                                                           forDate:urnikUpdate];
+                                                                                                 inUnit:NSCalendarUnitEra
+                                                                                                forDate:urnikUpdate];
     
     long endDay = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] ordinalityOfUnit:NSCalendarUnitDay
-                                                          inUnit:NSCalendarUnitEra
-                                                         forDate:[NSDate date]];
+                                                                                               inUnit:NSCalendarUnitEra
+                                                                                              forDate:[NSDate date]];
     
     long numberOfDays = endDay - startDay;
     
@@ -169,15 +169,14 @@
         return;
     }
     
-    
     NSDate *jedilnikUpdate = (NSDate *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"lastUpdatedJedilnik"];
     long startDay = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] ordinalityOfUnit:NSCalendarUnitDay
-                                                            inUnit:NSCalendarUnitEra
-                                                           forDate:jedilnikUpdate];
+                                                                                                 inUnit:NSCalendarUnitEra
+                                                                                                forDate:jedilnikUpdate];
     
     long endDay = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] ordinalityOfUnit:NSCalendarUnitDay
-                                                          inUnit:NSCalendarUnitEra
-                                                         forDate:[NSDate date]];
+                                                                                               inUnit:NSCalendarUnitEra
+                                                                                              forDate:[NSDate date]];
     long numberOfDays = endDay - startDay;
     
     if (numberOfDays <= 0)
@@ -188,7 +187,7 @@
 }
 
 - (void)updateSuplenceData {
-    if ([[VDDMetaData sharedMetaData] metaDataObjectForKey:@"lastUpdatedSuplence"] == [NSNull null]) {
+    if ([[VDDMetaData sharedMetaData] metaDataObjectForKey:@"m"] == [NSNull null]) {
         if ([VDDSuplenceDataFetch sharedSuplenceDataFetch].isRefreshing == NO)
             [[VDDSuplenceDataFetch sharedSuplenceDataFetch] refresh];
         return;
@@ -220,7 +219,7 @@
     
     NSDateComponents *lastAddedChangesComponents = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] components:NSCalendarUnitYear fromDate:lastAddedChanges];
     int lastAddedYear = (int)lastAddedChangesComponents.year;
-
+    
     NSDateComponents *firstSeptemberComponents = [[NSDateComponents alloc] init];
     [firstSeptemberComponents setYear:lastAddedYear];
     [firstSeptemberComponents setMonth:9];
