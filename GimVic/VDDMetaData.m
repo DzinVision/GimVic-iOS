@@ -53,7 +53,7 @@
 }
 
 - (NSObject *)metaDataObjectForKey:(NSString *)key {
-    return [metaData valueForKey:key];
+    return metaData[key];
 }
 
 @end

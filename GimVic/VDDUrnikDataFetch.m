@@ -172,7 +172,8 @@
                                      @"razredi": razredi,
                                      @"podRazredi": podRazredi,
                                      @"ucitelji": ucitelji,
-                                     @"ucilnice": ucilnice};
+                                     @"ucilnice": ucilnice
+                                     };
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = ([paths count] > 0) ? paths[0] : nil;
@@ -197,6 +198,26 @@
     string = [string stringByReplacingOccurrencesOfString:@" = " withString:@";"];
     
     return [string componentsSeparatedByString:@";"];
+}
+
+- (NSMutableArray *)mergeHours:(NSMutableArray *) array {
+    for (int i = 0; i < array.count; ++i) {
+        NSString *ura = array[i][@"ura"];
+        for (int j = i+1; j < array.count; ++j) {
+            if ([ura isEqualToString:array[j][@"ura"] ]) {
+                for (NSString *predmet in array[j][@"predmeti"])
+                    [array[i][@"predmeti"] addObject:predmet];
+                for (NSString *profesor in array[j][@"profesorji"])
+                    [array[i][@"profesorji"] addObject:profesor];
+                for (NSString *ucilnica in array[j][@"ucilnice"])
+                    [array[i][@"ucilnice"] addObject:ucilnica];
+                [array removeObjectAtIndex:j];
+                --j;
+            }
+        }
+    }
+    
+    return array;
 }
 
 #pragma mark - Refreshing
@@ -367,6 +388,11 @@
             [filteredUrnik5 addObject:element];
     }
     
+    filteredUrnik1 = [self mergeHours:filteredUrnik1];
+    filteredUrnik2 = [self mergeHours:filteredUrnik2];
+    filteredUrnik3 = [self mergeHours:filteredUrnik3];
+    filteredUrnik4 = [self mergeHours:filteredUrnik4];
+    filteredUrnik5 = [self mergeHours:filteredUrnik5];
     
     [filteredUrnik1 writeToFile:[NSString stringWithFormat:@"%@/filteredUrnik-1", documentsPath] atomically:YES];
     [filteredUrnik2 writeToFile:[NSString stringWithFormat:@"%@/filteredUrnik-2", documentsPath] atomically:YES];

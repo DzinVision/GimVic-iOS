@@ -48,6 +48,7 @@
 		9959C9B31A517F8E005FA131 /* jedilnik.png in Resources */ = {isa = PBXBuildFile; fileRef = 9959C9B21A517F8E005FA131 /* jedilnik.png */; };
 		9959C9B61A518106005FA131 /* VDDTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959C9B51A518106005FA131 /* VDDTutorialViewController.m */; };
 		9967620719E81D740037363A /* Reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 9967620619E81D740037363A /* Reload.png */; };
+		997A561D1B223C56009B6235 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997A561C1B223C56009B6235 /* OpenInChromeController.m */; };
 		9986FB3A1A14FB0E0098210F /* VDDHybridDataFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9986FB391A14FB0E0098210F /* VDDHybridDataFetch.m */; };
 		998E0AA219D098FB003D6B01 /* VDDMenjavaUrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E0AA119D098FB003D6B01 /* VDDMenjavaUrCell.m */; };
 		998E0AA419D09913003D6B01 /* VDDMenjavaUrCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E0AA319D09913003D6B01 /* VDDMenjavaUrCell.xib */; };
@@ -161,6 +162,8 @@
 		9959C9B41A518106005FA131 /* VDDTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDTutorialViewController.h; sourceTree = "<group>"; };
 		9959C9B51A518106005FA131 /* VDDTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDTutorialViewController.m; sourceTree = "<group>"; };
 		9967620619E81D740037363A /* Reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reload.png; sourceTree = "<group>"; };
+		997A561B1B223C56009B6235 /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInChromeController.h; sourceTree = "<group>"; };
+		997A561C1B223C56009B6235 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInChromeController.m; sourceTree = "<group>"; };
 		9986FB381A14FB0E0098210F /* VDDHybridDataFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDHybridDataFetch.h; sourceTree = "<group>"; };
 		9986FB391A14FB0E0098210F /* VDDHybridDataFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDHybridDataFetch.m; sourceTree = "<group>"; };
 		998E0AA019D098FB003D6B01 /* VDDMenjavaUrCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDMenjavaUrCell.h; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				992EECA51A6663C000168C2A /* VDDCrypto.m */,
 				992EEC9E1A66633500168C2A /* VDDReachability.h */,
 				992EEC9F1A66633500168C2A /* VDDReachability.m */,
+				997A561B1B223C56009B6235 /* OpenInChromeController.h */,
+				997A561C1B223C56009B6235 /* OpenInChromeController.m */,
 				9922F63219C4741A000E71E6 /* Images.xcassets */,
 				9922F63419C4741A000E71E6 /* VDDLaunchScreen.xib */,
 				99601E3219E06E820072C083 /* Images */,
@@ -729,6 +734,7 @@
 				99FA4F511A2769C1000F4B2A /* VDDProfFilterViewController.m in Sources */,
 				992EECA01A66633500168C2A /* VDDReachability.m in Sources */,
 				9929654019DF32700097C538 /* VDDSideMenuTransitioner.m in Sources */,
+				997A561D1B223C56009B6235 /* OpenInChromeController.m in Sources */,
 				99C1AF4D19C75D9F00EA2F0D /* VDDMenjavaPredmetaCell.m in Sources */,
 				992EECA61A6663C000168C2A /* VDDCrypto.m in Sources */,
 				9959C9B61A518106005FA131 /* VDDTutorialViewController.m in Sources */,
@@ -877,6 +883,7 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GimVic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -891,6 +898,7 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GimVic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

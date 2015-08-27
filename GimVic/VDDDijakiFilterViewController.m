@@ -12,6 +12,7 @@
 #import "VDDSuplenceDataFetch.h"
 #import "VDDUrnikDataFetch.h"
 #import "VDDHybridDataFetch.h"
+#import "VDDAppDelegate.h"
 
 @interface VDDDijakiFilterViewController () <UIPickerViewDataSource, UIPickerViewDelegate, VDDSubPredmetiDelegate>
 
@@ -146,7 +147,7 @@
 - (IBAction)setFilter:(id)sender {
     changesLeft--;
     
-    if (changesLeft < 0) {
+    if (changesLeft < 0 && !DEVELOPER) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Napaka!"
                                                                        message:@"V tem šolskem letu si filter že spremenil 3x. Če si profesor vklopi profesorski način."
                                                                 preferredStyle:UIAlertControllerStyleAlert];
