@@ -14,4 +14,4 @@
 
 @end
 
-static BOOL DEVELOPER = NO;
+static BOOL DEVELOPER = YES;

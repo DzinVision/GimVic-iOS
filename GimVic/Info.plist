@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.DzinVision.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -15,13 +15,45 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.4</string>
+	<string>2.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Urnik &amp; Suplence</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_urnik_and_suplence</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Suplence</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_suplence</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Urnik</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_urnik</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Jedilnik</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_jedilnik</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>VDDLaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

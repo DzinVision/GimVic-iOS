@@ -56,7 +56,7 @@
     _isRefreshing = YES;
     
     if (![VDDReachability checkInternetConnection]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDataFetchComplete" object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDataFetchComplete" object:nil];});
         
         _isRefreshing = NO;
         return;
@@ -151,7 +151,7 @@
         subFilters = @[];
     
     if ([filter isEqualToString:@""] && [subFilters isEqualToArray:@[]]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDataFetchComplete" object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDataFetchComplete" object:nil];});
         _isRefreshing = NO;
         return;
     }
@@ -176,7 +176,7 @@
     [dictionary4 writeToFile:[NSString stringWithFormat:@"%@/filtered-4", documentsPath] atomically:YES];
     
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDataFetchComplete" object:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDataFetchComplete" object:nil];});
     
     _isRefreshing = NO;
     
@@ -184,22 +184,6 @@
     /*if (![NSThread isMainThread])
         [NSThread exit];*/
 }
-
-/*-(NSURL *)generateUrlForDate:(NSDate *)dateToGenerate
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
-    
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
-    NSString *requestDate = [dateFormatter stringFromDate:dateToGenerate];
-    
-    dateFormatter.dateFormat = @"yyyy-MM-dd%20HH:mm:ss";
-    NSString *lastUpdateDate = [dateFormatter stringFromDate:(NSDate *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"lastUpdatedSuplence"]];
-    
-    NSString *urlString = [NSString stringWithFormat:@"http://app.gimvic.org/APIv2/json_provider.php?datum=%@&last_update=%@", requestDate, lastUpdateDate];
-    NSLog(@"%@", urlString);
-    return [NSURL URLWithString:urlString];
-}*/
 
 #pragma mark - URL Creation
 

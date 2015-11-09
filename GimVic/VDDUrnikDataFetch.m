@@ -226,7 +226,7 @@
     _isRefreshing = YES;
     
     if (![VDDReachability checkInternetConnection]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];});
         
         _isRefreshing = NO;
         return;
@@ -246,7 +246,7 @@
     
     NSString *filter = (NSString *)[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"filter"];
     if (filter == nil || [filter isEqualToString:@""]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];});
         _isRefreshing = NO;
         return;
     }
@@ -260,7 +260,7 @@
     
     
     if (data == nil) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];});
         _isRefreshing = NO;
         return;
     }
@@ -401,7 +401,7 @@
     [filteredUrnik5 writeToFile:[NSString stringWithFormat:@"%@/filteredUrnik-5", documentsPath] atomically:YES];
     
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDUrnikFetchComplete" object:nil];});
     _isRefreshing = NO;
 }
 @end
