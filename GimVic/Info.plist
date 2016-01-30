@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Urnik &amp; Suplence</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_urnik_and_suplence</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Suplence</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_suplence</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Urnik</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_urnik</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Jedilnik</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.theccode.Gimvic.open_jedilnik</string>
+		</dict>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
