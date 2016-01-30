@@ -14,6 +14,7 @@
 #import "VDDUrnikDataFetch.h"
 #import "VDDHybridDataFetch.h"
 #import "VDDIntroViewController.h"
+#import "OpenInChromeController.h"
 
 
 @interface VDDAppDelegate ()
@@ -24,24 +25,6 @@
 @implementation VDDAppDelegate
 
 #pragma mark - Delegate Functions
-
-- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
-    if ([shortcutItem.type isEqualToString: @"com.theccode.Gimvic.open_urnik_and_suplence"]) {
-        [[VDDRootViewController sharedRootViewController] changeToHybrid];
-        completionHandler(YES);
-    } else if ([shortcutItem.type isEqualToString: @"com.theccode.Gimvic.open_suplence"]) {
-        [[VDDRootViewController sharedRootViewController] changeToSuplence];
-        completionHandler(YES);
-    } else if ([shortcutItem.type isEqualToString: @"com.theccode.Gimvic.open_urnik"]) {
-        [[VDDRootViewController sharedRootViewController] changeToUrnik];
-        completionHandler(YES);
-    } else if ([shortcutItem.type isEqualToString: @"com.theccode.Gimvic.open_jedilnik"]) {
-        [[VDDRootViewController sharedRootViewController] changeToJedilnik];
-        completionHandler(YES);
-    } else {
-        completionHandler(NO);
-    }
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -66,6 +49,12 @@
                                @"lastUpdatedUrnik": [NSNull null],
                                @"showedView": @(VDDSetupView),
                                @"lastUpdatedJedilnik": [NSNull null],
+                               @"malicaFromDate": [NSNull null],
+                               @"malicaToDate": [NSNull null],
+                               @"kosiloFromDate": [NSNull null],
+                               @"kosiloToDate": [NSNull null],
+                               @"malicaFileName": [NSNull null],
+                               @"kosiloFileName": [NSNull null],
                                @"lastUpdatedUrnik": [NSNull null],
                                @"lastUpdatedHybrid": [NSNull null],
                                @"lastOpened": [NSNull null],
@@ -90,9 +79,56 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self anketa];
     [self checkDate];
     
     [NSThread detachNewThreadSelector:@selector(updateData) toTarget:self withObject:nil];
+}
+
+- (void)anketa {
+    if ([[[VDDMetaData sharedMetaData] metaDataObjectForKey:@"anketa"] isEqual: @YES])
+        return;
+    
+    NSDateComponents *limitDateComps = [NSDateComponents new];
+    limitDateComps.year = 2015;
+    limitDateComps.month = 6;
+    limitDateComps.day = 19;
+    
+    NSDate *limitDate = [[NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian] dateFromComponents:limitDateComps];
+    
+    NSDate *today = [NSDate date];
+    
+    if ([today timeIntervalSinceDate:limitDate] > 0)
+        return;
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Anketa"
+                                                                   message:@"Prosimo, da rešite anketo o šolski prehrani do 18. 6. 2015."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *accept = [UIAlertAction actionWithTitle:@"Anketa" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"anketa" toObject:@YES];
+        NSURL *url = [NSURL URLWithString:@"https://www.1ka.si/a/68175"];
+        OpenInChromeController *openInChromeController = [[OpenInChromeController alloc] init];
+        if ([openInChromeController isChromeInstalled]) {
+            UIAlertController *chooseBrowser = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertAction *chrome = [UIAlertAction actionWithTitle:@"Odpri v Google Chrome" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [openInChromeController openInChrome:url];
+            }];
+            UIAlertAction *safari = [UIAlertAction actionWithTitle:@"Odpri v Safari" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [[UIApplication sharedApplication] openURL:url];
+            }];
+            [chooseBrowser addAction:chrome];
+            [chooseBrowser addAction:safari];
+            [[VDDRootViewController sharedRootViewController] presentViewController:chooseBrowser animated:YES completion:nil];
+        }
+        else
+            [[UIApplication sharedApplication] openURL:url];
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Kasneje" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [[VDDRootViewController sharedRootViewController] dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction: accept];
+    [alert addAction:cancel];
+    [[VDDRootViewController sharedRootViewController] presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Update Data Functions
@@ -130,7 +166,7 @@
                                                                                               forDate:[NSDate date]];
     long numberOfDays = endDay - startDay;
     if (numberOfDays > 0) {
-        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDatesChanged" object:nil];});
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDDatesChanged" object:nil];
         [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"lastOpened" toObject:[NSDate date]];
     }
 }

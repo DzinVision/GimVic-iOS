@@ -13,7 +13,6 @@
 #import "VDDHybridViewController.h"
 #import "VDDMetaData.h"
 #import "VDDTutorialViewController.h"
-#import "GimVic-Swift.h"
 
 @interface VDDRootViewController ()
 
@@ -136,8 +135,7 @@
 - (void)changeToJedilnik {
     [self cleanViews];
     
-    JedilnikViewController *jedilnikVC = [[JedilnikViewController alloc] init];
-    // *jedilnikVC = [[VDDJedilnikViewController alloc] init];
+    VDDJedilnikViewController *jedilnikVC = [[VDDJedilnikViewController alloc] init];
     [self addChildViewController:jedilnikVC];
     [self.view addSubview:jedilnikVC.view];
     

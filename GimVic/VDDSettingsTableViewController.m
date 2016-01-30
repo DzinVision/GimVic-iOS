@@ -11,6 +11,7 @@
 #import "VDDRootViewController.h"
 #import "VDDTutorialViewController.h"
 #import "VDDCrypto.h"
+#import "VDDAppDelegate.h"
 
 @interface VDDSettingsTableViewController ()
 

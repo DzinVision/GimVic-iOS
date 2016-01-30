@@ -42,7 +42,7 @@
     _isRefreshing = YES;
     
     if (![VDDReachability checkInternetConnection]) {
-        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];});
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];
         
         _isRefreshing = NO;
         
@@ -77,7 +77,7 @@
     [self downloadMalica];
     [self downloadKosilo];
     
-    dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];});
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];
 
     _isRefreshing = NO;
     
@@ -87,22 +87,12 @@
 
 - (void)forceRefresh {
     _isRefreshing = YES;
-    if (![VDDReachability checkInternetConnection]) {
-        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];});
-        
-        _isRefreshing = NO;
-        
-        if (![NSThread isMainThread])
-            [NSThread exit];
-        
-        return;
-    }
     
     [self downloadInfoData];
     [self downloadMalica];
     [self downloadKosilo];
     
-    dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];});
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];
     _isRefreshing = NO;
 }
 
@@ -149,7 +139,8 @@
         [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/malica.pdf", documentsPath] error:nil];
         [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/kosilo.pdf", documentsPath] error:nil];
         
-        dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];});
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDJedilnikFetchComplete" object:nil];
         
         _isRefreshing = NO;
         

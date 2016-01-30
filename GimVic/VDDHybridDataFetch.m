@@ -52,7 +52,7 @@
             NSDictionary *suplenceData = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/filtered-%d", documentsPath, f]];
             
             if (urnikData == nil || suplenceData == nil) {
-                dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDHybridFetchComplete" object:nil];});
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDHybridFetchComplete" object:nil];
                 _isRefreshing = NO;
                 return;
             }
@@ -122,6 +122,8 @@
                         if ([urnikElement[@"ura"] isEqualToString:suplenceElement[@"ura"]]) {
                             NSMutableArray *predmeti = urnikElement[@"predmeti"];
                             int index = (int)[predmeti indexOfObject:suplenceElement[@"predmetFrom"]];
+                            NSLog(@"%@", predmeti);
+                            NSLog(@"%@", suplenceElement);
                             predmeti[index] = suplenceElement[@"predmetTo"];
                             urnikElement[@"predmeti"] = predmeti;
                             
@@ -217,7 +219,7 @@
     
     
     [[VDDMetaData sharedMetaData] changeMetaDataAtributeWithKey:@"lastUpdatedHybrid" toObject:[NSDate date]];
-    dispatch_async(dispatch_get_main_queue(), ^{[[NSNotificationCenter defaultCenter] postNotificationName:@"VDDHybridFetchComplete" object:nil];});
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VDDHybridFetchComplete" object:nil];
     
     _isRefreshing = NO;
     return;

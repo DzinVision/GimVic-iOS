@@ -26,10 +26,8 @@
 		992EECA61A6663C000168C2A /* VDDCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 992EECA51A6663C000168C2A /* VDDCrypto.m */; };
 		993B5BF71A12890500712853 /* VDDUrnikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993B5BF61A12890500712853 /* VDDUrnikViewController.m */; };
 		99400A5919E7010B00ABB1BF /* VDDJedilnikDataFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 99400A5819E7010B00ABB1BF /* VDDJedilnikDataFetch.m */; };
-		994D1A7F1BF12AC300CCC403 /* JedilnikDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1A7E1BF12AC300CCC403 /* JedilnikDataFetch.swift */; };
 		995040171A2116BA0081EF33 /* VDDIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995040161A2116BA0081EF33 /* VDDIntroViewController.m */; };
 		9950401B1A21F5940081EF33 /* VDDIntroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9950401A1A21F5940081EF33 /* VDDIntroStoryboard.storyboard */; };
-		99532D4A1BF744FB00048AE4 /* JedilnikTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99532D491BF744FB00048AE4 /* JedilnikTableView.swift */; };
 		9959C9901A516240005FA131 /* hybrid.png in Resources */ = {isa = PBXBuildFile; fileRef = 9959C98B1A516240005FA131 /* hybrid.png */; };
 		9959C9921A516240005FA131 /* nastavitve.png in Resources */ = {isa = PBXBuildFile; fileRef = 9959C98D1A516240005FA131 /* nastavitve.png */; };
 		9959C9931A516240005FA131 /* suplence.png in Resources */ = {isa = PBXBuildFile; fileRef = 9959C98E1A516240005FA131 /* suplence.png */; };
@@ -50,6 +48,7 @@
 		9959C9B31A517F8E005FA131 /* jedilnik.png in Resources */ = {isa = PBXBuildFile; fileRef = 9959C9B21A517F8E005FA131 /* jedilnik.png */; };
 		9959C9B61A518106005FA131 /* VDDTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959C9B51A518106005FA131 /* VDDTutorialViewController.m */; };
 		9967620719E81D740037363A /* Reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 9967620619E81D740037363A /* Reload.png */; };
+		997A561D1B223C56009B6235 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997A561C1B223C56009B6235 /* OpenInChromeController.m */; };
 		9986FB3A1A14FB0E0098210F /* VDDHybridDataFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9986FB391A14FB0E0098210F /* VDDHybridDataFetch.m */; };
 		998E0AA219D098FB003D6B01 /* VDDMenjavaUrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E0AA119D098FB003D6B01 /* VDDMenjavaUrCell.m */; };
 		998E0AA419D09913003D6B01 /* VDDMenjavaUrCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E0AA319D09913003D6B01 /* VDDMenjavaUrCell.xib */; };
@@ -77,7 +76,6 @@
 		99D13C921A20E09600488038 /* VDDHybridSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D13C911A20E09600488038 /* VDDHybridSource.m */; };
 		99D13C951A20E56000488038 /* VDDOpombaUrnikCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D13C941A20E56000488038 /* VDDOpombaUrnikCell.m */; };
 		99D13C971A20E56F00488038 /* VDDOpombaUrnikCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D13C961A20E56F00488038 /* VDDOpombaUrnikCell.xib */; };
-		99D3E3761BF68DBC008B4656 /* JedilnikViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3E3751BF68DBC008B4656 /* JedilnikViewController.swift */; };
 		99D40DB519C4AD6A00221F76 /* VDDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D40DB419C4AD6A00221F76 /* VDDRootViewController.m */; };
 		99D82B6F1A22468B00658B71 /* VDDDijakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D82B6E1A22468B00658B71 /* VDDDijakViewController.m */; };
 		99DB11191A23AF3C008CF2A4 /* VDDProfesorPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DB11181A23AF3C008CF2A4 /* VDDProfesorPasswordViewController.m */; };
@@ -140,12 +138,9 @@
 		993B5BF61A12890500712853 /* VDDUrnikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDUrnikViewController.m; sourceTree = "<group>"; };
 		99400A5719E7010B00ABB1BF /* VDDJedilnikDataFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDJedilnikDataFetch.h; sourceTree = "<group>"; };
 		99400A5819E7010B00ABB1BF /* VDDJedilnikDataFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDJedilnikDataFetch.m; sourceTree = "<group>"; };
-		994D1A7D1BF12AC200CCC403 /* GimVic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GimVic-Bridging-Header.h"; sourceTree = "<group>"; };
-		994D1A7E1BF12AC300CCC403 /* JedilnikDataFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JedilnikDataFetch.swift; sourceTree = "<group>"; };
 		995040151A2116BA0081EF33 /* VDDIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDIntroViewController.h; sourceTree = "<group>"; };
 		995040161A2116BA0081EF33 /* VDDIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDIntroViewController.m; sourceTree = "<group>"; };
 		9950401A1A21F5940081EF33 /* VDDIntroStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VDDIntroStoryboard.storyboard; sourceTree = "<group>"; };
-		99532D491BF744FB00048AE4 /* JedilnikTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JedilnikTableView.swift; sourceTree = "<group>"; };
 		9959C98B1A516240005FA131 /* hybrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hybrid.png; sourceTree = "<group>"; };
 		9959C98D1A516240005FA131 /* nastavitve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nastavitve.png; sourceTree = "<group>"; };
 		9959C98E1A516240005FA131 /* suplence.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suplence.png; sourceTree = "<group>"; };
@@ -167,6 +162,8 @@
 		9959C9B41A518106005FA131 /* VDDTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDTutorialViewController.h; sourceTree = "<group>"; };
 		9959C9B51A518106005FA131 /* VDDTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDTutorialViewController.m; sourceTree = "<group>"; };
 		9967620619E81D740037363A /* Reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reload.png; sourceTree = "<group>"; };
+		997A561B1B223C56009B6235 /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInChromeController.h; sourceTree = "<group>"; };
+		997A561C1B223C56009B6235 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInChromeController.m; sourceTree = "<group>"; };
 		9986FB381A14FB0E0098210F /* VDDHybridDataFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDHybridDataFetch.h; sourceTree = "<group>"; };
 		9986FB391A14FB0E0098210F /* VDDHybridDataFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDHybridDataFetch.m; sourceTree = "<group>"; };
 		998E0AA019D098FB003D6B01 /* VDDMenjavaUrCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDMenjavaUrCell.h; sourceTree = "<group>"; };
@@ -206,7 +203,6 @@
 		99D13C931A20E56000488038 /* VDDOpombaUrnikCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDOpombaUrnikCell.h; sourceTree = "<group>"; };
 		99D13C941A20E56000488038 /* VDDOpombaUrnikCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDOpombaUrnikCell.m; sourceTree = "<group>"; };
 		99D13C961A20E56F00488038 /* VDDOpombaUrnikCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDDOpombaUrnikCell.xib; sourceTree = "<group>"; };
-		99D3E3751BF68DBC008B4656 /* JedilnikViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JedilnikViewController.swift; sourceTree = "<group>"; };
 		99D40DB319C4AD6A00221F76 /* VDDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDRootViewController.h; sourceTree = "<group>"; };
 		99D40DB419C4AD6A00221F76 /* VDDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDRootViewController.m; sourceTree = "<group>"; };
 		99D82B6D1A22468B00658B71 /* VDDDijakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDDijakViewController.h; sourceTree = "<group>"; };
@@ -296,7 +292,8 @@
 				992EECA51A6663C000168C2A /* VDDCrypto.m */,
 				992EEC9E1A66633500168C2A /* VDDReachability.h */,
 				992EEC9F1A66633500168C2A /* VDDReachability.m */,
-				994D1A7D1BF12AC200CCC403 /* GimVic-Bridging-Header.h */,
+				997A561B1B223C56009B6235 /* OpenInChromeController.h */,
+				997A561C1B223C56009B6235 /* OpenInChromeController.m */,
 				9922F63219C4741A000E71E6 /* Images.xcassets */,
 				9922F63419C4741A000E71E6 /* VDDLaunchScreen.xib */,
 				99601E3219E06E820072C083 /* Images */,
@@ -337,8 +334,6 @@
 			children = (
 				99247B2B19EA7D2C009BD6FB /* VDDJedilnikViewController.h */,
 				99247B2C19EA7D2C009BD6FB /* VDDJedilnikViewController.m */,
-				99D3E3751BF68DBC008B4656 /* JedilnikViewController.swift */,
-				99532D491BF744FB00048AE4 /* JedilnikTableView.swift */,
 				99247B2E19EA89ED009BD6FB /* VDDNilJedilnik.xib */,
 			);
 			name = Jedilnik;
@@ -364,7 +359,6 @@
 				992EEC9C1A66632200168C2A /* VDDSuplenceDataFetch.m */,
 				99400A5719E7010B00ABB1BF /* VDDJedilnikDataFetch.h */,
 				99400A5819E7010B00ABB1BF /* VDDJedilnikDataFetch.m */,
-				994D1A7E1BF12AC300CCC403 /* JedilnikDataFetch.swift */,
 				99E7B9C919F00A27009F80D4 /* VDDUrnikDataFetch.h */,
 				99E7B9CA19F00A27009F80D4 /* VDDUrnikDataFetch.m */,
 				9986FB381A14FB0E0098210F /* VDDHybridDataFetch.h */,
@@ -633,7 +627,8 @@
 		9922F61A19C47419000E71E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Vid Drobnič";
 				TargetAttributes = {
 					9922F62119C4741A000E71E6 = {
@@ -740,6 +735,7 @@
 				99FA4F511A2769C1000F4B2A /* VDDProfFilterViewController.m in Sources */,
 				992EECA01A66633500168C2A /* VDDReachability.m in Sources */,
 				9929654019DF32700097C538 /* VDDSideMenuTransitioner.m in Sources */,
+				997A561D1B223C56009B6235 /* OpenInChromeController.m in Sources */,
 				99C1AF4D19C75D9F00EA2F0D /* VDDMenjavaPredmetaCell.m in Sources */,
 				992EECA61A6663C000168C2A /* VDDCrypto.m in Sources */,
 				9959C9B61A518106005FA131 /* VDDTutorialViewController.m in Sources */,
@@ -748,7 +744,6 @@
 				99D13C951A20E56000488038 /* VDDOpombaUrnikCell.m in Sources */,
 				99D13C921A20E09600488038 /* VDDHybridSource.m in Sources */,
 				992EECA31A66635800168C2A /* VDDSuplenceSource.m in Sources */,
-				99532D4A1BF744FB00048AE4 /* JedilnikTableView.swift in Sources */,
 				99175F8D1A1BDD8400E3607E /* VDDSubPredmetiCell.m in Sources */,
 				99B6A8831A26576F0070CAB9 /* VDDSettingsTabBarViewController.m in Sources */,
 				99C1AF4919C6102900EA2F0D /* VDDNadomescanjaCell.m in Sources */,
@@ -762,14 +757,12 @@
 				99A4B48919D9DE0400789FE5 /* VDDVecUciteljevCell.m in Sources */,
 				99E7B9CB19F00A27009F80D4 /* VDDUrnikDataFetch.m in Sources */,
 				992EEC9D1A66632200168C2A /* VDDSuplenceDataFetch.m in Sources */,
-				994D1A7F1BF12AC300CCC403 /* JedilnikDataFetch.swift in Sources */,
 				99DB11191A23AF3C008CF2A4 /* VDDProfesorPasswordViewController.m in Sources */,
 				9929654619DF38670097C538 /* VDDSideMenuViewController.m in Sources */,
 				99E22A1D19E586E00036AF82 /* VDDMetaData.m in Sources */,
 				9986FB3A1A14FB0E0098210F /* VDDHybridDataFetch.m in Sources */,
 				998E0AA219D098FB003D6B01 /* VDDMenjavaUrCell.m in Sources */,
 				99400A5919E7010B00ABB1BF /* VDDJedilnikDataFetch.m in Sources */,
-				99D3E3761BF68DBC008B4656 /* JedilnikViewController.swift in Sources */,
 				99FA4F541A277EEE000F4B2A /* VDDAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -824,6 +817,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -888,7 +882,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GimVic/Info.plist;
@@ -897,8 +890,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DzinVision.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "GimVic/GimVic-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -907,7 +898,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GimVic/Info.plist;
@@ -916,7 +906,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DzinVision.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "GimVic/GimVic-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

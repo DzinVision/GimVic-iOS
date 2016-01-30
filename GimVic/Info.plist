@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -15,45 +20,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1</string>
+	<string>2.0.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Urnik &amp; Suplence</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.theccode.Gimvic.open_urnik_and_suplence</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Suplence</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.theccode.Gimvic.open_suplence</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Urnik</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.theccode.Gimvic.open_urnik</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Jedilnik</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.theccode.Gimvic.open_jedilnik</string>
-		</dict>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>VDDLaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
