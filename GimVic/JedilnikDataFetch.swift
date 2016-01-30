@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum MalicaType: String {
+    case Navadna = "Navadna", VegSPerutnino = "VegSPerutnino", Vegetarijanska = "Vegetarijanska", SadnoZelenjavna = "SadnoZelenjavna"
+}
+
+enum KosiloType: String {
+    case Navadno = "Navadno", Vegetarijansko = "Vegetarijansko"
+}
+
 class JedilnikDataFetch {
     static let sharedInstance = JedilnikDataFetch()
     var isDownloading = false;
@@ -19,18 +27,6 @@ class JedilnikDataFetch {
         if jedilnik.isEmpty {
             jedilnik = NSDictionary(contentsOfFile: "\(documentsPath)/jedilnik") as? [String: [[String: [String]]]] ?? [String: [[String: [String]]]]()
         }
-    }
-    
-    enum Days: Int {
-        case Monday = 0, Tuesday, Wednesday, Thursday, Friday
-    }
-    
-    enum MalicaType: String {
-        case Navadna = "Navadna", VegSPerutnino = "VegSPerutnino", Vegetarijanska = "Vegetarijanska", SadnoZelenjavna = "SadnoZelenjavna"
-    }
-    
-    enum KosiloType: String {
-        case Navadno = "Navadno", Vegetarijansko = "Vegetarijansko"
     }
     
     func downloadJedilnik() {
@@ -91,13 +87,20 @@ class JedilnikDataFetch {
         
         let resultDictionary = ["malica": malicaData, "kosilo": kosiloData]
         NSDictionary(dictionary: resultDictionary).writeToFile("\(documentsPath)/jedilnik", atomically: true)
+        
+        VDDMetaData.sharedMetaData().changeMetaDataAtributeWithKey("lastUpdatedJedilnik", toObject: NSDate())
+        isDownloading = false
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            NSNotificationCenter.defaultCenter().postNotificationName("VDDJedilnikFetchComplete", object: nil)
+        }
     }
     
-    func malicaForDay(day: Days, type: MalicaType) -> [String] {
-        return jedilnik["malica"]![day.rawValue][type.rawValue]!
+    func malicaForDay(day: Int, type: MalicaType) -> [String] {
+        return jedilnik["malica"]?[day][type.rawValue] ?? []
     }
     
-    func kosiloForDay(day: Days, type: KosiloType) -> [String] {
-        return jedilnik["kosilo"]![day.rawValue][type.rawValue]!
+    func kosiloForDay(day: Int, type: KosiloType) -> [String] {
+        return jedilnik["kosilo"]?[day][type.rawValue] ?? []
     }
 }

@@ -69,7 +69,9 @@
                                @"lastUpdatedUrnik": [NSNull null],
                                @"lastUpdatedHybrid": [NSNull null],
                                @"lastOpened": [NSNull null],
-                               @"lastAddedChanges": [NSDate date]
+                               @"lastAddedChanges": [NSDate date],
+                               @"malicaType": @"Navadno",
+                               @"kosiloType": @"Navadno"
                                };
         
         metaDataData = [NSKeyedArchiver archivedDataWithRootObject:data];
