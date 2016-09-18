@@ -31,6 +31,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        guard let lastOpened =  UserDefaults().object(forKey: UserSettings.lastOpened.rawValue) as? Date else {
+            UserDefaults().set(Date(), forKey: UserSettings.lastOpened.rawValue)
+            
+            if let rootViewController = RootViewController.sharedInstance {
+                rootViewController.transitionToDay(index: rootViewController.startingIndex)
+            }
+            return
+        }
+        
+        let calendar = Calendar(identifier: .gregorian)
+        let lastOpenedDay = calendar.ordinality(of: .day, in: .era, for: lastOpened)!
+        let currentDay = calendar.ordinality(of: .day, in: .era, for: Date())!
+        if currentDay - lastOpenedDay > 0 {
+            UserDefaults().set(Date(), forKey: UserSettings.lastOpened.rawValue)
+            
+            if let rootViewController = RootViewController.sharedInstance {
+                rootViewController.transitionToDay(index: rootViewController.startingIndex)
+            }
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -40,7 +59,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
