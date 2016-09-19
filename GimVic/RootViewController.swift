@@ -74,4 +74,8 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width
         pageControl.currentPage = Int(currentIndex)
     }
+    
+    @IBAction func settingsButtonPressed(_ sender: AnyObject) {
+        print("settings")
+    }
 }
