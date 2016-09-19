@@ -9,12 +9,7 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
-
     @IBOutlet weak var showSubstitutionsSwitch: UISwitch!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBAction func showSubstitutionsValueChanged(_ sender: AnyObject) {
         print(showSubstitutionsSwitch.isOn)

@@ -134,7 +134,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Nastavitve" id="BVg-87-f33">
                         <barButtonItem key="leftBarButtonItem" title="Nastavi" style="done" id="0Q7-IK-G2v">
-                            <color key="tintColor" red="0.67712339743589745" green="0.1833527963977061" blue="0.15163534747912441" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.74117647058823533" green="0.88627450980392153" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="doneButtonPressed:" destination="AV2-HC-ZQS" id="RKb-rF-Wj1"/>
                             </connections>
@@ -148,11 +148,11 @@
             </objects>
             <point key="canvasLocation" x="722" y="134"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Light Navigation Controller-->
         <scene sceneID="vAo-wi-0p6">
             <objects>
-                <navigationController id="zSP-eh-ET2" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="f2O-Qo-haP">
+                <navigationController id="zSP-eh-ET2" customClass="LightNavigationController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="f2O-Qo-haP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>

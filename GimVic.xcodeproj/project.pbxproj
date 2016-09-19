@@ -17,6 +17,7 @@
 		9915BE331D9068C10027B300 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE321D9068C10027B300 /* DataStructures.swift */; };
 		9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE341D906C2A0027B300 /* SuplenceCell.swift */; };
 		9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9915BE351D906C2A0027B300 /* SuplenceCell.xib */; };
+		99260C5E1D90864200810152 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C5D1D90864200810152 /* LightNavigationController.swift */; };
 		9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944E2BD1D907B6000C61B0E /* Settings.storyboard */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		9915BE321D9068C10027B300 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		9915BE341D906C2A0027B300 /* SuplenceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuplenceCell.swift; sourceTree = "<group>"; };
 		9915BE351D906C2A0027B300 /* SuplenceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuplenceCell.xib; sourceTree = "<group>"; };
+		99260C5D1D90864200810152 /* LightNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
 		9944E2BD1D907B6000C61B0E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				9915BE301D903BC70027B300 /* RootViewController.swift */,
 				990CAC231D8F125B00F8BE7D /* SuplenceViewController.swift */,
 				99EE1EB91D907E78003A78DB /* SettingsViewController.swift */,
+				99260C5D1D90864200810152 /* LightNavigationController.swift */,
 				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
 				990CAC251D8F125B00F8BE7D /* Main.storyboard */,
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9915BE311D903BC70027B300 /* RootViewController.swift in Sources */,
+				99260C5E1D90864200810152 /* LightNavigationController.swift in Sources */,
 				9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */,
 				9915BE331D9068C10027B300 /* DataStructures.swift in Sources */,
 				990CAC241D8F125B00F8BE7D /* SuplenceViewController.swift in Sources */,
