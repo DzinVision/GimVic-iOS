@@ -17,6 +17,8 @@
 		9915BE331D9068C10027B300 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE321D9068C10027B300 /* DataStructures.swift */; };
 		9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE341D906C2A0027B300 /* SuplenceCell.swift */; };
 		9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9915BE351D906C2A0027B300 /* SuplenceCell.xib */; };
+		9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944E2BD1D907B6000C61B0E /* Settings.storyboard */; };
+		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9915BE321D9068C10027B300 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		9915BE341D906C2A0027B300 /* SuplenceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuplenceCell.swift; sourceTree = "<group>"; };
 		9915BE351D906C2A0027B300 /* SuplenceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuplenceCell.xib; sourceTree = "<group>"; };
+		9944E2BD1D907B6000C61B0E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +71,11 @@
 				990CAC211D8F125B00F8BE7D /* AppDelegate.swift */,
 				9915BE301D903BC70027B300 /* RootViewController.swift */,
 				990CAC231D8F125B00F8BE7D /* SuplenceViewController.swift */,
-				9915BE341D906C2A0027B300 /* SuplenceCell.swift */,
-				9915BE351D906C2A0027B300 /* SuplenceCell.xib */,
+				99EE1EB91D907E78003A78DB /* SettingsViewController.swift */,
+				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
 				990CAC251D8F125B00F8BE7D /* Main.storyboard */,
+				9944E2BD1D907B6000C61B0E /* Settings.storyboard */,
 				990CAC281D8F125B00F8BE7D /* Assets.xcassets */,
 				9910D75D1D8F150200C2A804 /* Resources */,
 				990CAC2A1D8F125B00F8BE7D /* LaunchScreen.storyboard */,
@@ -85,6 +90,15 @@
 				9910D75B1D8F14FE00C2A804 /* bakcground.jpg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		99EE1EB81D907E5B003A78DB /* Suplence Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9915BE341D906C2A0027B300 /* SuplenceCell.swift */,
+				9915BE351D906C2A0027B300 /* SuplenceCell.xib */,
+			);
+			name = "Suplence Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +164,7 @@
 				990CAC2C1D8F125B00F8BE7D /* LaunchScreen.storyboard in Resources */,
 				9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */,
 				9910D75C1D8F14FE00C2A804 /* bakcground.jpg in Resources */,
+				9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */,
 				990CAC291D8F125B00F8BE7D /* Assets.xcassets in Resources */,
 				990CAC271D8F125B00F8BE7D /* Main.storyboard in Resources */,
 			);
@@ -167,6 +182,7 @@
 				9915BE331D9068C10027B300 /* DataStructures.swift in Sources */,
 				990CAC241D8F125B00F8BE7D /* SuplenceViewController.swift in Sources */,
 				990CAC221D8F125B00F8BE7D /* AppDelegate.swift in Sources */,
+				99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,8 @@ class SuplenceViewController: UIViewController, UITableViewDataSource {
         lunchLabel.text = "piscancji raznic, prazen krompir, pecena zelenjava, voda ali sok"
         
         tableView.register(UINib(nibName: "SuplenceCell", bundle: nil), forCellReuseIdentifier: "SuplenceCell")
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     // MARK: - Table View Data Source

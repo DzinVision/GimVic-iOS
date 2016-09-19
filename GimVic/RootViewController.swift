@@ -76,6 +76,9 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func settingsButtonPressed(_ sender: AnyObject) {
-        print("settings")
+        let settingsStoryboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingsNavigationViewController = settingsStoryboard.instantiateInitialViewController()!
+        settingsNavigationViewController.modalPresentationStyle = .formSheet
+        present(settingsNavigationViewController, animated: true, completion: nil)
     }
 }
