@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults().set(Date(), forKey: UserSettings.lastOpened.rawValue)
             
             if let rootViewController = RootViewController.sharedInstance {
-                rootViewController.transitionToDay(index: rootViewController.startingIndex)
+                rootViewController.transitionToDay(rootViewController.startingIndex)
             }
             return
         }
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults().set(Date(), forKey: UserSettings.lastOpened.rawValue)
             
             if let rootViewController = RootViewController.sharedInstance {
-                rootViewController.transitionToDay(index: rootViewController.startingIndex)
+                rootViewController.transitionToDay(rootViewController.startingIndex)
             }
         }
     }

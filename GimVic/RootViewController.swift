@@ -2,16 +2,19 @@
 //  RootViewController.swift
 //  GimVic
 //
-//  Created by Vid Drobnič on 9/18/16.
+//  Created by Vid Drobnič on 9/19/16.
 //  Copyright © 2016 Vid Drobnič. All rights reserved.
 //
 
 import UIKit
 
-class RootViewController: UIPageViewController, UIPageViewControllerDataSource {
+class RootViewController: UIViewController, UIScrollViewDelegate {
     static var sharedInstance: RootViewController?
     var suplenceViewControllers = [SuplenceViewController]()
-    let imageView = UIImageView(image: UIImage(named: "bakcground.jpg"))
+    var currentIndex: CGFloat = 0
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     var startingIndex: Int {
         let calendar = Calendar(identifier: .gregorian)
@@ -23,68 +26,52 @@ class RootViewController: UIPageViewController, UIPageViewControllerDataSource {
         return weekday - 2
     }
     
+    // MARK: - Status Bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    // MARK: - View Lifecylce
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         RootViewController.sharedInstance = self
         
         for i in 0..<5 {
             if let viewController = storyboard?.instantiateViewController(withIdentifier: "SuplenceViewController")
                 as? SuplenceViewController {
                 viewController.index = i
+                
                 suplenceViewControllers.append(viewController)
+                addChildViewController(viewController)
+                scrollView.addSubview(viewController.view)
             }
         }
+        currentIndex = CGFloat(startingIndex)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize.height = scrollView.bounds.height
+        scrollView.contentSize.width = 5 * scrollView.bounds.width
         
-        imageView.contentMode = .scaleAspectFill
-        imageView.frame = view.bounds
-        view.insertSubview(imageView, at: 0)
+        scrollView.contentOffset.x = currentIndex * scrollView.bounds.width
         
-        dataSource = self
-        setViewControllers([suplenceViewControllers[startingIndex]], direction: .forward, animated: false, completion: nil)
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        imageView.frame.size = size
-    }
-    
-    func transitionToDay(index: Int) {
-        setViewControllers([suplenceViewControllers[startingIndex]], direction: .forward, animated: true, completion: nil)
-    }
-    
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return suplenceViewControllers.count
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return startingIndex
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = (viewController as? SuplenceViewController)?.index else {
-            return nil
+        for viewController in suplenceViewControllers {
+            viewController.view.frame.size = scrollView.bounds.size
+            viewController.view.frame.origin.x = CGFloat(viewController.index) * scrollView.bounds.size.width
+            viewController.view.frame.origin.y = 0
         }
-        
-        if index == 0 {
-            return nil
-        }
-        
-        return suplenceViewControllers[index - 1]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = (viewController as? SuplenceViewController)?.index else {
-            return nil
-        }
-        
-        if index + 1 == suplenceViewControllers.count {
-            return nil
-        }
-        
-        return suplenceViewControllers[index + 1]
+    // MARK: - Change Day
+    func transitionToDay(_ day: Int) {
+        scrollView.contentOffset.x = CGFloat(day) * scrollView.bounds.size.width
+    }
+    
+    // MARK: - Scroll View Delegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width
+        pageControl.currentPage = Int(currentIndex)
     }
 }
