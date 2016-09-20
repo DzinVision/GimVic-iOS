@@ -23,6 +23,10 @@
 		99260C6C1D91891B00810152 /* GimVicData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99260C641D91891B00810152 /* GimVicData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		99260C721D91898100810152 /* ChooserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C711D91898100810152 /* ChooserData.swift */; };
 		99260C741D91946700810152 /* ConstantProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C731D91946700810152 /* ConstantProperties.swift */; };
+		99260C761D91AC9F00810152 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C751D91AC9F00810152 /* FilterViewController.swift */; };
+		99260C781D91BA1A00810152 /* AdditionalClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C771D91BA1A00810152 /* AdditionalClassesViewController.swift */; };
+		99260C7A1D91C52C00810152 /* MalicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C791D91C52C00810152 /* MalicaViewController.swift */; };
+		99260C7C1D91C70C00810152 /* KosiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C7B1D91C70C00810152 /* KosiloViewController.swift */; };
 		9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944E2BD1D907B6000C61B0E /* Settings.storyboard */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,10 @@
 		99260C671D91891B00810152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99260C711D91898100810152 /* ChooserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooserData.swift; sourceTree = "<group>"; };
 		99260C731D91946700810152 /* ConstantProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantProperties.swift; sourceTree = "<group>"; };
+		99260C751D91AC9F00810152 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		99260C771D91BA1A00810152 /* AdditionalClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalClassesViewController.swift; sourceTree = "<group>"; };
+		99260C791D91C52C00810152 /* MalicaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalicaViewController.swift; sourceTree = "<group>"; };
+		99260C7B1D91C70C00810152 /* KosiloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KosiloViewController.swift; sourceTree = "<group>"; };
 		9944E2BD1D907B6000C61B0E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +126,10 @@
 				9915BE301D903BC70027B300 /* RootViewController.swift */,
 				990CAC231D8F125B00F8BE7D /* SuplenceViewController.swift */,
 				99EE1EB91D907E78003A78DB /* SettingsViewController.swift */,
+				99260C751D91AC9F00810152 /* FilterViewController.swift */,
+				99260C771D91BA1A00810152 /* AdditionalClassesViewController.swift */,
+				99260C791D91C52C00810152 /* MalicaViewController.swift */,
+				99260C7B1D91C70C00810152 /* KosiloViewController.swift */,
 				99260C5D1D90864200810152 /* LightNavigationController.swift */,
 				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
@@ -281,12 +293,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9915BE311D903BC70027B300 /* RootViewController.swift in Sources */,
+				99260C7A1D91C52C00810152 /* MalicaViewController.swift in Sources */,
 				99260C5E1D90864200810152 /* LightNavigationController.swift in Sources */,
+				99260C761D91AC9F00810152 /* FilterViewController.swift in Sources */,
 				9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */,
 				9915BE331D9068C10027B300 /* DataStructures.swift in Sources */,
 				990CAC241D8F125B00F8BE7D /* SuplenceViewController.swift in Sources */,
 				990CAC221D8F125B00F8BE7D /* AppDelegate.swift in Sources */,
 				99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */,
+				99260C7C1D91C70C00810152 /* KosiloViewController.swift in Sources */,
+				99260C781D91BA1A00810152 /* AdditionalClassesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

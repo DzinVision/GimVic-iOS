@@ -33,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        setRootControllerDay()
+        updateChooserData()
+    }
+    
+    func setRootControllerDay() {
         guard let lastOpened =  UserDefaults().object(forKey: UserSettings.lastOpened.rawValue) as? Date else {
             UserDefaults().set(Date(), forKey: UserSettings.lastOpened.rawValue)
             
@@ -51,6 +56,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let rootViewController = RootViewController.sharedInstance {
                 rootViewController.transitionToDay(rootViewController.startingIndex)
             }
+        }
+    }
+    
+    func updateChooserData() {
+        if let lastUpdatedDate = UserDefaults().object(forKey: UserSettings.lastRefreshedChooserData.rawValue) as? Date {
+            if Date().timeIntervalSince(lastUpdatedDate) > 24*3600 {
+                ChooserData.sharedInstance.update()
+                UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
+            }
+        } else {
+            ChooserData.sharedInstance.update()
+            UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
         }
     }
 

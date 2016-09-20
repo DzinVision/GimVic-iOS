@@ -86,6 +86,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="9Xx-1B-bHJ" secondAttribute="bottom" constant="11" id="p48-tz-5f9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BWu-if-Uvw" kind="show" id="Yfm-f4-SPO"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PTJ-7v-dVX">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
@@ -106,6 +109,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="1go-rc-qAA" secondAttribute="bottom" constant="11" id="nGK-hg-4b2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="C9i-Su-u6x" kind="show" id="fm1-hm-bWH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8qm-3j-mYx">
                                         <rect key="frame" x="0.0" y="176" width="375" height="44"/>
@@ -151,10 +157,80 @@
             </objects>
             <point key="canvasLocation" x="722" y="134"/>
         </scene>
+        <!--Vrsta Malice-->
+        <scene sceneID="Zg5-Og-TFf">
+            <objects>
+                <viewController id="BWu-if-Uvw" customClass="MalicaViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z7V-t8-CHs"/>
+                        <viewControllerLayoutGuide type="bottom" id="hXK-l7-e2a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vac-F0-IFr">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHB-kl-QFa">
+                                <connections>
+                                    <outlet property="dataSource" destination="BWu-if-Uvw" id="Dr2-QF-usT"/>
+                                    <outlet property="delegate" destination="BWu-if-Uvw" id="X4f-dt-Iye"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uHB-kl-QFa" secondAttribute="trailing" id="fua-Kl-ZfX"/>
+                            <constraint firstItem="uHB-kl-QFa" firstAttribute="centerY" secondItem="Vac-F0-IFr" secondAttribute="centerY" id="ik5-2i-Ffy"/>
+                            <constraint firstItem="uHB-kl-QFa" firstAttribute="leading" secondItem="Vac-F0-IFr" secondAttribute="leading" id="nOh-kw-Lbj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vrsta Malice" id="6hK-aF-ofY"/>
+                    <connections>
+                        <outlet property="malicaPickerView" destination="uHB-kl-QFa" id="x1u-DA-0PH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhd-HJ-cr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="232"/>
+        </scene>
+        <!--Vrsta Kosila-->
+        <scene sceneID="5A0-tq-QqT">
+            <objects>
+                <viewController id="C9i-Su-u6x" customClass="KosiloViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y36-2H-XDO"/>
+                        <viewControllerLayoutGuide type="bottom" id="yN4-Zv-rsB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nuj-Vb-Cfw">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwl-ag-QVn">
+                                <connections>
+                                    <outlet property="dataSource" destination="C9i-Su-u6x" id="I2x-V0-2RN"/>
+                                    <outlet property="delegate" destination="C9i-Su-u6x" id="OnF-TP-Sng"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwl-ag-QVn" firstAttribute="leading" secondItem="nuj-Vb-Cfw" secondAttribute="leading" id="1kj-pD-IGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="pwl-ag-QVn" secondAttribute="trailing" id="Zpd-Ra-Gnn"/>
+                            <constraint firstItem="pwl-ag-QVn" firstAttribute="centerY" secondItem="nuj-Vb-Cfw" secondAttribute="centerY" id="ebp-uR-nIw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vrsta Kosila" id="gdl-Bt-6mI"/>
+                    <connections>
+                        <outlet property="kosiloPickerView" destination="pwl-ag-QVn" id="zpD-fa-aTK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKC-hy-joZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="893"/>
+        </scene>
         <!--Filter-->
         <scene sceneID="qTN-Hg-41w">
             <objects>
-                <viewController id="9pZ-Rx-7ou" sceneMemberID="viewController">
+                <viewController id="9pZ-Rx-7ou" customClass="FilterViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qc2-cq-Yyc"/>
                         <viewControllerLayoutGuide type="bottom" id="Mpc-xW-LiL"/>
@@ -163,28 +239,92 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igh-jk-ja7">
-                                <frame key="frameInset" minX="-6" minY="109" height="216" maxX="6"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SRh-Dy-7sD">
                                 <segments>
                                     <segment title="Razred"/>
                                     <segment title="Profesor"/>
                                 </segments>
+                                <color key="tintColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="filterTypeChanged:" destination="9pZ-Rx-7ou" eventType="valueChanged" id="TPx-RM-alb"/>
+                                </connections>
                             </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igh-jk-ja7">
+                                <connections>
+                                    <outlet property="dataSource" destination="9pZ-Rx-7ou" id="RI2-ip-00Y"/>
+                                    <outlet property="delegate" destination="9pZ-Rx-7ou" id="du1-qc-mmy"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMx-SZ-srN">
+                                <state key="normal" title="Nastavi predmete">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fF8-ep-LT6" kind="show" identifier="" id="Z9x-C3-9bi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SRh-Dy-7sD" firstAttribute="centerX" secondItem="q33-QE-dPe" secondAttribute="centerX" id="5kb-9X-j4L"/>
+                            <constraint firstItem="HMx-SZ-srN" firstAttribute="leading" secondItem="q33-QE-dPe" secondAttribute="leading" constant="16" id="64G-dX-aaA"/>
+                            <constraint firstItem="HMx-SZ-srN" firstAttribute="top" secondItem="igh-jk-ja7" secondAttribute="bottom" constant="8" id="Q43-dJ-QBg"/>
+                            <constraint firstAttribute="trailing" secondItem="igh-jk-ja7" secondAttribute="trailing" id="RYK-vi-5I8"/>
+                            <constraint firstItem="igh-jk-ja7" firstAttribute="top" secondItem="SRh-Dy-7sD" secondAttribute="bottom" constant="8" id="fw4-kU-7S2"/>
+                            <constraint firstItem="igh-jk-ja7" firstAttribute="leading" secondItem="q33-QE-dPe" secondAttribute="leading" id="jSL-MA-A5v"/>
                             <constraint firstItem="SRh-Dy-7sD" firstAttribute="top" secondItem="qc2-cq-Yyc" secondAttribute="bottom" constant="8" id="km3-Zf-xgS"/>
+                            <constraint firstAttribute="trailing" secondItem="HMx-SZ-srN" secondAttribute="trailing" constant="16" id="tVc-p8-erW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Filter" id="Cqb-DN-pQ0"/>
+                    <connections>
+                        <outlet property="additionalClassesButton" destination="HMx-SZ-srN" id="A5m-68-W78"/>
+                        <outlet property="filterPickerView" destination="igh-jk-ja7" id="gRJ-hb-ZXr"/>
+                        <outlet property="filterTypeControl" destination="SRh-Dy-7sD" id="4j3-gN-Ysd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2e-Gw-Oon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="134"/>
+            <point key="canvasLocation" x="1665" y="-453"/>
+        </scene>
+        <!--Predmeti-->
+        <scene sceneID="EAX-KE-0RG">
+            <objects>
+                <tableViewController id="fF8-ep-LT6" customClass="AdditionalClassesViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pwI-L8-G26">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdditionalClassesCell" textLabel="iW1-aT-mTl" style="IBUITableViewCellStyleDefault" id="IEp-9K-hyK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IEp-9K-hyK" id="sea-4Q-ciG">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iW1-aT-mTl">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fF8-ep-LT6" id="oMA-NY-n90"/>
+                            <outlet property="delegate" destination="fF8-ep-LT6" id="oel-Kk-INO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Predmeti" id="0Tg-5i-S2N"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhY-qo-eSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="-453"/>
         </scene>
         <!--Light Navigation Controller-->
         <scene sceneID="vAo-wi-0p6">

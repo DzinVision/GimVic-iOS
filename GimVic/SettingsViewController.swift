@@ -9,6 +9,10 @@
 import UIKit
 import GimVicData
 
+protocol UpdatableSettings {
+    func update()
+}
+
 class SettingsViewController: UITableViewController, ChooserDataDelegate {
     @IBOutlet weak var showSubstitutionsSwitch: UISwitch!
     let refresher = UIRefreshControl()
@@ -17,7 +21,6 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
         super.viewDidLoad()
         
         ChooserData.sharedInstance.delegates[.settingsViewController] = self
-        updateChooserData(force: false)
         
         let showSubstitutions = UserDefaults().bool(forKey: UserSettings.showSubstitutions.rawValue)
         showSubstitutionsSwitch.setOn(showSubstitutions, animated: true)
@@ -27,25 +30,12 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
     }
     
     func refreshData(sender: AnyObject) {
-        updateChooserData(force: true)
+        updateChooserData()
     }
     
-    func updateChooserData(force: Bool) {
-        if force {
-            ChooserData.sharedInstance.update()
-            UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
-            return
-        }
-        
-        if let lastUpdatedDate = UserDefaults().object(forKey: UserSettings.lastRefreshedChooserData.rawValue) as? Date {
-            if Date().timeIntervalSince(lastUpdatedDate) > 24*3600 {
-                ChooserData.sharedInstance.update()
-                UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
-            }
-        } else {
-            ChooserData.sharedInstance.update()
-            UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
-        }
+    func updateChooserData() {
+        ChooserData.sharedInstance.update()
+        UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
     }
     
     @IBAction func showSubstitutionsValueChanged(_ sender: AnyObject) {
@@ -54,6 +44,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
     }
     
     @IBAction func doneButtonPressed(_ sender: AnyObject) {
+        UserDefaults().synchronize()
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
@@ -69,8 +60,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
                                                     message: message,
                                                     preferredStyle: .alert)
             let tryAgain = UIAlertAction(title: "Poskusi znova", style: .default, handler: {(action) in
-                ChooserData.sharedInstance.update()
-                UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
+                self.updateChooserData()
             })
             let cancel = UIAlertAction(title: "Vredu", style: .cancel, handler: nil)
             alertController.addAction(cancel)
