@@ -63,6 +63,9 @@
                                                 <constraint firstItem="5FG-Mt-fzt" firstAttribute="top" secondItem="dBN-R3-8Ta" secondAttribute="top" constant="11" id="xVM-KD-7wo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9pZ-Rx-7ou" kind="show" id="RsV-aw-LVq"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xvk-W1-KwN">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -148,13 +151,49 @@
             </objects>
             <point key="canvasLocation" x="722" y="134"/>
         </scene>
+        <!--Filter-->
+        <scene sceneID="qTN-Hg-41w">
+            <objects>
+                <viewController id="9pZ-Rx-7ou" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qc2-cq-Yyc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mpc-xW-LiL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q33-QE-dPe">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igh-jk-ja7">
+                                <frame key="frameInset" minX="-6" minY="109" height="216" maxX="6"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SRh-Dy-7sD">
+                                <segments>
+                                    <segment title="Razred"/>
+                                    <segment title="Profesor"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SRh-Dy-7sD" firstAttribute="centerX" secondItem="q33-QE-dPe" secondAttribute="centerX" id="5kb-9X-j4L"/>
+                            <constraint firstItem="SRh-Dy-7sD" firstAttribute="top" secondItem="qc2-cq-Yyc" secondAttribute="bottom" constant="8" id="km3-Zf-xgS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filter" id="Cqb-DN-pQ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2e-Gw-Oon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="134"/>
+        </scene>
         <!--Light Navigation Controller-->
         <scene sceneID="vAo-wi-0p6">
             <objects>
                 <navigationController id="zSP-eh-ET2" customClass="LightNavigationController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="f2O-Qo-haP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="f2O-Qo-haP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.74117647058823533" green="0.88627450980392153" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

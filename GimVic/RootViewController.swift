@@ -11,7 +11,8 @@ import UIKit
 class RootViewController: UIViewController, UIScrollViewDelegate {
     static var sharedInstance: RootViewController?
     var suplenceViewControllers = [SuplenceViewController]()
-    var currentIndex: CGFloat = 0
+    var currentIndex = 0
+    var scrollingLocked = false
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -37,6 +38,8 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         
         RootViewController.sharedInstance = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didRotate(sender:)), name: .UIDeviceOrientationDidChange, object: nil)
+        
         for i in 0..<5 {
             if let viewController = storyboard?.instantiateViewController(withIdentifier: "SuplenceViewController")
                 as? SuplenceViewController {
@@ -47,7 +50,11 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
                 scrollView.addSubview(viewController.view)
             }
         }
-        currentIndex = CGFloat(startingIndex)
+        currentIndex = startingIndex
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,13 +62,21 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize.height = scrollView.bounds.height
         scrollView.contentSize.width = 5 * scrollView.bounds.width
         
-        scrollView.contentOffset.x = currentIndex * scrollView.bounds.width
+        scrollView.contentOffset.x = CGFloat(currentIndex) * scrollView.bounds.width
         
         for viewController in suplenceViewControllers {
             viewController.view.frame.size = scrollView.bounds.size
             viewController.view.frame.origin.x = CGFloat(viewController.index) * scrollView.bounds.size.width
             viewController.view.frame.origin.y = 0
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        scrollingLocked = true
+    }
+    
+    func didRotate(sender: AnyObject) {
+        scrollingLocked = false
     }
     
     // MARK: - Change Day
@@ -71,8 +86,11 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: - Scroll View Delegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width
-        pageControl.currentPage = Int(currentIndex)
+        if scrollingLocked {
+            return
+        }
+        currentIndex = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        pageControl.currentPage = currentIndex
     }
     
     @IBAction func settingsButtonPressed(_ sender: AnyObject) {

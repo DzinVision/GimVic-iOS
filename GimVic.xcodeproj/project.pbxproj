@@ -18,9 +18,38 @@
 		9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE341D906C2A0027B300 /* SuplenceCell.swift */; };
 		9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9915BE351D906C2A0027B300 /* SuplenceCell.xib */; };
 		99260C5E1D90864200810152 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C5D1D90864200810152 /* LightNavigationController.swift */; };
+		99260C681D91891B00810152 /* GimVicData.h in Headers */ = {isa = PBXBuildFile; fileRef = 99260C661D91891B00810152 /* GimVicData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99260C6B1D91891B00810152 /* GimVicData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99260C641D91891B00810152 /* GimVicData.framework */; };
+		99260C6C1D91891B00810152 /* GimVicData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99260C641D91891B00810152 /* GimVicData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99260C721D91898100810152 /* ChooserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C711D91898100810152 /* ChooserData.swift */; };
+		99260C741D91946700810152 /* ConstantProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C731D91946700810152 /* ConstantProperties.swift */; };
 		9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944E2BD1D907B6000C61B0E /* Settings.storyboard */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99260C691D91891B00810152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 990CAC161D8F125B00F8BE7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99260C631D91891B00810152;
+			remoteInfo = GimVicData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99260C701D91891B00810152 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99260C6C1D91891B00810152 /* GimVicData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		990CAC1E1D8F125B00F8BE7D /* GimVic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GimVic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,12 +65,25 @@
 		9915BE341D906C2A0027B300 /* SuplenceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuplenceCell.swift; sourceTree = "<group>"; };
 		9915BE351D906C2A0027B300 /* SuplenceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuplenceCell.xib; sourceTree = "<group>"; };
 		99260C5D1D90864200810152 /* LightNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
+		99260C641D91891B00810152 /* GimVicData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GimVicData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99260C661D91891B00810152 /* GimVicData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GimVicData.h; sourceTree = "<group>"; };
+		99260C671D91891B00810152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99260C711D91898100810152 /* ChooserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooserData.swift; sourceTree = "<group>"; };
+		99260C731D91946700810152 /* ConstantProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantProperties.swift; sourceTree = "<group>"; };
 		9944E2BD1D907B6000C61B0E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		990CAC1B1D8F125B00F8BE7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99260C6B1D91891B00810152 /* GimVicData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99260C601D91891B00810152 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				990CAC201D8F125B00F8BE7D /* GimVic */,
+				99260C651D91891B00810152 /* GimVicData */,
 				990CAC1F1D8F125B00F8BE7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				990CAC1E1D8F125B00F8BE7D /* GimVic.app */,
+				99260C641D91891B00810152 /* GimVicData.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +139,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		99260C651D91891B00810152 /* GimVicData */ = {
+			isa = PBXGroup;
+			children = (
+				99260C661D91891B00810152 /* GimVicData.h */,
+				99260C711D91898100810152 /* ChooserData.swift */,
+				99260C731D91946700810152 /* ConstantProperties.swift */,
+				99260C671D91891B00810152 /* Info.plist */,
+			);
+			path = GimVicData;
+			sourceTree = "<group>";
+		};
 		99EE1EB81D907E5B003A78DB /* Suplence Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +161,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		99260C611D91891B00810152 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99260C681D91891B00810152 /* GimVicData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		990CAC1D1D8F125B00F8BE7D /* GimVic */ = {
 			isa = PBXNativeTarget;
@@ -114,15 +180,35 @@
 				990CAC1A1D8F125B00F8BE7D /* Sources */,
 				990CAC1B1D8F125B00F8BE7D /* Frameworks */,
 				990CAC1C1D8F125B00F8BE7D /* Resources */,
+				99260C701D91891B00810152 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				99260C6A1D91891B00810152 /* PBXTargetDependency */,
 			);
 			name = GimVic;
 			productName = GimVic;
 			productReference = 990CAC1E1D8F125B00F8BE7D /* GimVic.app */;
 			productType = "com.apple.product-type.application";
+		};
+		99260C631D91891B00810152 /* GimVicData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99260C6D1D91891B00810152 /* Build configuration list for PBXNativeTarget "GimVicData" */;
+			buildPhases = (
+				99260C5F1D91891B00810152 /* Sources */,
+				99260C601D91891B00810152 /* Frameworks */,
+				99260C611D91891B00810152 /* Headers */,
+				99260C621D91891B00810152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GimVicData;
+			productName = GimVicData;
+			productReference = 99260C641D91891B00810152 /* GimVicData.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -137,6 +223,12 @@
 					990CAC1D1D8F125B00F8BE7D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = NCNCMPRJ7T;
+						ProvisioningStyle = Automatic;
+					};
+					99260C631D91891B00810152 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NCNCMPRJ7T;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -155,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				990CAC1D1D8F125B00F8BE7D /* GimVic */,
+				99260C631D91891B00810152 /* GimVicData */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +263,13 @@
 				9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */,
 				990CAC291D8F125B00F8BE7D /* Assets.xcassets in Resources */,
 				990CAC271D8F125B00F8BE7D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99260C621D91891B00810152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +290,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		99260C5F1D91891B00810152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99260C741D91946700810152 /* ConstantProperties.swift in Sources */,
+				99260C721D91898100810152 /* ChooserData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99260C6A1D91891B00810152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99260C631D91891B00810152 /* GimVicData */;
+			targetProxy = 99260C691D91891B00810152 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		990CAC251D8F125B00F8BE7D /* Main.storyboard */ = {
@@ -308,6 +425,7 @@
 		990CAC311D8F125B00F8BE7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NCNCMPRJ7T;
 				INFOPLIST_FILE = GimVic/Info.plist;
@@ -322,6 +440,7 @@
 		990CAC321D8F125B00F8BE7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NCNCMPRJ7T;
 				INFOPLIST_FILE = GimVic/Info.plist;
@@ -330,6 +449,55 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DzinVision.GimVic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		99260C6E1D91891B00810152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NCNCMPRJ7T;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GimVicData/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DzinVision.GimVicData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99260C6F1D91891B00810152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NCNCMPRJ7T;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GimVicData/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DzinVision.GimVicData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -353,6 +521,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		99260C6D1D91891B00810152 /* Build configuration list for PBXNativeTarget "GimVicData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99260C6E1D91891B00810152 /* Debug */,
+				99260C6F1D91891B00810152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
