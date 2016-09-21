@@ -9,5 +9,5 @@
 import Foundation
 
 struct ConstantProperties {
-    static let serverURL = URL(string: "http://gimvicapp.404.si")!
+    static let serverURLString = "http://gimvicapp.404.si"
 }

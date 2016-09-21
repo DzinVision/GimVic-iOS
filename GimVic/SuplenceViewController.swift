@@ -7,26 +7,59 @@
 //
 
 import UIKit
+import GimVicData
 
-class SuplenceViewController: UIViewController, UITableViewDataSource {
+class SuplenceViewController: UIViewController, UITableViewDataSource, TimetableDataDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var snackLabel: UILabel!
     @IBOutlet weak var lunchLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var index = 0
+    let refreshControl = UIRefreshControl()
+    
+    var data: TimetableEntry?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dateLabel.text = Weekdays(index: index)!.rawValue
         
-        snackLabel.text = "koruzna bombeta (velika), tunin namaz, jabolcni zavitek, sok"
-        lunchLabel.text = "piscancji raznic, prazen krompir, pecena zelenjava, voda ali sok"
+        TimetableData.sharedInstance.delegates[TimetableData.DelegateID(rawValue: index)!] = self
+        data = TimetableData.sharedInstance.timetableEntryFor(TimetableData.Weekday(rawValue: index)!)
+        setJedilnik()
         
         tableView.register(UINib(nibName: "SuplenceCell", bundle: nil), forCellReuseIdentifier: "SuplenceCell")
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        refreshControl.tintColor = UIColor.white
+        refreshControl.tintColor = UIColor.white
+        refreshControl.tintColorDidChange()
+        tableView.addSubview(refreshControl)
+    }
+    
+    func setJedilnik() {
+        snackLabel.text = data?.snack ?? ""
+        lunchLabel.text = data?.lunch ?? ""
+    }
+    
+    func refresh(sender: AnyObject) {
+        let viewControllers = RootViewController.sharedInstance?.suplenceViewControllers ?? []
+        for viewController in viewControllers {
+            if viewController.index == index {
+                continue
+            }
+            
+            UIView.animate(withDuration: 0.2, delay: 0, options: .beginFromCurrentState, animations: {
+                viewController.tableView.contentOffset.y = -viewController.refreshControl.frame.size.height
+                }, completion: {finished in
+                    viewController.refreshControl.beginRefreshing()
+            })
+        }
+        
+        TimetableData.sharedInstance.update()
     }
     
     // MARK: - Table View Data Source
@@ -35,12 +68,34 @@ class SuplenceViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return data?.lessons.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SuplenceCell", for: indexPath) as! SuplenceCell
+        
+        let lesson = data!.lessons[indexPath.row]
+        cell.hourLabel.text = String(lesson.hour)
+        cell.lessonLabel.text = lesson.subjects.first
+        cell.classroomLabel.text = lesson.classrooms.first
+        cell.teacherLabel.text = lesson.teachers.first
+        
         return cell
+    }
+    
+    // MARK: - Timetable Data Delegate
+    func timetableDataDidUpdateWithStatus(_ status: DataGetterStatus) {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .beginFromCurrentState, animations: {
+            self.tableView.contentOffset.y = 0
+            }, completion: {finished in
+                self.refreshControl.endRefreshing()
+        })
+        
+        if status == .success {
+            data = TimetableData.sharedInstance.timetableEntryFor(TimetableData.Weekday(rawValue: index)!)
+            setJedilnik()
+            tableView.reloadData()
+        }
     }
 }
 

@@ -8,12 +8,8 @@
 
 import Foundation
 
-public enum ChooserDataStatus {
-    case success, networkError, error
-}
-
 public protocol ChooserDataDelegate {
-    func chooserDataDidUpdateWithStatus(_ status: ChooserDataStatus)
+    func chooserDataDidUpdateWithStatus(_ status: DataGetterStatus)
 }
 
 public final class ChooserData {
@@ -80,7 +76,9 @@ public final class ChooserData {
         }
         downloading = true
         
-        let url = ConstantProperties.serverURL.appendingPathComponent("chooserOptions")
+        UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
+        
+        let url = URL(string: ConstantProperties.serverURLString + "/chooserOptions")!
         URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
             if error != nil {
                 if error!._domain == NSURLErrorDomain {
@@ -122,7 +120,7 @@ public final class ChooserData {
         }).resume()
     }
     
-    public func refreshDelegates(_ status: ChooserDataStatus) {
+    public func refreshDelegates(_ status: DataGetterStatus) {
         DispatchQueue.main.async {
             for delegate in self.delegates.values {
                 delegate.chooserDataDidUpdateWithStatus(status)

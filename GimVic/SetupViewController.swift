@@ -21,7 +21,7 @@ class SetupViewController: UIViewController, ChooserDataDelegate {
         
         if !ChooserData.sharedInstance.isDataValid {
             ChooserData.sharedInstance.delegates[.setupViewController] = self
-            updateChooserData()
+            ChooserData.sharedInstance.update()
         } else {
             loadingLabel.isHidden = true
             loadingIndicator.stopAnimating()
@@ -29,12 +29,7 @@ class SetupViewController: UIViewController, ChooserDataDelegate {
         }
     }
     
-    func updateChooserData() {
-        ChooserData.sharedInstance.update()
-        UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
-    }
-    
-    func chooserDataDidUpdateWithStatus(_ status: ChooserDataStatus) {
+    func chooserDataDidUpdateWithStatus(_ status: DataGetterStatus) {
         if ChooserData.sharedInstance.isDataValid {
             nextButton.alpha = 0.0
             nextButton.isHidden = false
@@ -59,7 +54,7 @@ class SetupViewController: UIViewController, ChooserDataDelegate {
                                                     message: message,
                                                     preferredStyle: .alert)
             let tryAgain = UIAlertAction(title: "Poskusi znova", style: .default, handler: {(action) in
-                self.updateChooserData()
+                ChooserData.sharedInstance.update()
             })
             alertController.addAction(tryAgain)
             present(alertController, animated: true, completion: nil)

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import GimVicData
 
 class RootViewController: UIViewController, UIScrollViewDelegate {
     static var sharedInstance: RootViewController?
+    
     var suplenceViewControllers = [SuplenceViewController]()
     var currentIndex = 0
     var scrollingLocked = false

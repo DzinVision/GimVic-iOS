@@ -30,6 +30,9 @@
 		99471FB51D92F76E0071F3F8 /* SetupFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FB41D92F76E0071F3F8 /* SetupFilterViewController.swift */; };
 		99471FB81D92FD3D0071F3F8 /* SetupMalicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FB71D92FD3D0071F3F8 /* SetupMalicaViewController.swift */; };
 		99471FBA1D92FD430071F3F8 /* SetupKosiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FB91D92FD430071F3F8 /* SetupKosiloViewController.swift */; };
+		99471FBC1D9302210071F3F8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FBB1D9302210071F3F8 /* UserSettings.swift */; };
+		99471FBE1D9303F00071F3F8 /* TimetableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FBD1D9303F00071F3F8 /* TimetableData.swift */; };
+		99471FC01D9307020071F3F8 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FBF1D9307020071F3F8 /* DataStructures.swift */; };
 		99DFA7661D92E35E0066D7F3 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DFA7651D92E35E0066D7F3 /* Setup.storyboard */; };
 		99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFA7681D92E6350066D7F3 /* SetupViewController.swift */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
@@ -85,6 +88,9 @@
 		99471FB41D92F76E0071F3F8 /* SetupFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFilterViewController.swift; sourceTree = "<group>"; };
 		99471FB71D92FD3D0071F3F8 /* SetupMalicaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMalicaViewController.swift; sourceTree = "<group>"; };
 		99471FB91D92FD430071F3F8 /* SetupKosiloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupKosiloViewController.swift; sourceTree = "<group>"; };
+		99471FBB1D9302210071F3F8 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		99471FBD1D9303F00071F3F8 /* TimetableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableData.swift; sourceTree = "<group>"; };
+		99471FBF1D9307020071F3F8 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		99DFA7651D92E35E0066D7F3 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		99DFA7681D92E6350066D7F3 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,9 @@
 			children = (
 				99260C661D91891B00810152 /* GimVicData.h */,
 				99260C711D91898100810152 /* ChooserData.swift */,
+				99471FBF1D9307020071F3F8 /* DataStructures.swift */,
+				99471FBD1D9303F00071F3F8 /* TimetableData.swift */,
+				99471FBB1D9302210071F3F8 /* UserSettings.swift */,
 				99260C731D91946700810152 /* ConstantProperties.swift */,
 				99260C671D91891B00810152 /* Info.plist */,
 			);
@@ -351,7 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				99260C741D91946700810152 /* ConstantProperties.swift in Sources */,
+				99471FC01D9307020071F3F8 /* DataStructures.swift in Sources */,
+				99471FBC1D9302210071F3F8 /* UserSettings.swift in Sources */,
 				99260C721D91898100810152 /* ChooserData.swift in Sources */,
+				99471FBE1D9303F00071F3F8 /* TimetableData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

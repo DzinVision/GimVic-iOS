@@ -8,18 +8,6 @@
 
 import Foundation
 
-enum UserSettings: String {
-    case lastOpened
-    case lastRefreshedChooserData
-    case showSubstitutions
-    case profesorFilter
-    case filter
-    case maturitetniPredmeti
-    case izbirniPredmeti
-    case snack
-    case lunch
-}
-
 enum Weekdays: String {
     case monday = "Ponedeljek"
     case tuesday = "Torek"

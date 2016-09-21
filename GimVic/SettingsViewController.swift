@@ -30,12 +30,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
     }
     
     func refreshData(sender: AnyObject) {
-        updateChooserData()
-    }
-    
-    func updateChooserData() {
         ChooserData.sharedInstance.update()
-        UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
     }
     
     @IBAction func showSubstitutionsValueChanged(_ sender: AnyObject) {
@@ -48,7 +43,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    func chooserDataDidUpdateWithStatus(_ status: ChooserDataStatus) {
+    func chooserDataDidUpdateWithStatus(_ status: DataGetterStatus) {
         refresher.endRefreshing()
         if !ChooserData.sharedInstance.isDataValid {
             var message: String?
@@ -60,7 +55,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
                                                     message: message,
                                                     preferredStyle: .alert)
             let tryAgain = UIAlertAction(title: "Poskusi znova", style: .default, handler: {(action) in
-                self.updateChooserData()
+                ChooserData.sharedInstance.update()
             })
 //            let cancel = UIAlertAction(title: "Vredu", style: .cancel, handler: nil)
 //            alertController.addAction(cancel)

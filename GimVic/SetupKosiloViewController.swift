@@ -29,6 +29,9 @@ class SetupKosiloViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBAction func endButtonPressed(_ sender: AnyObject) {
         let selected = ChooserData.sharedInstance.lunchTypes[kosiloPickerView.selectedRow(inComponent: 0)]
         UserDefaults().set(selected, forKey: UserSettings.lunch.rawValue)
+        UserDefaults().synchronize()
+        
+        TimetableData.sharedInstance.update()
         
         navigationController?.dismiss(animated: true, completion: nil)
     }

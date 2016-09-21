@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         ChooserData.sharedInstance.save()
+        TimetableData.sharedInstance.save()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -61,11 +62,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let lastUpdatedDate = UserDefaults().object(forKey: UserSettings.lastRefreshedChooserData.rawValue) as? Date {
             if Date().timeIntervalSince(lastUpdatedDate) > 24*3600 {
                 ChooserData.sharedInstance.update()
-                UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
             }
         } else {
             ChooserData.sharedInstance.update()
-            UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedChooserData.rawValue)
+        }
+    }
+    
+    func updateTimetableData() {
+        if let lastUpdatedDate = UserDefaults().object(forKey: UserSettings.lastRefreshedTimetableData.rawValue) as? Date {
+            if Date().timeIntervalSince(lastUpdatedDate) > 15*60 {
+                TimetableData.sharedInstance.update()
+            }
+        } else {
+            TimetableData.sharedInstance.update()
         }
     }
 
@@ -73,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         setRootControllerDay()
         updateChooserData()
+        updateTimetableData()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
