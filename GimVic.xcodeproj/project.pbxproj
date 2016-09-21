@@ -17,7 +17,6 @@
 		9915BE331D9068C10027B300 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE321D9068C10027B300 /* DataStructures.swift */; };
 		9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915BE341D906C2A0027B300 /* SuplenceCell.swift */; };
 		9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9915BE351D906C2A0027B300 /* SuplenceCell.xib */; };
-		99260C5E1D90864200810152 /* LightNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C5D1D90864200810152 /* LightNavigationController.swift */; };
 		99260C681D91891B00810152 /* GimVicData.h in Headers */ = {isa = PBXBuildFile; fileRef = 99260C661D91891B00810152 /* GimVicData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99260C6B1D91891B00810152 /* GimVicData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99260C641D91891B00810152 /* GimVicData.framework */; };
 		99260C6C1D91891B00810152 /* GimVicData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99260C641D91891B00810152 /* GimVicData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,7 +67,6 @@
 		9915BE321D9068C10027B300 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		9915BE341D906C2A0027B300 /* SuplenceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuplenceCell.swift; sourceTree = "<group>"; };
 		9915BE351D906C2A0027B300 /* SuplenceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuplenceCell.xib; sourceTree = "<group>"; };
-		99260C5D1D90864200810152 /* LightNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightNavigationController.swift; sourceTree = "<group>"; };
 		99260C641D91891B00810152 /* GimVicData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GimVicData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99260C661D91891B00810152 /* GimVicData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GimVicData.h; sourceTree = "<group>"; };
 		99260C671D91891B00810152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				99260C771D91BA1A00810152 /* AdditionalClassesViewController.swift */,
 				99260C791D91C52C00810152 /* MalicaViewController.swift */,
 				99260C7B1D91C70C00810152 /* KosiloViewController.swift */,
-				99260C5D1D90864200810152 /* LightNavigationController.swift */,
 				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
 				990CAC251D8F125B00F8BE7D /* Main.storyboard */,
@@ -294,7 +291,6 @@
 			files = (
 				9915BE311D903BC70027B300 /* RootViewController.swift in Sources */,
 				99260C7A1D91C52C00810152 /* MalicaViewController.swift in Sources */,
-				99260C5E1D90864200810152 /* LightNavigationController.swift in Sources */,
 				99260C761D91AC9F00810152 /* FilterViewController.swift in Sources */,
 				9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */,
 				9915BE331D9068C10027B300 /* DataStructures.swift in Sources */,
@@ -545,6 +541,7 @@
 				99260C6F1D91891B00810152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
