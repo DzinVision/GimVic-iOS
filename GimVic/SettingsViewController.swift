@@ -40,6 +40,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
     
     @IBAction func doneButtonPressed(_ sender: AnyObject) {
         UserDefaults().synchronize()
+        TimetableData.sharedInstance.update()
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
