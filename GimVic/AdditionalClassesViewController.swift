@@ -19,7 +19,9 @@ class AdditionalClassesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        filter = UserDefaults().string(forKey: UserSettings.filter.rawValue) ?? ""
+        if filter == "" {
+            filter = UserDefaults().string(forKey: UserSettings.filter.rawValue) ?? ""
+        }
         
         classNumber = Int(filter.substring(to: filter.index(after: filter.startIndex))) ?? 0
         

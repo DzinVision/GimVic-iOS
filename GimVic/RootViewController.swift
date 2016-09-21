@@ -53,6 +53,16 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         currentIndex = startingIndex
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults().string(forKey: UserSettings.filter.rawValue) == nil {
+            let setupStoryboard = UIStoryboard(name: "Setup", bundle: nil)
+            let viewController = setupStoryboard.instantiateInitialViewController()!
+            present(viewController, animated: true, completion: nil)
+        }
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }

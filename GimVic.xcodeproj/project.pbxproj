@@ -27,6 +27,11 @@
 		99260C7A1D91C52C00810152 /* MalicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C791D91C52C00810152 /* MalicaViewController.swift */; };
 		99260C7C1D91C70C00810152 /* KosiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99260C7B1D91C70C00810152 /* KosiloViewController.swift */; };
 		9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944E2BD1D907B6000C61B0E /* Settings.storyboard */; };
+		99471FB51D92F76E0071F3F8 /* SetupFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FB41D92F76E0071F3F8 /* SetupFilterViewController.swift */; };
+		99471FB81D92FD3D0071F3F8 /* SetupMalicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FB71D92FD3D0071F3F8 /* SetupMalicaViewController.swift */; };
+		99471FBA1D92FD430071F3F8 /* SetupKosiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FB91D92FD430071F3F8 /* SetupKosiloViewController.swift */; };
+		99DFA7661D92E35E0066D7F3 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DFA7651D92E35E0066D7F3 /* Setup.storyboard */; };
+		99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFA7681D92E6350066D7F3 /* SetupViewController.swift */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +82,11 @@
 		99260C791D91C52C00810152 /* MalicaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalicaViewController.swift; sourceTree = "<group>"; };
 		99260C7B1D91C70C00810152 /* KosiloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KosiloViewController.swift; sourceTree = "<group>"; };
 		9944E2BD1D907B6000C61B0E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		99471FB41D92F76E0071F3F8 /* SetupFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFilterViewController.swift; sourceTree = "<group>"; };
+		99471FB71D92FD3D0071F3F8 /* SetupMalicaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMalicaViewController.swift; sourceTree = "<group>"; };
+		99471FB91D92FD430071F3F8 /* SetupKosiloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupKosiloViewController.swift; sourceTree = "<group>"; };
+		99DFA7651D92E35E0066D7F3 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
+		99DFA7681D92E6350066D7F3 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,15 +133,14 @@
 				990CAC211D8F125B00F8BE7D /* AppDelegate.swift */,
 				9915BE301D903BC70027B300 /* RootViewController.swift */,
 				990CAC231D8F125B00F8BE7D /* SuplenceViewController.swift */,
-				99EE1EB91D907E78003A78DB /* SettingsViewController.swift */,
-				99260C751D91AC9F00810152 /* FilterViewController.swift */,
-				99260C771D91BA1A00810152 /* AdditionalClassesViewController.swift */,
-				99260C791D91C52C00810152 /* MalicaViewController.swift */,
-				99260C7B1D91C70C00810152 /* KosiloViewController.swift */,
+				99DFA7671D92E61F0066D7F3 /* Setup */,
+				99DFA7641D92E3160066D7F3 /* Settings */,
 				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
+				99471FB61D92F9A60071F3F8 /* New Group */,
 				990CAC251D8F125B00F8BE7D /* Main.storyboard */,
 				9944E2BD1D907B6000C61B0E /* Settings.storyboard */,
+				99DFA7651D92E35E0066D7F3 /* Setup.storyboard */,
 				990CAC281D8F125B00F8BE7D /* Assets.xcassets */,
 				9910D75D1D8F150200C2A804 /* Resources */,
 				990CAC2A1D8F125B00F8BE7D /* LaunchScreen.storyboard */,
@@ -157,6 +166,36 @@
 				99260C671D91891B00810152 /* Info.plist */,
 			);
 			path = GimVicData;
+			sourceTree = "<group>";
+		};
+		99471FB61D92F9A60071F3F8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		99DFA7641D92E3160066D7F3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				99EE1EB91D907E78003A78DB /* SettingsViewController.swift */,
+				99260C751D91AC9F00810152 /* FilterViewController.swift */,
+				99260C771D91BA1A00810152 /* AdditionalClassesViewController.swift */,
+				99260C791D91C52C00810152 /* MalicaViewController.swift */,
+				99260C7B1D91C70C00810152 /* KosiloViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		99DFA7671D92E61F0066D7F3 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				99DFA7681D92E6350066D7F3 /* SetupViewController.swift */,
+				99471FB41D92F76E0071F3F8 /* SetupFilterViewController.swift */,
+				99471FB71D92FD3D0071F3F8 /* SetupMalicaViewController.swift */,
+				99471FB91D92FD430071F3F8 /* SetupKosiloViewController.swift */,
+			);
+			name = Setup;
 			sourceTree = "<group>";
 		};
 		99EE1EB81D907E5B003A78DB /* Suplence Cell */ = {
@@ -269,6 +308,7 @@
 				990CAC2C1D8F125B00F8BE7D /* LaunchScreen.storyboard in Resources */,
 				9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */,
 				9910D75C1D8F14FE00C2A804 /* bakcground.jpg in Resources */,
+				99DFA7661D92E35E0066D7F3 /* Setup.storyboard in Resources */,
 				9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */,
 				990CAC291D8F125B00F8BE7D /* Assets.xcassets in Resources */,
 				990CAC271D8F125B00F8BE7D /* Main.storyboard in Resources */,
@@ -292,10 +332,14 @@
 				9915BE311D903BC70027B300 /* RootViewController.swift in Sources */,
 				99260C7A1D91C52C00810152 /* MalicaViewController.swift in Sources */,
 				99260C761D91AC9F00810152 /* FilterViewController.swift in Sources */,
+				99471FBA1D92FD430071F3F8 /* SetupKosiloViewController.swift in Sources */,
 				9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */,
 				9915BE331D9068C10027B300 /* DataStructures.swift in Sources */,
 				990CAC241D8F125B00F8BE7D /* SuplenceViewController.swift in Sources */,
+				99471FB81D92FD3D0071F3F8 /* SetupMalicaViewController.swift in Sources */,
+				99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */,
 				990CAC221D8F125B00F8BE7D /* AppDelegate.swift in Sources */,
+				99471FB51D92F76E0071F3F8 /* SetupFilterViewController.swift in Sources */,
 				99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */,
 				99260C7C1D91C70C00810152 /* KosiloViewController.swift in Sources */,
 				99260C781D91BA1A00810152 /* AdditionalClassesViewController.swift in Sources */,

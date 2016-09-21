@@ -9,15 +9,15 @@
 import Foundation
 
 enum UserSettings: String {
-    case lastOpened = "last_opened"
-    case lastRefreshedChooserData = "last_refreshed_chooser_data"
-    case showSubstitutions = "show_substitutions"
-    case profesorFilter = "profesor_filter"
-    case filter = "filter"
-    case maturitetniPredmeti = "maturitetni_predmeti"
-    case izbirniPredmeti = "izbirni_predmeti"
-    case snack = "snack"
-    case lunch = "lunch"
+    case lastOpened
+    case lastRefreshedChooserData
+    case showSubstitutions
+    case profesorFilter
+    case filter
+    case maturitetniPredmeti
+    case izbirniPredmeti
+    case snack
+    case lunch
 }
 
 enum Weekdays: String {

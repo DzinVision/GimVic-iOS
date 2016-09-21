@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eSQ-Ke-L5c">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="75d-MR-Mbc">
+            <objects>
+                <navigationController id="eSQ-Ke-L5c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aH-nU-eSd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="H2B-Kn-uIJ" kind="relationship" relationship="rootViewController" id="ZD2-Zh-tFz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVN-fC-FeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="209"/>
+        </scene>
+        <!--Nastavitve-->
+        <scene sceneID="ev4-4b-SVr">
+            <objects>
+                <viewController id="H2B-Kn-uIJ" customClass="SetupViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XBs-7o-WRz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Kl-fs-vC2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i5R-KN-Ltl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TH5-KN-0jC">
+                                <state key="normal" title="Naprej"/>
+                                <connections>
+                                    <segue destination="CMD-sp-uCD" kind="show" id="FcK-K5-xlz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pred pričetkom uporabe je potrebno nastaviti nekatere nastavitve" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-ws-xYZ">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prenašanje podatkov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-Gx-VoU">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-7X-xQl">
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Re2-ws-xYZ" firstAttribute="leading" secondItem="i5R-KN-Ltl" secondAttribute="leadingMargin" id="JKB-Qk-7B4"/>
+                            <constraint firstItem="aWo-7X-xQl" firstAttribute="centerX" secondItem="i5R-KN-Ltl" secondAttribute="centerX" id="Mtc-ET-bgq"/>
+                            <constraint firstItem="Re2-ws-xYZ" firstAttribute="trailing" secondItem="i5R-KN-Ltl" secondAttribute="trailingMargin" id="TDv-sb-oFp"/>
+                            <constraint firstItem="Re2-ws-xYZ" firstAttribute="top" secondItem="XBs-7o-WRz" secondAttribute="bottom" constant="8" id="VDa-sF-0Lh"/>
+                            <constraint firstItem="aWo-7X-xQl" firstAttribute="centerY" secondItem="i5R-KN-Ltl" secondAttribute="centerY" constant="14" id="eGg-1o-lSv"/>
+                            <constraint firstItem="cIt-Gx-VoU" firstAttribute="centerX" secondItem="i5R-KN-Ltl" secondAttribute="centerX" id="owU-4e-j7T"/>
+                            <constraint firstItem="cIt-Gx-VoU" firstAttribute="centerY" secondItem="i5R-KN-Ltl" secondAttribute="centerY" constant="-23" id="x0t-Id-6aL"/>
+                            <constraint firstItem="TH5-KN-0jC" firstAttribute="trailing" secondItem="i5R-KN-Ltl" secondAttribute="trailingMargin" id="ynw-uX-sam"/>
+                            <constraint firstItem="1Kl-fs-vC2" firstAttribute="top" secondItem="TH5-KN-0jC" secondAttribute="bottom" constant="8" id="zH4-nY-Glu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nastavitve" id="rUA-Ug-pdO"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="aWo-7X-xQl" id="Wt5-Pf-pk7"/>
+                        <outlet property="loadingLabel" destination="cIt-Gx-VoU" id="bky-tf-JNN"/>
+                        <outlet property="nextButton" destination="TH5-KN-0jC" id="hGd-Gt-Cg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LP-KN-Tb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="207.34632683658174"/>
+        </scene>
+        <!--Urnik-->
+        <scene sceneID="5a8-Wu-eER">
+            <objects>
+                <viewController id="CMD-sp-uCD" customClass="SetupFilterViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eJO-VJ-vE6"/>
+                        <viewControllerLayoutGuide type="bottom" id="25K-Ts-YZz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vkp-am-liK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-00-lpt">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prikaži Nadomeščanja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9P-fX-e10">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-Xu-T3t"/>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iC4-IV-RJs">
+                                <connections>
+                                    <outlet property="dataSource" destination="CMD-sp-uCD" id="03D-i3-Ewe"/>
+                                    <outlet property="delegate" destination="CMD-sp-uCD" id="4s9-I2-3Z3"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-wC-gvP">
+                                <state key="normal" title="Naprej"/>
+                                <connections>
+                                    <segue destination="yQv-Zr-tfa" kind="show" identifier="nextSegue" id="uRo-bm-9ml"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tvP-wa-ec5">
+                                <segments>
+                                    <segment title="Razred"/>
+                                    <segment title="Profesor"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterTypeChanged:" destination="CMD-sp-uCD" eventType="valueChanged" id="6AJ-lP-Oh3"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-PZ-qGG">
+                                <state key="normal" title="Nastavi Predmete"/>
+                                <connections>
+                                    <segue destination="NpA-zm-u0x" kind="show" identifier="AdditionalClassesSegue" id="uIQ-qO-d1L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iC4-IV-RJs" firstAttribute="top" secondItem="tvP-wa-ec5" secondAttribute="bottom" constant="8" id="6KN-Ks-npi"/>
+                            <constraint firstItem="I3D-00-lpt" firstAttribute="top" secondItem="eJO-VJ-vE6" secondAttribute="bottom" constant="8" id="FcF-g5-MZG"/>
+                            <constraint firstItem="I3D-00-lpt" firstAttribute="leading" secondItem="Vkp-am-liK" secondAttribute="leadingMargin" id="Jab-jH-8tl"/>
+                            <constraint firstItem="MaO-PZ-qGG" firstAttribute="top" secondItem="iC4-IV-RJs" secondAttribute="bottom" constant="8" id="PSZ-xz-lFg"/>
+                            <constraint firstItem="tvP-wa-ec5" firstAttribute="top" secondItem="I3D-00-lpt" secondAttribute="bottom" constant="8" id="SKX-Kw-X1E"/>
+                            <constraint firstItem="iC4-IV-RJs" firstAttribute="leading" secondItem="Vkp-am-liK" secondAttribute="leading" id="TUK-BT-k9c"/>
+                            <constraint firstItem="MaO-PZ-qGG" firstAttribute="leading" secondItem="Vkp-am-liK" secondAttribute="leadingMargin" id="aUa-gX-XkR"/>
+                            <constraint firstItem="ZIn-wC-gvP" firstAttribute="trailing" secondItem="Vkp-am-liK" secondAttribute="trailingMargin" id="ca3-Ur-fyQ"/>
+                            <constraint firstAttribute="trailing" secondItem="iC4-IV-RJs" secondAttribute="trailing" id="dsE-3Q-ueY"/>
+                            <constraint firstItem="25K-Ts-YZz" firstAttribute="top" secondItem="ZIn-wC-gvP" secondAttribute="bottom" constant="8" id="eoh-4Z-uWe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I3D-00-lpt" secondAttribute="trailing" id="qgN-CA-x8Y"/>
+                            <constraint firstItem="tvP-wa-ec5" firstAttribute="centerX" secondItem="Vkp-am-liK" secondAttribute="centerX" id="v0d-7b-vwf"/>
+                            <constraint firstItem="MaO-PZ-qGG" firstAttribute="trailing" secondItem="Vkp-am-liK" secondAttribute="trailingMargin" id="wQ6-m2-y6N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Urnik" id="1Qs-Dj-6qT"/>
+                    <connections>
+                        <outlet property="additionalClassesButton" destination="MaO-PZ-qGG" id="g0G-Hw-AC5"/>
+                        <outlet property="filterPickerView" destination="iC4-IV-RJs" id="PAY-ve-tzC"/>
+                        <outlet property="filterTypeControl" destination="tvP-wa-ec5" id="NWH-h9-lKb"/>
+                        <outlet property="showSubstitutionsSwitch" destination="OTh-Xu-T3t" id="EiV-FX-pV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaa-Xy-VII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="207.34632683658174"/>
+        </scene>
+        <!--Predmeti-->
+        <scene sceneID="36C-5A-LP3">
+            <objects>
+                <tableViewController id="NpA-zm-u0x" customClass="AdditionalClassesViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cXc-DZ-d5e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdditionalClassesCell" textLabel="X7E-zM-Szt" style="IBUITableViewCellStyleDefault" id="Uip-HU-l6c">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uip-HU-l6c" id="i3L-JE-qNe">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X7E-zM-Szt">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NpA-zm-u0x" id="dmG-qj-2e4"/>
+                            <outlet property="delegate" destination="NpA-zm-u0x" id="brg-3v-Jv8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Predmeti" id="jou-eg-T7D"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObZ-Ym-02G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1625" y="-459"/>
+        </scene>
+        <!--Malica-->
+        <scene sceneID="psP-wZ-9KX">
+            <objects>
+                <viewController id="yQv-Zr-tfa" customClass="SetupMalicaViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DEi-lG-NCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="oOl-8c-I1K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gzc-vo-rBj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Malice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-de-SCb">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-lp-xue">
+                                <connections>
+                                    <outlet property="dataSource" destination="yQv-Zr-tfa" id="P0R-l7-mFu"/>
+                                    <outlet property="delegate" destination="yQv-Zr-tfa" id="v1e-gW-rPk"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-qT-Npw">
+                                <state key="normal" title="Naprej"/>
+                                <connections>
+                                    <segue destination="dWn-qP-HfV" kind="show" identifier="nextSegue" id="eKj-nX-Uqg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oOl-8c-I1K" firstAttribute="top" secondItem="ygd-qT-Npw" secondAttribute="bottom" constant="8" id="1Dm-8F-xtb"/>
+                            <constraint firstItem="aQh-de-SCb" firstAttribute="centerX" secondItem="gzc-vo-rBj" secondAttribute="centerX" id="EgY-VS-IkS"/>
+                            <constraint firstItem="z8l-lp-xue" firstAttribute="leading" secondItem="gzc-vo-rBj" secondAttribute="leading" id="F8e-Vf-VIS"/>
+                            <constraint firstAttribute="trailing" secondItem="z8l-lp-xue" secondAttribute="trailing" id="atm-zu-sMx"/>
+                            <constraint firstItem="ygd-qT-Npw" firstAttribute="trailing" secondItem="gzc-vo-rBj" secondAttribute="trailingMargin" id="e8P-mE-qRI"/>
+                            <constraint firstItem="z8l-lp-xue" firstAttribute="top" secondItem="aQh-de-SCb" secondAttribute="bottom" constant="8" id="zA8-8y-UOI"/>
+                            <constraint firstItem="aQh-de-SCb" firstAttribute="top" secondItem="DEi-lG-NCy" secondAttribute="bottom" constant="8" id="zCt-Nh-6Ae"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Malica" id="PG0-Qc-qmj"/>
+                    <connections>
+                        <outlet property="malicaPickerView" destination="z8l-lp-xue" id="mqP-H9-uGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTw-je-LFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="208"/>
+        </scene>
+        <!--Kosilo-->
+        <scene sceneID="abB-aD-BPQ">
+            <objects>
+                <viewController id="dWn-qP-HfV" customClass="SetupKosiloViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JCC-Fz-zcd"/>
+                        <viewControllerLayoutGuide type="bottom" id="5We-U6-e7O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p5Z-Xd-aDR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-ow-zeh">
+                                <state key="normal" title="Končaj"/>
+                                <connections>
+                                    <action selector="endButtonPressed:" destination="dWn-qP-HfV" eventType="touchUpInside" id="FTY-O0-Gde"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Kosila" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-So-IIK">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFX-tS-VcO">
+                                <connections>
+                                    <outlet property="dataSource" destination="dWn-qP-HfV" id="FHM-wx-Z47"/>
+                                    <outlet property="delegate" destination="dWn-qP-HfV" id="yDJ-Rj-vJO"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hFX-tS-VcO" firstAttribute="top" secondItem="c8V-So-IIK" secondAttribute="bottom" constant="8" id="3LI-cn-VZO"/>
+                            <constraint firstAttribute="trailing" secondItem="hFX-tS-VcO" secondAttribute="trailing" id="8tc-f4-az7"/>
+                            <constraint firstItem="c8V-So-IIK" firstAttribute="centerX" secondItem="p5Z-Xd-aDR" secondAttribute="centerX" id="FVO-s8-M2w"/>
+                            <constraint firstItem="mQf-ow-zeh" firstAttribute="trailing" secondItem="p5Z-Xd-aDR" secondAttribute="trailingMargin" id="TZM-P5-BbQ"/>
+                            <constraint firstItem="hFX-tS-VcO" firstAttribute="leading" secondItem="p5Z-Xd-aDR" secondAttribute="leading" id="V5U-n0-Wd8"/>
+                            <constraint firstItem="c8V-So-IIK" firstAttribute="top" secondItem="JCC-Fz-zcd" secondAttribute="bottom" constant="8" id="VKJ-NR-Bpo"/>
+                            <constraint firstItem="5We-U6-e7O" firstAttribute="top" secondItem="mQf-ow-zeh" secondAttribute="bottom" constant="8" id="bTz-Js-7of"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kosilo" id="bk3-CB-gal"/>
+                    <connections>
+                        <outlet property="kosiloPickerView" destination="hFX-tS-VcO" id="KBd-Ys-ahd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYa-st-2jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="207"/>
+        </scene>
+    </scenes>
+</document>

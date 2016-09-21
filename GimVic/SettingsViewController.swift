@@ -26,7 +26,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
         showSubstitutionsSwitch.setOn(showSubstitutions, animated: true)
         
         refresher.addTarget(self, action: #selector(refreshData(sender:)), for: .valueChanged)
-        tableView.addSubview(refresher)
+//        tableView.addSubview(refresher)
     }
     
     func refreshData(sender: AnyObject) {
@@ -62,8 +62,8 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
             let tryAgain = UIAlertAction(title: "Poskusi znova", style: .default, handler: {(action) in
                 self.updateChooserData()
             })
-            let cancel = UIAlertAction(title: "Vredu", style: .cancel, handler: nil)
-            alertController.addAction(cancel)
+//            let cancel = UIAlertAction(title: "Vredu", style: .cancel, handler: nil)
+//            alertController.addAction(cancel)
             alertController.addAction(tryAgain)
             present(alertController, animated: true, completion: nil)
         }

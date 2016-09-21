@@ -31,6 +31,7 @@ public final class ChooserData {
     
     public enum DelegateID: Int {
         case settingsViewController
+        case setupViewController
     }
     
     enum DictionaryTypes: String {
