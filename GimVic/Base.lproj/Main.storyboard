@@ -109,7 +109,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="dS9-dA-ZLB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dS9-dA-ZLB"/>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCU-Ez-SUC">
                                 <connections>
                                     <outlet property="delegate" destination="qex-ES-aev" id="0QM-qo-BMN"/>
@@ -174,6 +174,6 @@
         <image name="Lunch" width="50" height="50"/>
         <image name="Settings" width="30" height="30"/>
         <image name="Snack" width="50" height="50"/>
-        <image name="background.png" width="4032" height="3024"/>
+        <image name="background.jpg" width="4032" height="3024"/>
     </resources>
 </document>
