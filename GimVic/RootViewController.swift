@@ -9,15 +9,18 @@
 import UIKit
 import GimVicData
 
-class RootViewController: UIViewController, UIScrollViewDelegate {
+class RootViewController: UIViewController, UIScrollViewDelegate, TimetableDataDelegate {
     static var sharedInstance: RootViewController?
     
     var suplenceViewControllers = [SuplenceViewController]()
     var currentIndex = 0
     var scrollingLocked = false
+    var timer: Timer?
+    var initialLoad = true
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var dataAgeLabel: UILabel!
     
     var startingIndex: Int {
         let calendar = Calendar(identifier: .gregorian)
@@ -39,8 +42,11 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         RootViewController.sharedInstance = self
-        
         NotificationCenter.default.addObserver(self, selector: #selector(didRotate(sender:)), name: .UIDeviceOrientationDidChange, object: nil)
+        TimetableData.sharedInstance.delegates[.rootViewController] = self
+        
+        setDataAgeLabel()
+        setTimer()
         
         for i in 0..<5 {
             if let viewController = storyboard?.instantiateViewController(withIdentifier: "SuplenceViewController")
@@ -52,6 +58,7 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
                 scrollView.addSubview(viewController.view)
             }
         }
+        
         currentIndex = startingIndex
     }
     
@@ -71,10 +78,10 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize.height = scrollView.bounds.height
-        scrollView.contentSize.width = 5 * scrollView.bounds.width
-        
-        scrollView.contentOffset.x = CGFloat(currentIndex) * scrollView.bounds.width
+        scrollView.contentSize.height = scrollView.bounds.size.height
+        scrollView.contentSize.width = 5 * scrollView.bounds.size.width
+
+        scrollView.contentOffset.x = CGFloat(currentIndex) * view.bounds.size.width
         
         for viewController in suplenceViewControllers {
             viewController.view.frame.size = scrollView.bounds.size
@@ -91,6 +98,17 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         scrollingLocked = false
     }
     
+    func setTimer() {
+        if timer != nil {
+            return
+        }
+        timer = Timer.scheduledTimer(timeInterval: 60,
+                                     target: self,
+                                     selector: #selector(setDataAgeLabel),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+    
     // MARK: - Change Day
     func transitionToDay(_ day: Int) {
         scrollView.contentOffset.x = CGFloat(day) * scrollView.bounds.size.width
@@ -101,7 +119,7 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         if scrollingLocked {
             return
         }
-        currentIndex = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        currentIndex = Int(scrollView.contentOffset.x / view.bounds.size.width)
         pageControl.currentPage = currentIndex
     }
     
@@ -110,5 +128,34 @@ class RootViewController: UIViewController, UIScrollViewDelegate {
         let settingsNavigationViewController = settingsStoryboard.instantiateInitialViewController()!
         settingsNavigationViewController.modalPresentationStyle = .formSheet
         present(settingsNavigationViewController, animated: true, completion: nil)
+    }
+    
+    func setDataAgeLabel() {
+        let lastRefreshed = UserDefaults().object(forKey: UserSettings.lastRefreshedTimetableData.rawValue) as? Date
+        if lastRefreshed == nil {
+            dataAgeLabel.text = "N/A"
+        } else {
+            let ageText = FuzzyDate.timeSince(lastRefreshed!)
+            dataAgeLabel.text = ageText
+        }
+    }
+    
+    func timetableDataDidUpdateWithStatus(_ status: DataGetterStatus) {
+        if status == .error {
+            let alertController = UIAlertController(title: "Napaka pri nalaganju podatkov.",
+                                                    message: "Prikazani so podatki od zadnje uspešne osvežitve.",
+                                                    preferredStyle: .alert)
+            let tryAgain = UIAlertAction(title: "Poskusi ponovno",
+                                         style: .default,
+                                         handler: {action in
+                                            TimetableData.sharedInstance.update()
+            })
+            let dismiss = UIAlertAction(title: "Vredu", style: .cancel, handler: nil)
+            alertController.addAction(dismiss)
+            alertController.addAction(tryAgain)
+            present(alertController, animated: true, completion: nil)
+        } else if status == .success {
+            setDataAgeLabel()
+        }
     }
 }

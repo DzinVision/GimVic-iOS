@@ -21,7 +21,7 @@ public final class TimetableData {
     public var delegates = [DelegateID: TimetableDataDelegate]()
     
     public enum DelegateID: Int {
-        case monday = 0, tuesday, wednesday, thursday, friday
+        case monday = 0, tuesday, wednesday, thursday, friday, rootViewController
     }
     
     public enum Weekday: Int {
@@ -64,7 +64,7 @@ public final class TimetableData {
         }
         isDownloading = true
         
-        UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedTimetableData.rawValue)
+        timetableEntries.removeAll()
         
         guard let url = generateURL() else {
             isDownloading = false
@@ -141,6 +141,7 @@ public final class TimetableData {
                         self.timetableEntries[timetableEntry.weekday] = timetableEntry
                     }
                     
+                    UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedTimetableData.rawValue)
                     self.refreshDelegates(.success)
                 } else {
                     self.refreshDelegates(.error)
@@ -165,7 +166,6 @@ public final class TimetableData {
     func generateURL() -> URL? {
         var url = ConstantProperties.serverURLString
         
-        UserDefaults().set(Date(), forKey: UserSettings.lastRefreshedTimetableData.rawValue)
         let profesorType = UserDefaults().bool(forKey: UserSettings.profesorFilter.rawValue)
 
         if profesorType {
@@ -181,9 +181,9 @@ public final class TimetableData {
             return nil
         }
         if profesorType {
-            url += "teacher=\(filter)&"
+            url += "teacher=\(filter)&".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         } else {
-            url += "classes[]=\(filter)&"
+            url += "classes[]=\(filter)&".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
             let classNumber = Int(filter.substring(to: filter.index(after: filter.startIndex))) ?? 0
             
             let key: String
@@ -195,15 +195,14 @@ public final class TimetableData {
             
             let selected = (UserDefaults().array(forKey: key) as? [String]) ?? []
             for item in selected {
-                url += "classes[]=\(item)&"
+                url += "classes[]=\(item)&".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
             }
         }
         
         let snack = UserDefaults().string(forKey: UserSettings.snack.rawValue)!
         let lunch = UserDefaults().string(forKey: UserSettings.lunch.rawValue)!
         
-        url += "snackType=\(snack)&lunchType=\(lunch)"
-        
+        url += "snackType=\(snack)&lunchType=\(lunch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         return URL(string: url)!
     }
 }

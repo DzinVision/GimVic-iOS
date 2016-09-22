@@ -22,7 +22,33 @@ class SuplenceCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setOpombaHidden(_ hidden: Bool) {
+    func setNote(_ note: String?) {
+        guard let note = note else {
+            setNoteHidden(true)
+            return
+        }
+        
+        setNoteHidden(false)
+        opombaLabel.text = note
+    }
+    
+    func isSubstitution(_ substitution: Bool) {
+        let color: UIColor
+        if !substitution {
+            color = UIColor.white
+        } else {
+            color = UIColor(red: 255/255.0, green: 51/255.0, blue: 43/255.0, alpha: 1.0)
+        }
+        
+        hourLabel.textColor = color
+        lessonLabel.textColor = color
+        classroomLabel.textColor = color
+        teacherLabel.textColor = color
+        opombaTitleLabel.textColor = color
+        opombaLabel.textColor = color
+    }
+    
+    func setNoteHidden(_ hidden: Bool) {
         if hidden {
             stackViewConstraint.constant = 0
             opombaTitleLabel.isHidden = true

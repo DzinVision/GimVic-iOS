@@ -17,6 +17,7 @@ class SuplenceViewController: UIViewController, UITableViewDataSource, Timetable
     
     var index = 0
     let refreshControl = UIRefreshControl()
+    var profesor = false
     
     var data: TimetableEntry?
     
@@ -28,6 +29,7 @@ class SuplenceViewController: UIViewController, UITableViewDataSource, Timetable
         TimetableData.sharedInstance.delegates[TimetableData.DelegateID(rawValue: index)!] = self
         data = TimetableData.sharedInstance.timetableEntryFor(TimetableData.Weekday(rawValue: index)!)
         setJedilnik()
+        profesor = UserDefaults().bool(forKey: UserSettings.profesorFilter.rawValue)
         
         tableView.register(UINib(nibName: "SuplenceCell", bundle: nil), forCellReuseIdentifier: "SuplenceCell")
         tableView.estimatedRowHeight = 100
@@ -78,7 +80,14 @@ class SuplenceViewController: UIViewController, UITableViewDataSource, Timetable
         cell.hourLabel.text = String(lesson.hour)
         cell.lessonLabel.text = lesson.subjects.first
         cell.classroomLabel.text = lesson.classrooms.first
-        cell.teacherLabel.text = lesson.teachers.first
+        if profesor {
+            cell.teacherLabel.text = lesson.classes.first
+        } else {
+            cell.teacherLabel.text = lesson.teachers.first
+        }
+        
+        cell.setNote(lesson.note)
+        cell.isSubstitution(lesson.substitution)
         
         return cell
     }
@@ -93,8 +102,9 @@ class SuplenceViewController: UIViewController, UITableViewDataSource, Timetable
         
         if status == .success {
             data = TimetableData.sharedInstance.timetableEntryFor(TimetableData.Weekday(rawValue: index)!)
-            setJedilnik()
             tableView.reloadData()
+            setJedilnik()
+            profesor = UserDefaults().bool(forKey: UserSettings.profesorFilter.rawValue)
         }
     }
 }

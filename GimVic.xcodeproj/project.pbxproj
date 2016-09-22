@@ -36,6 +36,7 @@
 		99DFA7661D92E35E0066D7F3 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DFA7651D92E35E0066D7F3 /* Setup.storyboard */; };
 		99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFA7681D92E6350066D7F3 /* SetupViewController.swift */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
+		99EE54DA1D9468D700C5FC42 /* FuzzyDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		99DFA7651D92E35E0066D7F3 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		99DFA7681D92E6350066D7F3 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				99DFA7641D92E3160066D7F3 /* Settings */,
 				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
+				99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */,
 				99471FB61D92F9A60071F3F8 /* New Group */,
 				990CAC251D8F125B00F8BE7D /* Main.storyboard */,
 				9944E2BD1D907B6000C61B0E /* Settings.storyboard */,
@@ -340,6 +343,7 @@
 			files = (
 				9915BE311D903BC70027B300 /* RootViewController.swift in Sources */,
 				99260C7A1D91C52C00810152 /* MalicaViewController.swift in Sources */,
+				99EE54DA1D9468D700C5FC42 /* FuzzyDate.swift in Sources */,
 				99260C761D91AC9F00810152 /* FilterViewController.swift in Sources */,
 				99471FBA1D92FD430071F3F8 /* SetupKosiloViewController.swift in Sources */,
 				9915BE361D906C2A0027B300 /* SuplenceCell.swift in Sources */,

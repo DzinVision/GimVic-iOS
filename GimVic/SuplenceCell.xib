@@ -50,14 +50,13 @@
                         </subviews>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Mmj-Tn-ESw" secondAttribute="trailing" constant="8" id="49R-EF-4X7"/>
                     <constraint firstItem="7JO-5a-DaM" firstAttribute="leading" secondItem="Q7q-7m-AkS" secondAttribute="trailing" constant="8" id="9fq-DD-633"/>
+                    <constraint firstItem="Vd3-yn-0To" firstAttribute="top" secondItem="Y5P-k8-y41" secondAttribute="bottom" id="A1a-FN-RNx"/>
                     <constraint firstItem="Q7q-7m-AkS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="C8l-zR-Tjg"/>
                     <constraint firstItem="Y5P-k8-y41" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="NA3-gp-wZ5"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Vd3-yn-0To" secondAttribute="bottom" constant="3" id="NOr-dm-7Zo"/>
-                    <constraint firstItem="Vd3-yn-0To" firstAttribute="top" secondItem="Q7q-7m-AkS" secondAttribute="bottom" id="S2L-EQ-5Wi"/>
                     <constraint firstAttribute="trailing" secondItem="Vd3-yn-0To" secondAttribute="trailing" constant="8" id="SOe-52-RZQ"/>
                     <constraint firstItem="7JO-5a-DaM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="dDZ-ge-d2T"/>
                     <constraint firstItem="Mmj-Tn-ESw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="e67-y7-NP1"/>
@@ -75,7 +74,7 @@
                 <outlet property="lessonLabel" destination="Q7q-7m-AkS" id="m88-8i-5qZ"/>
                 <outlet property="opombaLabel" destination="xdM-1T-hbA" id="lHX-qu-cfm"/>
                 <outlet property="opombaTitleLabel" destination="tZx-Ty-b8t" id="Xbt-mR-6iD"/>
-                <outlet property="stackViewConstraint" destination="S2L-EQ-5Wi" id="ylg-sh-32P"/>
+                <outlet property="stackViewConstraint" destination="A1a-FN-RNx" id="zFJ-yE-JY1"/>
                 <outlet property="teacherLabel" destination="Mmj-Tn-ESw" id="84Q-ZA-JL0"/>
             </connections>
             <point key="canvasLocation" x="35" y="77.5"/>
