@@ -64,8 +64,6 @@ public final class TimetableData {
         }
         isDownloading = true
         
-        timetableEntries.removeAll()
-        
         guard let url = generateURL() else {
             isDownloading = false
             return
