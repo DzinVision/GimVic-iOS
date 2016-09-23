@@ -36,7 +36,6 @@
 		99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFA7681D92E6350066D7F3 /* SetupViewController.swift */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 		99EE54DA1D9468D700C5FC42 /* FuzzyDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */; };
-		99EE54DE1D947A0B00C5FC42 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99EE54DD1D947A0B00C5FC42 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +94,6 @@
 		99DFA7681D92E6350066D7F3 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyDate.swift; sourceTree = "<group>"; };
-		99EE54DD1D947A0B00C5FC42 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,19 +149,10 @@
 				9944E2BD1D907B6000C61B0E /* Settings.storyboard */,
 				99DFA7651D92E35E0066D7F3 /* Setup.storyboard */,
 				990CAC281D8F125B00F8BE7D /* Assets.xcassets */,
-				9910D75D1D8F150200C2A804 /* Resources */,
 				990CAC2A1D8F125B00F8BE7D /* LaunchScreen.storyboard */,
 				990CAC2D1D8F125B00F8BE7D /* Info.plist */,
 			);
 			path = GimVic;
-			sourceTree = "<group>";
-		};
-		9910D75D1D8F150200C2A804 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				99EE54DD1D947A0B00C5FC42 /* background.jpg */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		99260C651D91891B00810152 /* GimVicData */ = {
@@ -319,7 +308,6 @@
 			files = (
 				990CAC2C1D8F125B00F8BE7D /* LaunchScreen.storyboard in Resources */,
 				9915BE371D906C2A0027B300 /* SuplenceCell.xib in Resources */,
-				99EE54DE1D947A0B00C5FC42 /* background.jpg in Resources */,
 				99DFA7661D92E35E0066D7F3 /* Setup.storyboard in Resources */,
 				9944E2BE1D907B6000C61B0E /* Settings.storyboard in Resources */,
 				990CAC291D8F125B00F8BE7D /* Assets.xcassets in Resources */,
