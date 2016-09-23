@@ -6,13 +6,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Light View Controller-->
         <scene sceneID="75d-MR-Mbc">
             <objects>
-                <navigationController id="eSQ-Ke-L5c" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aH-nU-eSd">
+                <navigationController id="eSQ-Ke-L5c" customClass="LightViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8aH-nU-eSd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="H2B-Kn-uIJ" kind="relationship" relationship="rootViewController" id="ZD2-Zh-tFz"/>
@@ -31,30 +36,32 @@
                         <viewControllerLayoutGuide type="bottom" id="1Kl-fs-vC2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i5R-KN-Ltl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TH5-KN-0jC">
-                                <state key="normal" title="Naprej"/>
+                                <state key="normal" title="Naprej">
+                                    <color key="titleColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="CMD-sp-uCD" kind="show" id="FcK-K5-xlz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pred pričetkom uporabe je potrebno nastaviti nekatere nastavitve" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-ws-xYZ">
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prenašanje podatkov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-Gx-VoU">
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-7X-xQl">
-                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="color" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Re2-ws-xYZ" firstAttribute="leading" secondItem="i5R-KN-Ltl" secondAttribute="leadingMargin" id="JKB-Qk-7B4"/>
                             <constraint firstItem="aWo-7X-xQl" firstAttribute="centerX" secondItem="i5R-KN-Ltl" secondAttribute="centerX" id="Mtc-ET-bgq"/>
@@ -87,27 +94,30 @@
                         <viewControllerLayoutGuide type="bottom" id="25K-Ts-YZz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vkp-am-liK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-00-lpt">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prikaži Nadomeščanja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9P-fX-e10">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-Xu-T3t"/>
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iC4-IV-RJs">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CMD-sp-uCD" id="03D-i3-Ewe"/>
                                     <outlet property="delegate" destination="CMD-sp-uCD" id="4s9-I2-3Z3"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-wC-gvP">
-                                <state key="normal" title="Naprej"/>
+                                <state key="normal" title="Naprej">
+                                    <color key="titleColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="yQv-Zr-tfa" kind="show" identifier="nextSegue" id="uRo-bm-9ml"/>
                                 </connections>
@@ -117,18 +127,21 @@
                                     <segment title="Razred"/>
                                     <segment title="Profesor"/>
                                 </segments>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="filterTypeChanged:" destination="CMD-sp-uCD" eventType="valueChanged" id="6AJ-lP-Oh3"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-PZ-qGG">
-                                <state key="normal" title="Nastavi Predmete"/>
+                                <state key="normal" title="Nastavi Predmete">
+                                    <color key="titleColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="NpA-zm-u0x" kind="show" identifier="AdditionalClassesSegue" id="uIQ-qO-d1L"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iC4-IV-RJs" firstAttribute="top" secondItem="tvP-wa-ec5" secondAttribute="bottom" constant="8" id="6KN-Ks-npi"/>
                             <constraint firstItem="I3D-00-lpt" firstAttribute="top" secondItem="eJO-VJ-vE6" secondAttribute="bottom" constant="8" id="FcF-g5-MZG"/>
@@ -162,12 +175,12 @@
             <objects>
                 <tableViewController id="NpA-zm-u0x" customClass="AdditionalClassesViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cXc-DZ-d5e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdditionalClassesCell" textLabel="X7E-zM-Szt" style="IBUITableViewCellStyleDefault" id="Uip-HU-l6c">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uip-HU-l6c" id="i3L-JE-qNe">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -177,11 +190,13 @@
                                             <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -204,12 +219,12 @@
                         <viewControllerLayoutGuide type="bottom" id="oOl-8c-I1K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gzc-vo-rBj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Malice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-de-SCb">
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-lp-xue">
@@ -219,13 +234,15 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-qT-Npw">
-                                <state key="normal" title="Naprej"/>
+                                <state key="normal" title="Naprej">
+                                    <color key="titleColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="dWn-qP-HfV" kind="show" identifier="nextSegue" id="eKj-nX-Uqg"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oOl-8c-I1K" firstAttribute="top" secondItem="ygd-qT-Npw" secondAttribute="bottom" constant="8" id="1Dm-8F-xtb"/>
                             <constraint firstItem="aQh-de-SCb" firstAttribute="centerX" secondItem="gzc-vo-rBj" secondAttribute="centerX" id="EgY-VS-IkS"/>
@@ -254,18 +271,20 @@
                         <viewControllerLayoutGuide type="bottom" id="5We-U6-e7O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p5Z-Xd-aDR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-ow-zeh">
-                                <state key="normal" title="Končaj"/>
+                                <state key="normal" title="Končaj">
+                                    <color key="titleColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="endButtonPressed:" destination="dWn-qP-HfV" eventType="touchUpInside" id="FTY-O0-Gde"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Kosila" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8V-So-IIK">
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFX-tS-VcO">
@@ -275,7 +294,7 @@
                                 </connections>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hFX-tS-VcO" firstAttribute="top" secondItem="c8V-So-IIK" secondAttribute="bottom" constant="8" id="3LI-cn-VZO"/>
                             <constraint firstAttribute="trailing" secondItem="hFX-tS-VcO" secondAttribute="trailing" id="8tc-f4-az7"/>

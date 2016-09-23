@@ -20,10 +20,14 @@ class SetupKosiloViewController: UIViewController, UIPickerViewDataSource, UIPic
         return ChooserData.sharedInstance.lunchTypes.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ChooserData.sharedInstance.lunchTypes[row]
+    func pickerView(_ pickerView: UIPickerView,
+                    attributedTitleForRow row: Int,
+                    forComponent component: Int) -> NSAttributedString? {
+        let title = ChooserData.sharedInstance.lunchTypes[row]
             .replacingOccurrences(of: "_", with: " ")
             .capitalized
+        
+        return NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName: UIColor.white])
     }
     
     @IBAction func endButtonPressed(_ sender: AnyObject) {

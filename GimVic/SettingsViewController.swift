@@ -9,13 +9,8 @@
 import UIKit
 import GimVicData
 
-protocol UpdatableSettings {
-    func update()
-}
-
 class SettingsViewController: UITableViewController, ChooserDataDelegate {
     @IBOutlet weak var showSubstitutionsSwitch: UISwitch!
-    let refresher = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +20,9 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
         let showSubstitutions = UserDefaults().bool(forKey: UserSettings.showSubstitutions.rawValue)
         showSubstitutionsSwitch.setOn(showSubstitutions, animated: true)
         
-        refresher.addTarget(self, action: #selector(refreshData(sender:)), for: .valueChanged)
-//        tableView.addSubview(refresher)
+        if !ChooserData.sharedInstance.isDataValid {
+            ChooserData.sharedInstance.update()
+        }
     }
     
     func refreshData(sender: AnyObject) {
@@ -45,7 +41,6 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
     }
     
     func chooserDataDidUpdateWithStatus(_ status: DataGetterStatus) {
-        refresher.endRefreshing()
         if !ChooserData.sharedInstance.isDataValid {
             var message: String?
             if status == .networkError {
@@ -58,8 +53,7 @@ class SettingsViewController: UITableViewController, ChooserDataDelegate {
             let tryAgain = UIAlertAction(title: "Poskusi znova", style: .default, handler: {(action) in
                 ChooserData.sharedInstance.update()
             })
-//            let cancel = UIAlertAction(title: "Vredu", style: .cancel, handler: nil)
-//            alertController.addAction(cancel)
+            
             alertController.addAction(tryAgain)
             present(alertController, animated: true, completion: nil)
         }

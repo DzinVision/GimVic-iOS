@@ -48,6 +48,10 @@ class RootViewController: UIViewController, UIScrollViewDelegate, TimetableDataD
         setDataAgeLabel()
         setTimer()
         
+        if TimetableData.sharedInstance.isEmpty {
+            TimetableData.sharedInstance.update()
+        }
+        
         for i in 0..<5 {
             if let viewController = storyboard?.instantiateViewController(withIdentifier: "SuplenceViewController")
                 as? SuplenceViewController {
@@ -65,7 +69,7 @@ class RootViewController: UIViewController, UIScrollViewDelegate, TimetableDataD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if UserDefaults().string(forKey: UserSettings.filter.rawValue) == nil {
+        if UserDefaults().object(forKey: UserSettings.lastRefreshedTimetableData.rawValue) as? Date == nil {
             let setupStoryboard = UIStoryboard(name: "Setup", bundle: nil)
             let viewController = setupStoryboard.instantiateInitialViewController()!
             present(viewController, animated: true, completion: nil)

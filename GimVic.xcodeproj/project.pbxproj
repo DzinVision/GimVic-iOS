@@ -34,6 +34,7 @@
 		99471FC01D9307020071F3F8 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99471FBF1D9307020071F3F8 /* DataStructures.swift */; };
 		99DFA7661D92E35E0066D7F3 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DFA7651D92E35E0066D7F3 /* Setup.storyboard */; };
 		99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFA7681D92E6350066D7F3 /* SetupViewController.swift */; };
+		99E56C5C1D959884000266A0 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E56C5B1D959884000266A0 /* LightViewController.swift */; };
 		99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1EB91D907E78003A78DB /* SettingsViewController.swift */; };
 		99EE54DA1D9468D700C5FC42 /* FuzzyDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		99471FBF1D9307020071F3F8 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		99DFA7651D92E35E0066D7F3 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		99DFA7681D92E6350066D7F3 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		99E56C5B1D959884000266A0 /* LightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
 		99EE1EB91D907E78003A78DB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				99DFA7671D92E61F0066D7F3 /* Setup */,
 				99DFA7641D92E3160066D7F3 /* Settings */,
 				99EE1EB81D907E5B003A78DB /* Suplence Cell */,
+				99E56C5B1D959884000266A0 /* LightViewController.swift */,
 				9915BE321D9068C10027B300 /* DataStructures.swift */,
 				99EE54D91D9468D700C5FC42 /* FuzzyDate.swift */,
 				99471FB61D92F9A60071F3F8 /* New Group */,
@@ -340,6 +343,7 @@
 				99471FB81D92FD3D0071F3F8 /* SetupMalicaViewController.swift in Sources */,
 				99DFA7691D92E6350066D7F3 /* SetupViewController.swift in Sources */,
 				990CAC221D8F125B00F8BE7D /* AppDelegate.swift in Sources */,
+				99E56C5C1D959884000266A0 /* LightViewController.swift in Sources */,
 				99471FB51D92F76E0071F3F8 /* SetupFilterViewController.swift in Sources */,
 				99EE1EBA1D907E78003A78DB /* SettingsViewController.swift in Sources */,
 				99260C7C1D91C70C00810152 /* KosiloViewController.swift in Sources */,

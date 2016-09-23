@@ -12,7 +12,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FcW-CH-fia">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="c52-Tf-a6d">
                                 <cells>
@@ -30,7 +30,7 @@
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prikaži Nadomeščanja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fa-Mf-lDM">
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -43,6 +43,7 @@
                                                 <constraint firstItem="aoU-Pg-HVb" firstAttribute="top" secondItem="Zth-BV-Wbb" secondAttribute="top" constant="6" id="tqh-8b-H9h"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="faT-Fw-DO6">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -53,7 +54,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Urnika" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FG-Mt-fzt">
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -63,6 +64,7 @@
                                                 <constraint firstItem="5FG-Mt-fzt" firstAttribute="top" secondItem="dBN-R3-8Ta" secondAttribute="top" constant="11" id="xVM-KD-7wo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="9pZ-Rx-7ou" kind="show" id="RsV-aw-LVq"/>
                                         </connections>
@@ -76,7 +78,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Malice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xx-1B-bHJ">
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -86,6 +88,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="9Xx-1B-bHJ" secondAttribute="bottom" constant="11" id="p48-tz-5f9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="BWu-if-Uvw" kind="show" id="Yfm-f4-SPO"/>
                                         </connections>
@@ -99,7 +102,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vrsta Kosila" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1go-rc-qAA">
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -109,6 +112,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="1go-rc-qAA" secondAttribute="bottom" constant="11" id="nGK-hg-4b2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="C9i-Su-u6x" kind="show" id="fm1-hm-bWH"/>
                                         </connections>
@@ -122,7 +126,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O Aplikaciji" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqc-VJ-z26">
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -132,6 +136,10 @@
                                                 <constraint firstItem="Vqc-VJ-z26" firstAttribute="top" secondItem="LD2-dn-OSZ" secondAttribute="top" constant="11" id="wEQ-Ch-k1o"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="be4-lK-6XN" kind="show" id="78L-SU-H9f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -175,7 +183,7 @@
                                 </connections>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uHB-kl-QFa" secondAttribute="trailing" id="fua-Kl-ZfX"/>
                             <constraint firstItem="uHB-kl-QFa" firstAttribute="centerY" secondItem="Vac-F0-IFr" secondAttribute="centerY" id="ik5-2i-Ffy"/>
@@ -190,6 +198,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhd-HJ-cr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1665" y="232"/>
+        </scene>
+        <!--O Aplikaciji-->
+        <scene sceneID="n6h-v2-qne">
+            <objects>
+                <viewController id="be4-lK-6XN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gs9-M9-h8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="NDK-kM-tkW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aE5-l5-TcF">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-oY-9Tw">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avtor: Vid Drobnič" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgM-bH-AmZ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verzija: 3.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxl-Om-GY8">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Licenca: GNU GPL v3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjU-67-xn0">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrS-Wy-9JK">
+                                        <string key="text">Nekatere ikone so vzete iz:
+icons8.com</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lvf-oY-9Tw" firstAttribute="centerY" secondItem="aE5-l5-TcF" secondAttribute="centerY" id="OGq-Q0-b0i"/>
+                            <constraint firstItem="lvf-oY-9Tw" firstAttribute="centerX" secondItem="aE5-l5-TcF" secondAttribute="centerX" id="ofY-zL-s1u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="O Aplikaciji" id="yUt-fZ-9er"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fr-QT-AaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664.8" y="939.58020989505258"/>
         </scene>
         <!--Vrsta Kosila-->
         <scene sceneID="5A0-tq-QqT">
@@ -210,7 +269,7 @@
                                 </connections>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pwl-ag-QVn" firstAttribute="leading" secondItem="nuj-Vb-Cfw" secondAttribute="leading" id="1kj-pD-IGJ"/>
                             <constraint firstAttribute="trailing" secondItem="pwl-ag-QVn" secondAttribute="trailing" id="Zpd-Ra-Gnn"/>
@@ -224,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKC-hy-joZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="893"/>
+            <point key="canvasLocation" x="2441" y="232"/>
         </scene>
         <!--Urnik-->
         <scene sceneID="qTN-Hg-41w">
@@ -243,6 +302,7 @@
                                     <segment title="Razred"/>
                                     <segment title="Profesor"/>
                                 </segments>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="filterTypeChanged:" destination="9pZ-Rx-7ou" eventType="valueChanged" id="TPx-RM-alb"/>
                                 </connections>
@@ -254,13 +314,14 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMx-SZ-srN">
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Nastavi predmete"/>
                                 <connections>
                                     <segue destination="fF8-ep-LT6" kind="show" identifier="" id="Z9x-C3-9bi"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SRh-Dy-7sD" firstAttribute="centerX" secondItem="q33-QE-dPe" secondAttribute="centerX" id="5kb-9X-j4L"/>
                             <constraint firstItem="HMx-SZ-srN" firstAttribute="leading" secondItem="q33-QE-dPe" secondAttribute="leading" constant="16" id="64G-dX-aaA"/>
@@ -290,7 +351,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pwI-L8-G26">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdditionalClassesCell" textLabel="iW1-aT-mTl" style="IBUITableViewCellStyleDefault" id="IEp-9K-hyK">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -303,11 +364,13 @@
                                             <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -321,13 +384,18 @@
             </objects>
             <point key="canvasLocation" x="2441" y="-453"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Light View Controller-->
         <scene sceneID="vAo-wi-0p6">
             <objects>
-                <navigationController id="zSP-eh-ET2" sceneMemberID="viewController">
+                <navigationController id="zSP-eh-ET2" customClass="LightViewController" customModule="GimVic" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="f2O-Qo-haP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="AV2-HC-ZQS" kind="relationship" relationship="rootViewController" id="Hla-YB-bmu"/>
@@ -335,7 +403,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlH-7a-uAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="134"/>
+            <point key="canvasLocation" x="-324" y="134"/>
         </scene>
     </scenes>
 </document>

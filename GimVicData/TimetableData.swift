@@ -20,6 +20,10 @@ public final class TimetableData {
     
     public var delegates = [DelegateID: TimetableDataDelegate]()
     
+    public var isEmpty: Bool {
+        return timetableEntries.isEmpty
+    }
+    
     public enum DelegateID: Int {
         case monday = 0, tuesday, wednesday, thursday, friday, rootViewController
     }
@@ -197,8 +201,13 @@ public final class TimetableData {
             }
         }
         
-        let snack = UserDefaults().string(forKey: UserSettings.snack.rawValue)!
-        let lunch = UserDefaults().string(forKey: UserSettings.lunch.rawValue)!
+        guard let snack = UserDefaults().string(forKey: UserSettings.snack.rawValue) else {
+            return nil
+        }
+        
+        guard let lunch = UserDefaults().string(forKey: UserSettings.lunch.rawValue) else {
+            return nil
+        }
         
         url += "snackType=\(snack)&lunchType=\(lunch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         return URL(string: url)!

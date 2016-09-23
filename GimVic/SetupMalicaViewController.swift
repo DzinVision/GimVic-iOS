@@ -20,10 +20,14 @@ class SetupMalicaViewController: UIViewController, UIPickerViewDataSource, UIPic
         return ChooserData.sharedInstance.snackTypes.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ChooserData.sharedInstance.snackTypes[row]
+    func pickerView(_ pickerView: UIPickerView,
+                    attributedTitleForRow row: Int,
+                    forComponent component: Int) -> NSAttributedString? {
+        let title = ChooserData.sharedInstance.snackTypes[row]
             .replacingOccurrences(of: "_", with: " ")
             .capitalized
+        
+        return NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName: UIColor.white])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

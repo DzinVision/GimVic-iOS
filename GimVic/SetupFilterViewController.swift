@@ -77,14 +77,19 @@ class SetupFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         return ChooserData.sharedInstance.mainClasses.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView,
+                    attributedTitleForRow row: Int,
+                    forComponent component: Int) -> NSAttributedString? {
+        let title: String
         if profesorFilter {
-            return ChooserData.sharedInstance.teachers[row]
+            title = ChooserData.sharedInstance.teachers[row]
+        } else {
+            title = ChooserData.sharedInstance.mainClasses[row]
         }
         
-        return ChooserData.sharedInstance.mainClasses[row]
+        return NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName: UIColor.white])
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if profesorFilter {
             filter = ChooserData.sharedInstance.teachers[row]

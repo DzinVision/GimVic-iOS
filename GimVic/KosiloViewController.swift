@@ -29,10 +29,12 @@ class KosiloViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return ChooserData.sharedInstance.lunchTypes.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ChooserData.sharedInstance.lunchTypes[row]
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let title = ChooserData.sharedInstance.lunchTypes[row]
             .replacingOccurrences(of: "_", with: " ")
             .capitalized
+        
+        return NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName: UIColor.white])
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
