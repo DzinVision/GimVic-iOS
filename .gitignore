@@ -3,3 +3,5 @@
 *.gz
 *.log
 *.aux
+*.toc
+*.out
