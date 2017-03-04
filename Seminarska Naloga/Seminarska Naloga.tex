@@ -5,6 +5,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage[backend=bibtex]{biblatex}
+
+\addbibresource{viri.bib}
 
 \hypersetup{
 	colorlinks,
@@ -18,17 +21,14 @@
 	\begin{titlepage}
 		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 		\center
-		
-		%	HEADING SECTIONS
+	
 		\textsc{\LARGE Gimnazija Vič}\\[0.5cm]
 		\textsc{\Large Tržaška c. 72, 1000 Ljubljana}\\[1.5cm]
 
-		%	TITLE SECTION		
 		\HRule \\[0.4cm]
 		{ \huge \bfseries Programiranje za mobilne platforme iOS}\\[0.4cm]
 		\HRule \\[1.5cm]
 		
-		%	AUTHOR SECTION	
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushleft} \large
 				\emph{Avtor:}\\
@@ -43,7 +43,6 @@
 			\end{flushright}
 		\end{minipage}\\[4cm]
 		
-		%	DATE SECTION
 		{\large 13. februar 2017}\\[3cm]
 		\vfill
 	\end{titlepage}
@@ -77,6 +76,6 @@
 	\section{Zaklju"cek}
 	\input{zakljucek}
 	
-	\section{Viri in literatura}
-	[viri in literatura placeholder]
+	\printbibliography[heading=bibintoc]
+	
 \end{document}
