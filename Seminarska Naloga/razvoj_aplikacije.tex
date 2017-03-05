@@ -10,17 +10,25 @@
 Aplikacija je sestavljena iz dveh glavnih delov:
 \begin{itemize}
 	\setlength\itemsep{0em}
-	\item glavna aktivnost (\textit{ang.} root view controller)
+	\item glavna aktivnost (\textit{ang.} root view controller) (slika \ref{fig:main_view})
 	\item upravitelj podatkov
-	\item nastavitve
+	\item nastavitve (slika \ref{fig:settings})
 	\item o aplikaciji
 \end{itemize}
 
+\begin{figure}[!ht]
+	\begin{minipage}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{images/main_view.png}
+		\caption{Glavna aktivnost}\label{fig:main_view}
+	\end{minipage}\hfill
+	\begin{minipage}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{images/nastavitve.png}
+		\caption{Nastavitve}\label{fig:settings}
+	\end{minipage}
+\end{figure}
+
 \subsubsection{Glavna aktivnost}
-\begin{wrapfigure}{r}{0.4\linewidth}
-	\includegraphics[width=\linewidth]{images/main_view.png}
-\end{wrapfigure}
-\paragraph{}Tu se odvija ve"cino uporabniku pomembnih stvari. Ko uporabnik odpre aplikacijo se mu prika"ze glavni pogled (\textit{ang.} main view) v katerem je za vsak dan prikazan jedilnik in urnik. V glavni aktivnosti se nahaja tudi gumb za nastavitve.
+\paragraph{}Tu se odvija ve"cino uporabniku pomembnih stvari. Ko uporabnik odpre aplikacijo se mu prika"ze glavni pogled (\textit{ang.} main view) (slika \ref{fig:main_view}) v katerem je za vsak dan prikazan jedilnik in urnik. V glavni aktivnosti se nahaja tudi gumb za nastavitve.
 
 \paragraph{}Ko se glavna aktvinost odpre, aplikacija najprej preveri, "ce je odprta prvi"c. V tem primeru uporabniku prika"ze navodila za uprabo in ga popelje "cez osnovne nastavitve kjer nastavi razred oziroma ime profesorja, ter vrsto malice in kosila.
 
@@ -30,10 +38,7 @@ Aplikacija je sestavljena iz dveh glavnih delov:
 \paragraph{}"Ce upravitelj podatkov ugotovi, da naprava nima internetne povezave uporabi podatke, ki so "ze shranjeni na napravi. Uporabnik lahko podatke osve"zi ro"cno. V tem primeru glavna aktivnost zahteva od upravitelja podatkov, da gre po nove podatke.
 
 \subsubsection{Nastavitve}
-\begin{wrapfigure}{r}{0.4\linewidth}
-	\includegraphics[width=\linewidth]{images/nastavitve.png}
-\end{wrapfigure}
-\paragraph{}V nastavitvah lahko uprabnik nastavi ali je dijak, ali profesor in temu primeren filter za urnik. Nastavi lahko tudi vrsto malice in kosila na katerega je naro"cen. Poleg tega ima tudi mo"znost, da izklopi funkcijo za prikaz nadome"s"canj, tako da je uporabniku prikazan samo urnik. V nastavitvah lahko uporabnik pogleda podatke o aplikaciji.
+\paragraph{}V nastavitvah (slika \ref{fig:settings}) lahko uprabnik nastavi ali je dijak, ali profesor in temu primeren filter za urnik. Nastavi lahko tudi vrsto malice in kosila na katerega je naro"cen. Poleg tega ima tudi mo"znost, da izklopi funkcijo za prikaz nadome"s"canj, tako da je uporabniku prikazan samo urnik. V nastavitvah lahko uporabnik pogleda podatke o aplikaciji.
 
 \subsubsection{O aplikaciji}
 \paragraph{}V tem meniju se uporabniku prika"zejo osnovne informacije o aplikaciji kot so avtor aplikacije, verzija in pod katero licenco je aplikacija izdana. Prav tako je v tem meniju zapisan vir nekaterih ikon, ki so uporabljene, saj to predpisuje licenca pod katero so izdane te ikone.

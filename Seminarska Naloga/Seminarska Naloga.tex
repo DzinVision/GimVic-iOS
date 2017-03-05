@@ -4,8 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=biber]{biblatex}
+\usepackage{float}
 
 \addbibresource{viri.bib}
 
@@ -76,6 +76,7 @@
 	\section{Zaklju"cek}
 	\input{zakljucek}
 	
-	\printbibliography[heading=bibintoc]
-	
+	\newpage
+	\section{Literatura}
+	\printbibliography[heading=none]
 \end{document}
