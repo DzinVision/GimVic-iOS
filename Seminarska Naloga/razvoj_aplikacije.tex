@@ -1,9 +1,9 @@
 \paragraph{}Da bi bila aplikacija "cim bolj prijazna uporabniku je "sla "cez veliko razli"cic in popravkov. V nadaljevanju je opisano kako deluje trenutno najnovej"sa razli"cica 3.0. Izvorna koda je dostopna na spletnem portalu GitHub na naslovu \url{https://github.com/GimVic-app/gimvic-ios}.
 
 \subsection{Podatki} 
-\paragraph{}Podatki, ki jih aplikacija potrebuje, so servirani iz razli"cnih stre"znikov v razli"cnih oblikah zapisa. Urnik je na voljo v JavaScript array obliki, nadome"s"canja pa v json\cite{json-wiki}. Jedilnik za "solsko malico in kosilo se nalo"zi na stre"znik v csv obliki. Odlo"cil sem se, da bo za podatke skrbel poseben stre"znik, ki bo vse od zgoraj na"stetega zdru"zil v enovito json obliko, ker bo tako prikazovanje na telefonu hitrej"se in bolj u"cinkovito. Podatki na tem stre"zniku so na voljo v json obliki.
+\paragraph{}Podatki, ki jih aplikacija potrebuje, so servirani iz razli"cnih stre"znikov v razli"cnih oblikah zapisa. Urnik je na voljo v JavaScript Array\cite{js-array} obliki, nadome"s"canja pa v JSON\cite{json-wiki}. Jedilnik za "solsko malico in kosilo se nalo"zi na stre"znik v csv\cite{csv-wiki} obliki. Odlo"cil sem se, da bo za podatke skrbel poseben stre"znik, ki bo vse od zgoraj na"stetega zdru"zil v enovito JSON obliko, ker bo tako prikazovanje na telefonu hitrej"se in bolj u"cinkovito. Stre"znik si podatke shranjuje v MySQL\cite{mysql-wiki} podatkovno bazo\cite{rin} in jih nato servira v JSON obliki.
 
-\paragraph{}Pri dostopu do podatkov stre"zniku poda"s ali "zeli"s podatke za profesorja, ali pa za dijaka. Pri profesorju stre"zniku kot parameter poda"s ime profesorja, pri dijaku pa razred in izbirne ozroma maturitetne predmete. Stre"znik nato vrne seznam, kjer vsak element v tem seznamu predstavlaj podatke za dolo"cen dan v tednu. Vsak dan je predstavljen z seznamom v katerem vsak element predstavlja uro.
+\paragraph{}Pri dostopu do podatkov stre"zniku z URL parametri\cite{query-string-wiki} poda"s ali "zeli"s podatke za profesorja, ali pa za dijaka. Pri profesorju stre"zniku kot parameter poda"s ime profesorja, pri dijaku pa razred in izbirne ozroma maturitetne predmete. Stre"znik nato vrne seznam, kjer vsak element v tem seznamu predstavlaj podatke za dolo"cen dan v tednu. Vsak dan je predstavljen z seznamom v katerem vsak element predstavlja uro.
 
 \newpage
 \subsection{Sestava aplikacije}
@@ -41,4 +41,4 @@ Aplikacija je sestavljena iz dveh glavnih delov:
 \paragraph{}V nastavitvah (slika \ref{fig:settings}) lahko uprabnik nastavi ali je dijak, ali profesor in temu primeren filter za urnik. Nastavi lahko tudi vrsto malice in kosila na katerega je naro"cen. Poleg tega ima tudi mo"znost, da izklopi funkcijo za prikaz nadome"s"canj, tako da je uporabniku prikazan samo urnik. V nastavitvah lahko uporabnik pogleda podatke o aplikaciji.
 
 \subsubsection{O aplikaciji}
-\paragraph{}V tem meniju se uporabniku prika"zejo osnovne informacije o aplikaciji kot so avtor aplikacije, verzija in pod katero licenco je aplikacija izdana. Prav tako je v tem meniju zapisan vir nekaterih ikon, ki so uporabljene, saj to predpisuje licenca pod katero so izdane te ikone.
+\paragraph{}V tem meniju se uporabniku prika"zejo osnovne informacije o aplikaciji kot so avtor aplikacije, verzija in pod katero licenco\cite{license-wiki} je aplikacija izdana. Prav tako je v tem meniju zapisan vir nekaterih ikon, ki so uporabljene, saj to predpisuje licenca pod katero so izdane te ikone.
