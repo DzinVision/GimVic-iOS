@@ -2,7 +2,7 @@
 
 \subsection{Struktura}
 \paragraph{}
-Aplikacija je sestavljena iz dveh delov. Prvi del se ukvarja s pridobivanjem podatkov iz stre"znika, drug del pa se ukvarja s predstavitvijo podatkov uporabniku. Del aplikacije, ki se ukvarja s pridobivanjem in shranjevanjem podatkov je narejen kot knji"znica (Framework), ki jo aplikacija uporablja. S tem lahko kasneje dodam "se druge na"cine prikazovanja urnika uporoabniku (na primer gradnik \textit{ang. widget}), brez da bi ponovno pisal pridobivanje podatkov.
+Aplikacija je sestavljena iz dveh delov. Prvi del se ukvarja s pridobivanjem podatkov iz stre"znika, drugi del pa se ukvarja s predstavitvijo podatkov uporabniku. Del aplikacije, ki se ukvarja s pridobivanjem in shranjevanjem podatkov je narejen kot knji"znica (Framework), ki jo aplikacija uporablja. S tem lahko kasneje dodam "se druge na"cine prikazovanja urnika uporoabniku (na primer gradnik (\textit{ang.} widget)), brez da bi ponovno pisal pridobivanje podatkov.
 
 \subsection{Podatki} 
 \paragraph{}Podatki, ki jih aplikacija potrebuje, so servirani iz razli"cnih stre"znikov v razli"cnih oblikah zapisa. Urnik je na voljo v JavaScript Array\cite{js-array} obliki, nadome"s"canja pa v JSON\cite{json-wiki}. Jedilnik za "solsko malico in kosilo se nalo"zi na stre"znik v csv\cite{csv-wiki} obliki. Odlo"cil sem se, da bo za podatke skrbel poseben stre"znik, ki bo vse od zgoraj na"stetega zdru"zil v enovito JSON obliko, ker bo tako prikazovanje na telefonu hitrej"se in bolj u"cinkovito. Stre"znik si podatke shranjuje v MySQL\cite{mysql-wiki} podatkovno bazo\cite{rin} in jih nato servira v JSON obliki.
@@ -17,16 +17,16 @@ Aplikacija je sestavljena iz dveh delov. Prvi del se ukvarja s pridobivanjem pod
 
 \subsubsection{Upravitelj podatkov}
 \paragraph{}
-Glaven objekt v tej knji"znici je upravitelj podatkov, ki skrbi za pridobivanje podatkov iz stre"znika, njihovo obdelovanje in shranjevanje. Za"zene se vsaki"c ko se aplikacija odpre in najprej preveri starost trenutno shranjenih podatkov. "Ce so podatki prestari gre na stre"znik po nove podatke, ki jih pretvori v primerne podatkovne strukture in shrani na pomnilnik telefona. Nato o novih podatkih obvesti glavno aktivnost, ki osve"zi grafi"cni vmesnik z novimi podatki.
+Glaven razred v knji"znici za delo s podatki je upravitelj podatkov, ki skrbi za pridobivanje podatkov iz stre"znika, njihovo obdelovanje in shranjevanje. Za"zene se vsaki"c ko se aplikacija odpre in najprej preveri starost trenutno shranjenih podatkov. "Ce so podatki prestari gre na stre"znik po nove podatke, ki jih pretvori v primerne podatkovne strukture in shrani na pomnilnik telefona. Nato o novih podatkih obvesti glavno aktivnost, ki osve"zi grafi"cni vmesnik z novimi podatki.
 
 \paragraph{}
 "Ce upravitelj podatkov ugotovi, da naprava nima internetne povezave uporabi podatke, ki so "ze shranjeni na napravi. Uporabnik lahko podatke osve"zi ro"cno. V tem primeru glavna aktivnost zahteva od upravitelja podatkov, da gre po nove podatke.
 
 \paragraph{}
-Upravitelj podatkov je \texttt{singleton}, kar pomeni, da inicializiran samo en objekt, ki ga uporabljajo vsi drugi objekti. S tem se izognemo podvojevanju podatkov in neso"casnega osve"zevanja. 
+Upravitelj podatkov je \texttt{singleton}, kar pomeni, da inicializiran samo en objekt, ki ga uporabljajo vsi drugi objekti. S tem se izognemo podvojevanju podatkov in neso"casnega osve"zevanja, zaradi "cesar aplikacija porabi manj spomina in prenese manj podatkov.
 
 \paragraph{}
-Vsak objekt, ki "zeli od upravitelja podatkov prejemati sporo"cila o spremembah podatkov, se mora dodati kot delegat (\textit{ang. delegate}). Upravitelj podatkov ima za shranjevanje delegatov mapo (\textit{ang. dictionary}). Vsak delegat je shranjen v mapi pod svojim imenom, ki predstavlja klju"c. S tem se lahko kasneje objekt pri zbrisevanju odstrani iz upravitelja podatkov. 
+Vsak objekt, ki "zeli od upravitelja podatkov prejemati sporo"cila o spremembah podatkov, se mora dodati kot delegat (\textit{ang.} delegate). Upravitelj podatkov ima za shranjevanje delegatov mapo (\textit{ang.} dictionary). Vsak delegat je shranjen v mapi pod svojim imenom, ki predstavlja klju"c. S tem se lahko kasneje objekt pri zbrisevanju odstrani iz upravitelja podatkov. 
 
 \begin{center}
 	Initializacija singleton objekta in shranjevanje delegatov:
@@ -41,7 +41,7 @@ public final class TimetableData {
 \end{minted}
 
 \paragraph{}
-Ker morajo biti vsi objekti v mapi istega tipa, izkoristimo protokole. V Swiftu z protokolom definiramo, katere funkcije in spremenljivke mora objekt imeti. Protokol se nato obna"sa kot tip spremenljivke. S tem zagovotimo da imajo vsi shranjeni objekti na voljo funkcijo, ki jo kli"cemo, ko se spremenijo podatki.
+Ker morajo biti vsi objekti v mapi istega tipa, izkoristimo protokole. V Swiftu s protokolom definiramo, katere funkcije in spremenljivke mora objekt imeti. Protokol se nato obna"sa kot tip spremenljivke. S tem zagovotimo da imajo vsi shranjeni objekti na voljo funkcijo, ki jo kli"cemo, ko se spremenijo podatki.
 
 \begin{minted}[frame=lines]{swift}
 public protocol TimetableDataDelegate {
@@ -50,7 +50,7 @@ public protocol TimetableDataDelegate {
 \end{minted}
 
 \paragraph{}
-Zelo moramo paziti, da se vsak objekt, ki se doda kot delegat, tudi izbri"se. Druga"ce lahko do objekta dostopamo preko ve"ceih kazalcev (pointer), kar pomeni, da se objekt nikoli ne bo odstranil iz pomnilnika. S tem naredimo pu"s"canje pomnilnika (\textit{ang. memory leak}).
+Zelo moramo paziti, da se vsak objekt, ki se doda kot delegat, tudi odstrani. Druga"ce lahko do objekta dostopamo preko ve"ceih kazalcev (pointer), kar pomeni, da se objekt nikoli ne bo odstranil iz pomnilnika. S tem ustvarimo pu"s"canje pomnilnika (\textit{ang.} memory leak).
 
 \subsection{Predstavitev podatkov}
 Del aplikacije, ki skrbi za predstavitev podatkov uporabniku, je sestavljen iz ve"cih komponent:
@@ -115,10 +115,10 @@ func setDataAgeLabel() {
 \end{minted}
 
 \subsubsection{Nastavitve}
-\paragraph{}V nastavitvah (slika \ref{fig:settings}) lahko uprabnik nastavi ali je dijak, ali profesor in temu primeren filter za urnik. Nastavi lahko tudi vrsto malice in kosila na katerega je naro"cen. Poleg tega ima tudi mo"znost, da izklopi funkcijo za prikaz nadome"s"canj, tako da je uporabniku prikazan samo urnik. V nastavitvah lahko uporabnik pogleda podatke o aplikaciji.
+\paragraph{}V nastavitvah (slika \ref{fig:settings}) lahko uprabnik nastavi ali je dijak, ali profesor in temu primeren filter za urnik. Nastavi lahko tudi vrsto malice in kosila na katerega je naro"cen. Poleg tega ima tudi mo"znost, da izklopi funkcijo za prikaz nadome"s"canj, tako da je uporabniku prikazan samo urnik. V nastavitvah lahko uporabnik tudi pogleda podatke o aplikaciji.
 
 \paragraph{}
-Nastavitve se na zaslon prika"zejo kot modalno okno (\texttt{Modal View}). Ko uporabnik zapre nastavitve z pritiskom na gump \textit{Nastavi}, nastavitve sporo"cijo upravitelju podatkov, naj gre po nove podatke.
+Nastavitve se na zaslon prika"zejo kot modalno okno (\textit{ang.} Modal View). Ko uporabnik zapre nastavitve z pritiskom na gump \textit{Nastavi}, nastavitve sporo"cijo upravitelju podatkov, naj gre po nove podatke.
 
 \begin{center}
 	Izhod iz nastavitev:
