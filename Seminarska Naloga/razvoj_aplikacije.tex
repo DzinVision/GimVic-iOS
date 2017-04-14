@@ -1,22 +1,30 @@
 \paragraph{}Da bi bila aplikacija "cim bolj prijazna uporabniku je "sla "cez veliko razli"cic in popravkov. V nadaljevanju je opisano kako deluje trenutno najnovej"sa razli"cica 3.0. Izvorna koda je dostopna na spletnem portalu GitHub na naslovu \url{https://github.com/GimVic-app/gimvic-ios}.
 
+\subsection{Struktura}
+\paragraph{}
+Aplikacija je sestavljena iz dveh delov. Prvi del se ukvarja s pridobivanjem podatkov iz stre"znika, drug del pa se ukvarja s predstavitvijo podatkov uporabniku. Del aplikacije, ki se ukvarja s pridobivanjem in shranjevanjem podatkov je narejen kot knji"znica (Framework), ki jo aplikacija uporablja. S tem lahko kasneje dodam "se druge na"cine prikazovanja urnika uporoabniku (na primer gradnik \textit{ang. widget}), brez da bi ponovno pisal pridobivanje podatkov.
+
 \subsection{Podatki} 
 \paragraph{}Podatki, ki jih aplikacija potrebuje, so servirani iz razli"cnih stre"znikov v razli"cnih oblikah zapisa. Urnik je na voljo v JavaScript Array\cite{js-array} obliki, nadome"s"canja pa v JSON\cite{json-wiki}. Jedilnik za "solsko malico in kosilo se nalo"zi na stre"znik v csv\cite{csv-wiki} obliki. Odlo"cil sem se, da bo za podatke skrbel poseben stre"znik, ki bo vse od zgoraj na"stetega zdru"zil v enovito JSON obliko, ker bo tako prikazovanje na telefonu hitrej"se in bolj u"cinkovito. Stre"znik si podatke shranjuje v MySQL\cite{mysql-wiki} podatkovno bazo\cite{rin} in jih nato servira v JSON obliki.
 
 \paragraph{}Pri dostopu do podatkov stre"zniku z URL parametri\cite{query-string-wiki} poda"s ali "zeli"s podatke za profesorja, ali pa za dijaka. Pri profesorju stre"zniku kot parameter poda"s ime profesorja, pri dijaku pa razred in izbirne ozroma maturitetne predmete. Stre"znik nato vrne seznam, kjer vsak element v tem seznamu predstavlaj podatke za dolo"cen dan v tednu. Vsak dan je predstavljen z seznamom v katerem vsak element predstavlja uro.
 
-\newpage
-\subsection{Sestava aplikacije}
-Aplikacija je sestavljena iz dveh glavnih delov:
+\begin{figure}[!h]
+	\centering
+	Primer URL-ja:
+	\texttt{http://gimvicapp.404.si/data?addSubstitutions=true\&classes[]=4B\\\&snackType=navadna\&lunchType=navadno}
+\end{figure}
+
+\subsection{Predstavitev podatkov}
+Del aplikacije, ki skrbi za predstavitev podatkov uporabniku, je sestavljen iz ve"cih komponent:
 \begin{itemize}
 	\setlength\itemsep{0em}
 	\item glavna aktivnost (\textit{ang.} root view controller) (slika \ref{fig:main_view})
-	\item upravitelj podatkov
 	\item nastavitve (slika \ref{fig:settings})
 	\item o aplikaciji
 \end{itemize}
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
 	\begin{minipage}{0.45\linewidth}
 		\includegraphics[width=\linewidth]{images/main_view.png}
 		\caption{Glavna aktivnost}\label{fig:main_view}
@@ -30,7 +38,17 @@ Aplikacija je sestavljena iz dveh glavnih delov:
 \subsubsection{Glavna aktivnost}
 \paragraph{}Tu se odvija ve"cino uporabniku pomembnih stvari. Ko uporabnik odpre aplikacijo se mu prika"ze glavni pogled (\textit{ang.} main view) (slika \ref{fig:main_view}) v katerem je za vsak dan prikazan jedilnik in urnik. V glavni aktivnosti se nahaja tudi gumb za nastavitve.
 
-\paragraph{}Ko se glavna aktvinost odpre, aplikacija najprej preveri, "ce je odprta prvi"c. V tem primeru uporabniku prika"ze navodila za uprabo in ga popelje "cez osnovne nastavitve kjer nastavi razred oziroma ime profesorja, ter vrsto malice in kosila.
+\paragraph{}Ko se aplikacija odpre, najprej preveri, "ce je odprta prvi"c. V tem primeru uporabnika popelje "cez osnovne nastavitve kjer nastavi razred oziroma ime profesorja, ter vrsto malice in kosila. 
+
+\newpage
+\begin{minted}[mathescape, linenos, numbersep=5pt, gobble=2, frame=lines, framesep=2mm]{swift}
+let setupStoryboard = UIStoryboard(name: "Setup", bundle: nil)
+let viewController = setupStoryboard.
+                     instantiateInitialViewController()!
+present(viewController, animated: true, completion: nil)
+\end{minted}
+
+\paragraph{title}
 
 \subsubsection{Upravitelj podatkov}
 \paragraph{}Upravitelj podatkov skrbi za pridobivanje podatkov iz stre"znika, njihovo obdelovanje in shranjevanje. Za"zene se vsaki"c ko se aplikacija odpre in najprej preveri starost trenutno shranjenih podatkov. "Ce so podatki prestari gre na stre"znik po nove podatke, ki jih pretvori v primerne podatkovne strukture in shrani na pomnilnik telefona. Nato o novih podatkih obvesti glavno aktivnost, ki osve"zi grafi"cni vmesnik z novimi podatki.
